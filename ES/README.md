@@ -1,6 +1,6 @@
 <h1><b>Iggle -  Engenharia de software (IF977)</b></h1>
 
-Disciplina do curso de Sistemas de Informação, ministrada no Centro de Informática (CIn) da UFPE pelo professor <a href="https://github.com/vinicius3w">Vinícius García</a> (vcg)
+Disciplina do curso de Sistemas de Informação, ministrada no Centro de Informática (CIn) da UFPE pelo professor <a href="https://github.com/vinicius3w">Vinícius García</a> (vcg).
 
 <h3><b>Entregas</b></h3>
 <ul>
