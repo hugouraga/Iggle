@@ -1,6 +1,6 @@
-<h1><b>Banco de dados (IF976)</b></h1>
+<h1><b>Banco de Dados (IF976)</b></h1>
 
-   Disciplina do curso de Sistemas de Informação, ministrada no Centro de Informática (CIn) da UFPE pela professoa Bernadeti
+Disciplina do curso de Sistemas de Informação, ministrada no Centro de Informática (CIn) da UFPE pela professora Bernadette Loscio (bfl).
 
 <h3><b>Entregas</b></h3>
 <ul>
