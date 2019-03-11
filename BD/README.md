@@ -7,6 +7,12 @@
     <li></li>
 </ul>
 
+<h3><b>Tecnologias</b></h3>
+<ul>
+    <li>Ruby</li>
+    <li>Ruby on rails</li>
+    <li>React</li>
+</ul>
 <h3>Equipe</h3>
 <ul>
     <li><a href="https://github.com/shirubadan">Daniel Silva</a> (djs)</li>
