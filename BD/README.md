@@ -4,7 +4,7 @@ Disciplina do curso de Sistemas de Informação, ministrada no Centro de Inform�
 
 <h3><b>Entregas</b></h3>
 <ul>
-    <li></li>
+    <li>1 - Descrição da Aplicação e Projeto Conceitual</li>
 </ul>
 
 <h3>Equipe</h3>
