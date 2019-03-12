@@ -4,10 +4,10 @@ Disciplina do curso de Sistemas de Informação, ministrada no Centro de Inform�
 
 <h3><b>Entregas</b></h3>
 <ol>
-    <li>Descrição da Aplicação e Projeto Conceitual</li>
-    <li>Projeto Lógico e Scripts de criação do BD</li>
-    <li>Povoamento do BD e Lista de Consultas com respostas</li>
-    <li>Lista de Triggers, Funções e Procedimentos</li>
+    <li>Descrição da Aplicação e Projeto Conceitual.</li>
+    <li>Projeto Lógico e Scripts de criação do BD.</li>
+    <li>Povoamento do BD e Lista de Consultas com respostas.</li>
+    <li>Lista de Triggers, Funções e Procedimentos.</li>
 </ol>
 
 <h3>Equipe</h3>
