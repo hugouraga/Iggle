@@ -1,4 +1,4 @@
-<h1><b>Iggle -  Engenharia de software (IF977)</b></h1>
+<h1><b>IGGLE -  Engenharia de software (IF977)</b></h1>
 
 Disciplina do curso de Sistemas de Informação, ministrada no Centro de Informática (CIn) da UFPE pelo professor <a href="https://github.com/vinicius3w">Vinícius García</a> (vcg).
 
