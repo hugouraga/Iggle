@@ -9,7 +9,7 @@
 - Myllena Almeida (mrma2)
 - Myllena Alves (mal4)
 
-### Agenda de Reuni�es
+### Agenda de Reuniões
 | Dia                   | Local      | Horário        |
 | :-------------------- | :--------- | :------------- |
 | Seg a Sex             | Slack      | 22h10 às 22h30 |
