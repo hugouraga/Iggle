@@ -1,8 +1,4 @@
-# Iggle (ES - BD)
+# Iggle 
+Projeto da disciplina de Engenharia de Software (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE)..
 
-Repositório destinado a entrega dos artefatos das discipinas Banco de Dados (IF976) e Engenharia de Software (IF977).
-
-<ul>
-  <li><a href="https://github.com/hugouraga/Iggle/tree/master/ES">Engenharia de software</a></li>
-  <li><a href="https://github.com/hugouraga/Iggle/tree/master/BD">Banco de dados</a></li>
-</ul>
+<h3>Equipe</h3>
