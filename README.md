@@ -14,4 +14,8 @@ Projeto da disciplina de Engenharia de Software (IF977), do curso de graduação
 ...
 
 ## Justificativa
-...
+
+Um método de identificar a qualidade de atendimento de profissionais da área fitness que ultrapasse a barreira das indicações por pessoas conhecidas que tiveram a oportunidade de testar esses serviços.
+
+Unir diversos tipos de profissionais da área na plataforma, para que a pesquisa possa feita em um só aplicativo para diversos tipos de serviços e profissionais.
+
