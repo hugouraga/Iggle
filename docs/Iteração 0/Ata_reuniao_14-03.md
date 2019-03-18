@@ -29,7 +29,5 @@ Ação                       | Responsável
 Criação do Product Backlog | Myllena Alves
 Definir primeira sprint    | Daniel Silva
 
-###Informações Adicionais
-* Alguma coisa
 
 
