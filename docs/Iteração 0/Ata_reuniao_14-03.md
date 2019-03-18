@@ -1,6 +1,3 @@
-#Iggle
-
-
 ## Ata de Reunião
 
 Data         | Local
