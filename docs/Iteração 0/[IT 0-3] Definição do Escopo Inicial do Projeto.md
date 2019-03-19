@@ -9,13 +9,13 @@ Um método de identificar a qualidade de atendimento de profissionais da área f
 Unir diversos tipos de profissionais da área na plataforma, para que a pesquisa possa feita em um só lugar para diversos tipos de serviços e profissionais.
 
 ## 3. Personas
-####   3.1 Profissionais englobados inicialmente:
+###   3.1 Profissionais englobados inicialmente:
 	Nutricionistas
 	Nutrólogos
 	Professores de esportes
 	Profissionais de educação física
 
-####   3.2 Público Alvo:
+###   3.2 Público Alvo:
 Sem restrições de idade e renda, visa conquistar pessoas que buscam um estilo de vida mais saudável.
 
 ## 4. Funcionalidades
