@@ -31,15 +31,16 @@ Como usuário do Iggle quero poder avaliar o serviço do profissional com 5 estr
 ### PROFISSIONAL
 
 ```
-Como profissional cadastrado no Iggle quero poder adicionar uma biografia, contendo minhas redes sociais,
-site e habilidades.
+Como profissional cadastrado no Iggle quero poder adicionar uma biografia, contendo minhas 
+redes sociais, site e habilidades.
 ```
 ```
 Como profissional cadastrado no Iggle quero adicionar meus contatos (telefone/celular) e minha
 localização de atendimento.
 ```
 ```
-Como profissional cadastrado no Iggle quero poder adicionar as modalidades que atendo com seus preços e horários.
+Como profissional cadastrado no Iggle quero poder adicionar as modalidades que atendo com 
+seus preços e horários.
 ```
 ```
 Como profissional cadastrado no Iggle quero ter um mural com os feedbacks recebidos pelos meus clientes.
@@ -73,10 +74,12 @@ Como usuário do Iggle quero poder fazer login no app com facilidade.
 Como usuário/profissional do Iggle quero poder cancelar uma consulta/atendimento.
 ```
 ```
-Como cliente/profissional cadastrado no Iggle quero poder me comunicar com o cliente/profissional por um chat.
+Como cliente/profissional cadastrado no Iggle quero poder me comunicar com o cliente/profissional 
+por um chat.
 ```
 ```
-Como usuário do Iggle quero visualizar minhas próximas consultas/aulas/treinos e ser notificado/ou não no dia.
+Como usuário do Iggle quero visualizar minhas próximas consultas/aulas/treinos e ser notificado
+ou não no dia.
 ```
 ```
 Como usuário/profissional do Iggle quero poder reportar uma reclamação para equipe do Iggle.
