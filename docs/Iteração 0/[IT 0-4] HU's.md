@@ -21,9 +21,6 @@ Como usuário do Iggle quero escolher um profissional que se encaixe nos meus re
 horário, localidade e preço.
 ```
 ```
-Como usuário do Iggle quero ter um carrinho de compras.
-```
-```
 Como usuário do Iggle quero poder avaliar o serviço do profissional com 5 estrelas e comentários.
 ```
 ---
@@ -46,7 +43,7 @@ seus preços e horários.
 Como profissional cadastrado no Iggle quero ter um mural com os feedbacks recebidos pelos meus clientes.
 ```
 ```
-Como profissional cadastrado no Iggle quer.o poder visualizar a média de avaliação do usuário que
+Como profissional cadastrado no Iggle quero poder visualizar a média de avaliação do usuário que
 solicitou marcação comigo.
 ```
 ```
@@ -78,8 +75,7 @@ Como cliente/profissional cadastrado no Iggle quero poder me comunicar com o cli
 por um chat.
 ```
 ```
-Como usuário do Iggle quero visualizar minhas próximas consultas/aulas/treinos e ser notificado
-ou não no dia.
+Como usuário do Iggle quero visualizar minhas próximas consultas/aulas/treinos.
 ```
 ```
 Como usuário/profissional do Iggle quero poder reportar uma reclamação para equipe do Iggle.
