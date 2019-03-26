@@ -1,5 +1,3 @@
-#Nome do Projeto - #i(1..4)
-
 # Postmortem
 
 Início da Iteração | Término da iteração
