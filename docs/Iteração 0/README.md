@@ -7,5 +7,5 @@
 - IT 0-4: HU's, Mockups e Storyboards Lo-Fi (18/03 - 25/03).
 
 ## Wireframe
-<p>Para uma melhor visualização do wireframe, visite esse link: https://xd.adobe.com/spec/6fd73b9d-c661-4763-6fe0-a689e350e7eb-19e6/ </p>
+<p>Para uma melhor visualização do wireframe, visite o link: https://xd.adobe.com/spec/6fd73b9d-c661-4763-6fe0-a689e350e7eb-19e6/ </p>
 
