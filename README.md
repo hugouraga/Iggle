@@ -1,7 +1,7 @@
 
 # IGGLE
 
-Projeto da disciplina de Engenharia de Software (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
+Projeto da disciplina de [Engenharia de Software](https://github.com/if977/if977) (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
 
 ## Equipe
 - [**Daniel Silva:**](https://github.com/shirubadan) Gerente de Projetos e Desenvolvedor
