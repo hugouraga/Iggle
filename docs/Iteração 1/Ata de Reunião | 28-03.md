@@ -1,8 +1,8 @@
-## Ata de Reunião
+# Ata de Reunião
 
 Data         | Local
------------- | -------------
-28/03/2019   | CIn
+:------------: | :-------------:
+28/03/2019   |CIn
 
 
 ### Participantes
@@ -12,12 +12,27 @@ Data         | Local
 * Myllena Alves
 * Myllena Almeida
 
+## Retrospectiva 
 ### Objetivos
 * Definir pontos de melhoria na interação do grupo
 * Delimitar funcionalidades que serão implementadas primeiro
 
+### Tópicos Discutidos
+* Comunicação do grupo
+* Metodologia Scrum
+* Datas de entrega
 
+### Ações a serem tomadas
+Ação                            | Responsável   
+:-------------------------------: | :-------------:
+Reuniões diarias (20:40-20:50)  |Time
+Leitura de [artigo]() sobre comunicação    |Time
 
+## Sprint Planning
+### Objetivos
+* Definir próximas tarefas
 
-
-
+### Ações a serem tomadas
+Ação                            | Responsável   
+:-------------------------------: | :-------------:
+Levantamento das ferramentas para o desenvolvimento | Myllena Almeida 
