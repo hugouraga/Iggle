@@ -26,7 +26,7 @@ Data         | Local
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
 Reuniões diarias (20:40-20:50)  |Time
-Leitura de [artigo](http://www.manifestoagil.com.br/principios.html) sobre comunicação    |Time
+Leitura de [artigo](https://medium.com/@brendaviegas/comunica%C3%A7%C3%A3o-assertiva-b6cbf27813e3) sobre comunicação    |Time
 
 ## Sprint Planning
 ### Objetivos
