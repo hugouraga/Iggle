@@ -32,6 +32,9 @@ Leitura de [artigo]() sobre comunicação    |Time
 ### Objetivos
 * Definir próximas tarefas
 
+### Tópicos Discutidos
+* Hierarquia das HU's
+
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
