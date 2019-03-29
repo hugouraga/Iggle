@@ -20,7 +20,7 @@ Data         | Local
 ### Tópicos Discutidos
 * Comunicação do grupo
 * Metodologia Scrum
-* Datas de entrega
+* Deadlines
 
 ### Ações a serem tomadas
 Ação                            | Responsável   
