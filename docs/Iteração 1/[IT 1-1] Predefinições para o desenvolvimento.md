@@ -1,4 +1,4 @@
-## Considerações da Aplicação
+### Considerações da Aplicação
 
 	Após análises feitas em relação ao desenvolvimento da aplicação e suas necessidades, decidiu-se que o melhor formato a ser utilizado seria o mobile, devido a composição do sistema ter características que se enquadram em um aplicativo móvel.
 
@@ -9,7 +9,7 @@ Extensões
 Live Share
 Gitlens
  
-###Linguagens
+### Linguagens
 
 Front-end: React Native (framework)
 
@@ -19,9 +19,9 @@ Back-end: Ruby on Rails(framework)
 
 Esse framework se encaixa na necessidade de produtividade que precisamos no backend da aplicação. Outro ponto é a curva de aprendizado, pois as convenções da linguagem diminuem as barreiras de entrada para iniciantes no desenvolvimento de aplicações.
 
-Gerenciamento 
+### Gerenciamento 
 
-Metodologia de gerenciamento de projetos
+### Metodologia de gerenciamento de projetos
 
 Nós optamos pela metodologia ágil Scrum, que por já ser bem explorada no mercado, tem uma alta disponibilidade de conteúdo e aplicações para servir como base para nosso time. Tendo em vista a quantidade de entregas que precisam ser realizadas em um breve intervalo de tempo, a divisão em sprints trará uma maior observação para o processo de qualidade e a possibilidade de fazer em curto prazo mudanças necessárias. 
 
@@ -35,7 +35,7 @@ Primeiro vamos analisar o que foi alcançado durante a Sprint.
 Logo em seguida, vamos fazer uma  retrospectiva mais geral de tudo que aconteceu, que é dividida em três aspectos: O que funcionou bem, o que pode ser melhorado e ações que serão tomadas para melhorar.
 Sendo esse último aspecto (ações que serão tomadas para melhorar), um gancho para o planejamento da próxima sprint.
 
-TDD
+### TDD
 
 Nós pretendemos utilizar essa prática durante o desenvolvimento da nossa aplicação. Mas será uma questão adaptativa, e vai ser muito interessante acompanhar nossa imersão nesse modo de desenvolver software. O principal argumento para a utilização dessa prática, é que com uma bateria de testes automatizados, o time terá mais segurança para lidar com mudanças e erros.
 
