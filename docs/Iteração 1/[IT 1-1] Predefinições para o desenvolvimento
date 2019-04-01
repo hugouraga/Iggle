@@ -1,15 +1,15 @@
-<h2>Considerações da Aplicação</h2>
+###Considerações da Aplicação
 
 	Após análises feitas em relação ao desenvolvimento da aplicação e suas necessidades, decidiu-se que o melhor formato a ser utilizado seria o mobile, devido a composição do sistema ter características que se enquadram em um aplicativo móvel.
 
-Ambiente de Desenvolvimento
+###Ambiente de Desenvolvimento
 
 IDE: VS CODE
 Extensões
 Live Share
 Gitlens
  
-Linguagens
+###Linguagens
 
 Front-end: React Native (framework)
 
