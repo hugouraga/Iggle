@@ -5,7 +5,7 @@ Após análises feitas em relação ao desenvolvimento da aplicação e suas nec
 ### Ambiente de Desenvolvimento
 
 #### IDE:  
-VS CODE  
+      VS CODE  
 #### Extensões:  
       Live Share  
       Gitlens
