@@ -4,18 +4,19 @@ Após análises feitas em relação ao desenvolvimento da aplicação e suas nec
 
 ### Ambiente de Desenvolvimento
 
-*IDE*: VS CODE
-*Extensões*
-Live Share
-Gitlens
+#### IDE:  
+VS CODE  
+#### Extensões:  
+      Live Share  
+      Gitlens
  
 ### Linguagens
 
-*Front-end*: React Native (framework)
+#### Front-end: React Native (framework)
 
 A principal razão para utilização desse framework é a possibilidade de criar um aplicativo multiplataforma para Android e iOS utilizando apenas Javascript. O que é essencial para a  concretização da nossa aplicação dentro do período definido pela disciplina.
 
-*Back-end*: Ruby on Rails(framework)
+#### Back-end: Ruby on Rails(framework)
 
 Esse framework se encaixa na necessidade de produtividade que precisamos no backend da aplicação. Outro ponto é a curva de aprendizado, pois as convenções da linguagem diminuem as barreiras de entrada para iniciantes no desenvolvimento de aplicações.
 
