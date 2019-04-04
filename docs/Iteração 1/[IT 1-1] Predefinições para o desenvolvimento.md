@@ -12,7 +12,7 @@ Após análises feitas em relação ao desenvolvimento da aplicação e suas nec
  
 ### Linguagens
 
-#### Front-end: React Native (framework)
+#### Front-end: React Native (Biblioteca)
 
 A principal razão para utilização desse framework é a possibilidade de criar um aplicativo multiplataforma para Android e iOS utilizando apenas Javascript. O que é essencial para a  concretização da nossa aplicação dentro do período definido pela disciplina.
 
