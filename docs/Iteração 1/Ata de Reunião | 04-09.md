@@ -11,7 +11,7 @@ Data         | Local
 * Myllena Alves
 * Myllena Almeida
 
-## Retrospectiva 
+## RETROSPECTIVA 
 
 ### Tópicos discutidos
 * Deadlines (antecedência)
@@ -29,7 +29,7 @@ Ação                            | Responsável
   x  |x
   x  |x
     
-## Sprint Planning (10/04 - 15/04)
+## SPRINT PLANNING (10/04 - 15/04)
 ### Objetivos
 * Divisão dos pares e HU's
 
