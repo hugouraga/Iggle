@@ -26,8 +26,8 @@ Data         | Local
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
-    |
-    |
+  x  |x
+  x  |x
     
 ## Sprint Planning (10/04 - 15/04)
 ### Objetivos
