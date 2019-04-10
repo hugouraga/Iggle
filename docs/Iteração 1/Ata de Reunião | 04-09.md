@@ -20,29 +20,30 @@ Data         | Local
 * Feedback
 
 ### O que funcionou bem
+* Comunicação
 
 ### O que pode ser melhorado
+* Deadlines
+* Comprometimento
 
-### Ações a serem tomadas
-Ação                            | Responsável   
-:-------------------------------: | :-------------:
-  x  |x
-  x  |x
-    
+
+
 ## SPRINT PLANNING (10/04 - 15/04)
 ### Objetivos
 * Divisão dos pares e HU's
 
 ### Tópicos Discutidos
-* Data da próxima reunião
-* Uso da plataforma de HU's
-* Testes
-* Novos itens para o backlog (dividir por MVP)
+* ~~Data da próxima reunião~~ (15/04)
+* ~~Uso da plataforma de HU's~~ (Pivotal Tracker)
+* ~~Testes~~ (TDD e BDD)
+* ~~Novos itens para o backlog~~ (dividir por MVP)
 
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
-Cadastro | 
-Login |
-Perfil profissional |
-Perfil do cliente |
+Cadastro|Myllena Alves/ Myllena Roberta
+Login|Daniel Silva/ Jussara Silva
+Gravar video das telas|Hugo Uraga
+Passar, para Hugo, resumos do ocorrido durante a semana|Daniel Silva
+Escolher melhores licenças e passar pro grupo|Myllena Alves
+Relacionar opções dos bancos de dados|Daniel Silva
