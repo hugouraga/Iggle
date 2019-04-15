@@ -30,6 +30,8 @@ Data         | Local
 ### Tópicos Discutidos
 * Data da próxima reunião (22/04)
 * Uso da plataforma de HU's (Pivotal Tracker)
+* Mutirão para deixar as HU's mais SMART
+* Dúvidas PO sobre as telas criadas e associação com as HU's
 * Método de trabalho na Semana Santa (TDD e BDD)
 * Seguir ou não com aplicação mobile?
 
