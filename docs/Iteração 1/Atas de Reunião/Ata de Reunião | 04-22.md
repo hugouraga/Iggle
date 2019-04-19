@@ -13,7 +13,7 @@ Data         | Local
 * Myllena Almeida
 
 ## REVISÃO
-*Apresentação dos itens desenvolvidos
+* Apresentação dos itens desenvolvidos
 
 ## RETROSPECTIVA 
 
