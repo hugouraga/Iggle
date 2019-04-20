@@ -32,7 +32,7 @@ Data         | Local
 * Sorteio dos pares e HU's
 
 ### Tópicos Discutidos
-
+Descrição nas issues
 
 ### Ações a serem tomadas
 Ação                            | Responsável   
