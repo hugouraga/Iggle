@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Normal Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Password digest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @normal_users.each do |normal_user| %>
+      <tr>
+        <td><%= normal_user.name %></td>
+        <td><%= normal_user.email %></td>
+        <td><%= normal_user.phone %></td>
+        <td><%= normal_user.password_digest %></td>
+        <td><%= link_to 'Show', normal_user %></td>
+        <td><%= link_to 'Edit', edit_normal_user_path(normal_user) %></td>
+        <td><%= link_to 'Destroy', normal_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Normal User', new_normal_user_path %>

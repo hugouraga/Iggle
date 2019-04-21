@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @professional_user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @professional_user.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @professional_user.phone %>
+</p>
+
+<p>
+  <strong>Profession:</strong>
+  <%= @professional_user.profession %>
+</p>
+
+<p>
+  <strong>Document:</strong>
+  <%= @professional_user.document %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @professional_user.description %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @professional_user.facebook %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @professional_user.instagram %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @professional_user.password_digest %>
+</p>
+
+<%= link_to 'Edit', edit_professional_user_path(@professional_user) %> |
+<%= link_to 'Back', professional_users_path %>

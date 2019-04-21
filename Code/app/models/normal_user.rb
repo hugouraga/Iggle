@@ -1,0 +1,2 @@
+class NormalUser < ApplicationRecord
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @normal_user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @normal_user.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @normal_user.phone %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @normal_user.password_digest %>
+</p>
+
+<%= link_to 'Edit', edit_normal_user_path(@normal_user) %> |
+<%= link_to 'Back', normal_users_path %>
