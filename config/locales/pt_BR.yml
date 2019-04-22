@@ -1,0 +1,30 @@
+pt-BR:
+  hello: "Olá mundo!"
+
+  activerecord:
+    attributes:
+      normal_user:
+        name: "Nome"
+        email: "Email"
+        phone: "Telefone"
+        password_digest: "Senha"
+
+      professional_user:
+        name: "Nome"
+        email: "Email"
+        phone: "Telefone"
+        profession: "Profissão (Nutricionista / Nutrólogo / Professor de Esportes / Profissional de Ed. Física)"
+        document: "Nº do Documento (CRM / CRN / CONFEF)"
+        description: "Descrição"
+        Facebook: "Facebook"
+        Instagram: "Instagram"
+        password_digest: "Senha"
+
+    errors:
+      messages:
+        blank: "não pode ser em branco."
+        invalid: "inválido."
+        taken: "já cadastrado."
+        confirmation: "não é igual, insira a mesma senha."
+        too_long: "muito grande. Máximo de %{count} caracteres."
+        too_short: "muito pequena. Mínimo de %{count} caracteres."
