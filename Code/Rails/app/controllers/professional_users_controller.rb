@@ -26,13 +26,13 @@ class ProfessionalUsersController < ApplicationController
   def create
     @professional_user = ProfessionalUser.new(professional_user_params)
 
-    respond_to do |format|
+    
       if @professional_user.save
-        format.html { redirect_to @professional_user, notice: 'Professional user was successfully created.' }
-        format.json { render :show, status: :created, location: @professional_user }
+        flash[:sucess] = 'Usuário cadastrado com sucesso.'        
+        redirect_to root_path
       else
-        format.html { render :new }
-        format.json { render json: @professional_user.errors, status: :unprocessable_entity }
+        render :new
+        
       end
     end
   end
@@ -71,4 +71,4 @@ class ProfessionalUsersController < ApplicationController
     def professional_user_params
       params.require(:professional_user).permit(:name, :email, :phone, :profession, :document, :description, :facebook, :instagram, :password_digest)
     end
-end
+

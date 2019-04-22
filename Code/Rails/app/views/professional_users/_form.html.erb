@@ -1,62 +1,66 @@
 <%= form_with(model: professional_user, local: true) do |form| %>
   <% if professional_user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(professional_user.errors.count, "error") %> prohibited this professional_user from being saved:</h2>
-
+    <div clas="">
+    <div class="alert alert-danger">    
       <ul>
+      <h3>Ops! Encontramos <%= pluralize(professional_user.errors.count, 'erro', 'erros') %> </h3>
+
+      
       <% professional_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
+    </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :profession %>
-    <%= form.text_field :profession %>
+    <%= form.text_field :profession, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :document %>
-    <%= form.text_field :document %>
+    <%= form.text_field :document, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :facebook %>
-    <%= form.text_field :facebook %>
+    <%= form.text_field :facebook, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :instagram %>
-    <%= form.text_field :instagram %>
+    <%= form.text_field :instagram, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :password_digest %>
-    <%= form.text_field :password_digest %>
+    <%= form.password_field :password_digest, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Cadastrar' , class: 'btn btn-primary' %>
+    <%= link_to 'Voltar', root_path, class: 'btn btn-primary' %>
   </div>
 <% end %>

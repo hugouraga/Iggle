@@ -26,13 +26,13 @@ class NormalUsersController < ApplicationController
   def create
     @normal_user = NormalUser.new(normal_user_params)
 
-    respond_to do |format|
+    
       if @normal_user.save
-        format.html { redirect_to @normal_user, notice: 'Normal user was successfully created.' }
-        format.json { render :show, status: :created, location: @normal_user }
+        flash[:sucess] = 'Usuário cadastrado com sucesso.'        
+        redirect_to root_path
       else
-        format.html { render :new }
-        format.json { render json: @normal_user.errors, status: :unprocessable_entity }
+        render :new
+        
       end
     end
   end
@@ -71,4 +71,4 @@ class NormalUsersController < ApplicationController
     def normal_user_params
       params.require(:normal_user).permit(:name, :email, :phone, :password_digest)
     end
-end
+
