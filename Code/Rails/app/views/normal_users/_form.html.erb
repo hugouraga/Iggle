@@ -34,8 +34,16 @@
     <%= form.password_field :password_digest, class: 'form-control' %>
   </div>
 
+  <br>
+
   <div class="actions">
-    <%= form.submit 'Cadastrar' , class: 'btn btn-primary' %>
-    <%= link_to 'Voltar', root_path, class: 'btn btn-primary' %>
+    <div class="center">
+      <%= form.submit 'Cadastrar' , class: 'btn btn-verde' %>
+    </div>
+
+    <div class="center">
+      <%= link_to 'Voltar', root_path, class: 'btn btn-cinza' %>
+    </div>
+    
   </div>
 <% end %>

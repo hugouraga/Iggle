@@ -1,10 +1,25 @@
-<div class="jumbotron">
-  <h1>IGGLE</h1>
-  <p>
-  Crie sua nova conta
-  </p>
-  <p>
-    <%= link_to 'Profissional', cadastro_profissional_path , class: 'btn btn-primary btn-lg' %>
-    <%= link_to 'Cliente', cadastro_cliente_path , class: 'btn btn-primary btn-lg' %>
-  </p>
+<div>
+	<div id="logo-login" class="row">
+		<%= image_tag "logo.png",
+        :alt => "Descricao img",
+        :width => "150px",
+        :height => "150px" %>
+	</div>
+
+	<div class="row">
+		<h3 class="nome-app">Iggle</h3>
+	</div>
+
+	<br><br><br><br><br><br>
+
+	<h3 class="center">Cadastre-se como:</h3>
+
+    <div class="center">
+    	<%= link_to 'Cliente', cadastro_cliente_path, class: 'btn btn-verde' %>
+    <div>
+
+    <div class="center">
+    	<%= link_to 'Profissional', cadastro_profissional_path, class: 'btn btn-cinza' %>
+    </div>
+
 </div>

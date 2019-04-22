@@ -28,7 +28,7 @@ class NormalUsersController < ApplicationController
 
     
       if @normal_user.save
-        flash[:sucess] = 'Usuário cadastrado com sucesso.'        
+        flash[:success] = 'Usuário cadastrado com sucesso.'        
         redirect_to root_path
       else
         render :new
