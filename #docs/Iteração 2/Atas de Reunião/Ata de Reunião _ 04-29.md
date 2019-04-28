@@ -29,6 +29,7 @@ Data         | Local
 
 
 ### Tópicos Discutidos
+Ferramentas para testes (Cucumber, Rspec, Selenium)
 
 ### Ações a serem tomadas
 Ação                            | Responsável   
