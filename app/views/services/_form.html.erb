@@ -1,0 +1,55 @@
+<%= form_with(model: service, local: true) do |form| %>
+  <% if service.errors.any? %>
+    <div clas="">
+    <div class="alert alert-danger">    
+      <ul>
+      <h3>Ops! Encontramos <%= pluralize(service.errors.count, 'erro', 'erros') %> </h3>
+
+      
+      <% service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :service %>
+    <%= form.text_field :service, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :value %>
+    <%= form.text_field :value, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :duration %>
+    <%= form.text_field :duration, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <div class="center">
+      <%= form.submit 'Cadastrar' , class: 'btn btn-verde' %>
+    </div>
+
+    <div class="center">
+      <%= link_to 'Voltar', '#', class: 'btn btn-cinza' %>
+    </div>
+<% end %>

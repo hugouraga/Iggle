@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   get 'sessions/new'
   resources :professional_users
   resources :normal_users
