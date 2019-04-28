@@ -9,11 +9,11 @@ Projeto da disciplina de [Engenharia de Software](https://github.com/if977/if977
 #### Link da aplicação no Heroku: [http://iggle-app.herokuapp.com](http://iggle-app.herokuapp.com)
 
 ## Equipe
-- [**Daniel Silva:**](https://github.com/shirubadan) Gerente de Projetos e Desenvolvedor
-- [**Hugo Uraga:**](https://github.com/hugouraga) Desenvolvedor
-- [**Jussara Silva:**](https://github.com/jussararodrigues) Desenvolvedora
-- [**Myllena Almeida:**](https://github.com/MyllenaAlmeida) Desenvolvedora
-- [**Myllena Alves:**](https://github.com/myllenaalves) Product Owner e Desenvolvedora
+
+| ![daniel](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/daniel.png) | ![myllena-alves](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/myllena-alves.png) | ![hugo](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/hugo.png) | ![jussara](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/jussara.png) | ![myllena-almeida](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/myllena-almeida.png) |
+|:---------------------:|:------------------:|:----------------:|:--------------------:|:-----------------------:|
+[Daniel Silva](https://github.com/shirubadan) (djs) | [Myllena Alves](https://github.com/myllenaalves) (mal4) | [Hugo Uraga](https://github.com/hugouraga) (hiu) | [Jussara Silva](https://github.com/jussararodrigues) (jprs) | [Myllena Almeida](https://github.com/MyllenaAlmeida) (mrma2) | 
+| GP / Scrum Master | Product Owner | Desenvolvedor | Desenvolvedora | Desenvolvedora |
 
 ## Descrição
 Destinado às pessoas interessadas em um estilo de vida mais saudável, o Iggle é um aplicativo que permite aos seus usuários tanto prover serviços no ramo de saúde fitness como contratá-los, tudo em um ambiente funcional para cada tipo de interesse. Para o profissional, é disponibilizada a criação de um perfil com suas informações e serviços e um canal de comunicação com os clientes interessados. Aos clientes, o aplicativo permite uma análise desses profissionais e serviços e um processo de marcação de consultas mais enxuto, que atenda aos seus critérios. Além disso, é oferecido também um sistema de avaliação pós-consulta entre cliente-profissional, promovendo uma garantia de qualidade para todos os interessados.
