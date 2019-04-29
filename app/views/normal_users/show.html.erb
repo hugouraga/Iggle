@@ -20,9 +20,15 @@
   </nav>
 
     <div id="escurecendo" class="div-profile center">
-      <%= image_tag @normal_user.avatar,
+      <% if @normal_user.avatar.attached? %>
+        <%= image_tag @normal_user.avatar,
           :alt => "profile picture",
           class: "img-profile" %>
+      <% else %>
+          <%= image_tag 'no_avatar.jpg',
+          :alt => "No profile picture",
+          class: "img-profile" %>
+      <% end %>
     </div>
 </div>
 
