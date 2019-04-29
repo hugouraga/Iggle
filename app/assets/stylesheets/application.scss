@@ -1,5 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+a, a:hover {
+  color: gray;
+  text-decoration: none;
+}
 
 /* IDs */
 #logo-login {
@@ -70,4 +83,120 @@
 }
 .btn-cinza:hover {
   background-color: rgba(192, 192, 192, 0.6);
+}
+
+/* ============= PERFIL DO CLIENTE ============= */
+
+/* IDs */
+#escurecendo {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+}
+
+/* CLASSES */
+.bg-cliente {
+  background-color: #3CB371;
+  height: 150px;
+}
+.div-profile {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+}
+.img-profile {
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+}
+.nome-user {
+  font-size: 25px;
+  color: #FFF;
+  margin-top: -40px;
+  margin-left: 4%;
+}
+.right {
+  float: right;
+}
+.fa-envelope, .fa-star {
+  float: left;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.avaliacao {
+  font-weight: 900;
+  float: left;
+  margin: 11px 10px 0 5px;
+}
+.caixa-busca {
+  width: 98%;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.card-atendimento {
+  height: 100px;
+  border: 1px solid gray;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: #FFF;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sidebar {
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #808080;
+    display: block;
+    transition: 0.3s;
+  }
+}
+.sidebar-header {
+  color: #808080;
+  font-size: 25px;
+  padding-left: 30px;
+  a:hover {
+    color: #3CB371;
+  }
+}
+.sidebar-links {
+  a:hover {
+    background-color: #3CB371;
+    color: #FFF;
+  }
+}
+.sidebar {
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    .closebtn:hover {
+      color: #3CB371;
+    }
+  }
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #3CB371;
+  color: white;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 92%;
 }

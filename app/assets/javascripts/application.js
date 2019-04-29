@@ -16,3 +16,17 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+//= SIDEBAR (Cliente)
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("openbtn").style.marginLeft = "92%";
+    document.getElementById("escurecendo").style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("openbtn").style.marginLeft = "92%";
+    document.getElementById("escurecendo").style.backgroundColor = "#FFF";
+    document.getElementById("escurecendo").style.transitionDuration = "1s";
+}

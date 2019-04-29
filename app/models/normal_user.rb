@@ -1,6 +1,11 @@
 class NormalUser < ApplicationRecord
     
+<<<<<<< HEAD
     has_secure_password
+=======
+    #has_secure_password
+    has_one_attached :avatar
+>>>>>>> 410477e1c1e999f2a88571216477fc63740ca850
 
     before_save :email_downcase
 
@@ -12,7 +17,7 @@ class NormalUser < ApplicationRecord
                                       format: { with: VALID_EMAIL_REGEX },
                                       uniqueness: { case_sensitive: true }
     validates :phone, presence: true, length: { minimum: 10 }, length: { maximum: 11 }
-    
+    validates :avatar, presence: true
     private
       def email_downcase
         self.email.downcase!
