@@ -1,24 +1,58 @@
-<p id="notice"><%= notice %></p>
+<div class="bg-cliente">
+  <button id="openbtn" class="openbtn" onclick="openNav()">&#9776;</button>
 
-<p>
-  <strong>Name:</strong>
-  <%= @normal_user.name %>
-</p>
+  <h5 class="nome-user">
+    <%= @normal_user.name %>
+  </h5>
 
-<p>
-  <strong>Email:</strong>
-  <%= @normal_user.email %>
-</p>
+  <!-- SIDEBAR -->
+  <nav id="mySidebar" class="sidebar">
+    <div class="sidebar-header">
+      <a href="javascript:void(0)" class="closebtn sidebar-header" onclick="closeNav()">&times;</a>
+      <%= @normal_user.name %>
+      <hr>
+    </div>
+    <div class="sidebar-links">
+      <%= link_to "Conta", edit_normal_user_path %>
+      <%= link_to "Suporte", '#' %>
+      <%= link_to "Sair", root_path %>
+    </div>
+  </nav>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @normal_user.phone %>
-</p>
+    <div id="escurecendo" class="div-profile center">
+      <%= image_tag @normal_user.avatar,
+          :alt => "profile picture",
+          class: "img-profile" %>
+    </div>
+</div>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @normal_user.password_digest %>
-</p>
+<div id="conteudo" class="main">
+  <div class="container">
+    <div class="row right">
+      <%= fa_icon "envelope" %>
+      <%= fa_icon "star" %>
+      <span class="avaliacao">4.5</span>
+    </div>
 
-<%= link_to 'Edit', edit_normal_user_path(@normal_user) %> |
-<%= link_to 'Back', normal_users_path %>
+    <br><br><br><br>
+
+    <div class="caixa-busca container">
+      <input id="escurecendo" class="form-control center col-11" type="search" placeholder="Buscar">
+    </div> <!-- Caixa de busca -->
+
+    <div class="row container">
+      <a href="#" class="col-md-6">
+        <div class="card-atendimento">
+          <h5>ATENDIMENTOS MARCADOS</h5>
+        </div>
+      </a>
+
+      <a href="#" class="col-md-6">
+        <div class="card-atendimento">
+          <h5>HISTÓRICO DE ATENDIMENTOS</h5>
+        </div>
+      </a>
+    </div><!-- Row -->
+
+  </div> <!-- Container -->
+</div>
