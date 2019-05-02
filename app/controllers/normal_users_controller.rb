@@ -69,6 +69,6 @@ class NormalUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def normal_user_params
-      params.require(:normal_user).permit(:name, :email, :phone, :password_digest, :avatar)
+      params.require(:normal_user).permit(:name, :email, :phone, :password, :password_confirmation , :avatar)
     end
 

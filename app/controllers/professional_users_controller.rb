@@ -69,6 +69,6 @@ class ProfessionalUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professional_user_params
-      params.require(:professional_user).permit(:name, :email, :phone, :profession, :document, :description, :facebook, :instagram, :password_digest)
+      params.require(:professional_user).permit(:name, :email, :phone, :profession, :document, :description, :facebook, :instagram, :password, :password_confirmation )
     end
 

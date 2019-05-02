@@ -30,8 +30,13 @@
   </div>
 
   <div class="form-group">
-    <%= form.label :password_digest %>
-    <%= form.password_field :password_digest, class: 'form-control' %>
+    <%= form.label :password %>
+    <%= form.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
   <div class="form-group">
