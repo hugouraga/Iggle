@@ -18,4 +18,5 @@ class SessionsController < ApplicationController
     flash[:sucess] = 'logout realizado com sucesso!'
     redirect_to entrar_path
   end
+  
 end

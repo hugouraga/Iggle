@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   root to: 'static_pages#index'
   get 'cadastro_cliente', to: 'normal_users#new'
   get 'cadastro_profissional', to: 'professional_users#new'
-  get 'entrar', to: 'sessions#new'
-  post 'entrar', to: 'sessions#create'
+  get 'login_cliente', to: 'login_cliente#new'
+  post 'login_cliente', to: 'login_cliente#create'
+  get 'login_profissional', to: 'login_profissional#new'
+  post 'login_profissional', to: 'login_profissional#create'
+  get 'entrar', to: 'login_users#new'
+  #post 'entrar', to:  'login_users#new'
   get 'temp', to: 'static_pages#temp'
 end 
