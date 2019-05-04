@@ -1,3 +1,5 @@
+<%= render "layouts/header" %>
+
 <div class="row">
 
     <div id="logo-login" class="row">
@@ -14,24 +16,24 @@
 
     <div class="row col-md-6 col-md-offset-3 col-xs-offset-1 col-xs-10">
         <%= form_for :session, url: login_cliente_path, method: :post do |f| %>
-            
+
             <div class="form-group">
                 <%= f.label :email %>
                 <%= f.email_field :email, placeholder: 'Email', class: 'form-control' %>
             </div>
- 
+
             <div class="form-group">
                 <%= f.label :password %>
                 <%= f.password_field :password, placeholder: 'Senha', class: 'form-control' %>
             </div>
-           
-            <div class="col-md-6 col-md-offset-4 col-xs-offset-4 col-xs-6">
-                <%= f.submit 'Entrar', class: 'btn btn-verde' %> 
+
+            <br>
+
+            <div class="center">
+                <%= f.submit 'Entrar', class: 'btn btn-verde' %>
                 <br><br>
                 <%= link_to 'Voltar', entrar_path, class: 'btn btn-cinza' %>
             <div>
         <% end %>
     </div>
 </div>
-
-

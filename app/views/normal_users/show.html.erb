@@ -13,9 +13,9 @@
       <hr>
     </div>
     <div class="sidebar-links">
-      <%= link_to "Conta", edit_normal_user_path %>
-      <%= link_to "Suporte", '#' %>
-      <%= link_to "Sair", root_path %>
+      <%= link_to "Conta", temp_path %>
+      <%= link_to "Suporte", temp_path %>
+      <%= link_to "Sair", temp_path %>
     </div>
   </nav>
 
@@ -47,17 +47,17 @@
     </div> <!-- Caixa de busca -->
 
     <div class="row container">
-      <a href="#" class="col-md-6">
+      <%= link_to temp_path, class: "col-md-6" do %>
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
-      </a>
+      <% end %>
 
-      <a href="#" class="col-md-6">
+      <%= link_to temp_path, class: "col-md-6" do %>
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>
-      </a>
+      <% end %>
     </div><!-- Row -->
 
   </div> <!-- Container -->

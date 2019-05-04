@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'login_profissional', to: 'login_profissional#new'
   post 'login_profissional', to: 'login_profissional#create'
   get 'entrar', to: 'login_users#new'
-  #post 'entrar', to:  'login_users#new'
+  # post 'entrar', to:  'login_users#new'
   get 'temp', to: 'static_pages#temp'
-end 
+
+  # get 'sair_cliente', to: 'login_cliente#destroy'
+end
