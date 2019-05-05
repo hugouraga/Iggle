@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   # post 'entrar', to:  'login_users#new'
   get 'temp', to: 'static_pages#temp'
 
-  # get 'sair_cliente', to: 'login_cliente#destroy'
+  delete 'saircliente', to: 'login_cliente#destroy'
+  delete 'sairprofissional', to: 'login_profissional#destroy'
 end

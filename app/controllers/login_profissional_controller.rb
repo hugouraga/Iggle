@@ -15,7 +15,7 @@ class LoginProfissionalController < ApplicationController
     end
     
     def destroy 
-        sing_out
+        sign_out
         flash[:success] = 'logout realizado com sucesso!'
         redirect_to entrar_path
     end
