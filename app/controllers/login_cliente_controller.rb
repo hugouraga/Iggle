@@ -1,5 +1,6 @@
 class LoginClienteController < ApplicationController
     def new
+        redirect_to normal_user_path(current_user) if user_signed_in?
     end
 
     def create

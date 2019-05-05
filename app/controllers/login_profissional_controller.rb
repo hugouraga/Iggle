@@ -1,5 +1,6 @@
 class LoginProfissionalController < ApplicationController
     def new
+        redirect_to professional_user_path(current_user) if user_signed_in?
     end
     
     def create
