@@ -1,12 +1,13 @@
 class LoginProfissionalController < ApplicationController
     def new
+        redirect_to professional_user_path(current_user) if user_signed_in?
     end
     
     def create
         professional = ProfessionalUser.find_by(email: params[:session][:email].downcase)
         if professional && professional.authenticate(params[:session][:password])
         sign_in(professional)
-        redirect_to temp_path(professional)
+        redirect_to professional_user_path(professional)
         else 
         flash.now[:danger] = 'Email ou senha inválidos'
         render 'new'
@@ -14,8 +15,8 @@ class LoginProfissionalController < ApplicationController
     end
     
     def destroy 
-        sing_out
-        flash[:sucess] = 'logout realizado com sucesso!'
+        sign_out
+        flash[:success] = 'logout realizado com sucesso!'
         redirect_to entrar_path
     end
     

@@ -7,7 +7,9 @@ pt-BR:
         name: "Nome"
         email: "Email"
         phone: "Telefone"
-        password_digest: "Senha"
+        password: "Senha"
+        password_confirmation: "Repetir a senha"
+        avatar: "Foto do Perfil"
 
       professional_user:
         name: "Nome"
@@ -18,7 +20,9 @@ pt-BR:
         description: "Descrição"
         Facebook: "Facebook"
         Instagram: "Instagram"
-        password_digest: "Senha"
+        password: "Senha"
+        password_confirmation: "Repetir a senha"
+        avatar: "Foto do Perfil"
 
     errors:
       messages:

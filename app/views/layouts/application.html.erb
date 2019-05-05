@@ -7,15 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<%= favicon_link_tag 'logo.png' %>
   </head>
 
   <body id="escurecendo">
     <div>
-      <%= render 'layouts/header' %>
       <div class="container">
           <% flash.each do |message_type, message| %>
             <%= content_tag 'div', class: "alert alert-#{message_type} alert-dismissible", role: 'alert' do %>

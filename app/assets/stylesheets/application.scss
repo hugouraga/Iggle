@@ -48,7 +48,7 @@ a, a:hover {
   color: #A9A9A9;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
 }
 .center {
@@ -85,16 +85,9 @@ a, a:hover {
   background-color: rgba(192, 192, 192, 0.6);
 }
 
-/* ============= PERFIL DO CLIENTE ============= */
+/* ============= PERFIL DO USUÁRIO ============= */
 
-/* IDs */
-#escurecendo {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-}
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-}
+
 
 /* CLASSES */
 .bg-cliente {
@@ -104,7 +97,7 @@ a, a:hover {
 .div-profile {
   position: absolute;
   width: 100%;
-  top: 130px;
+  top: 70px;
 }
 .img-profile {
   height: 150px;
@@ -199,4 +192,19 @@ a, a:hover {
   border: none;
   border-radius: 5px;
   margin-left: 92%;
+}
+
+
+/* ============= PERFIL DO PROFISSIONAL ============= */
+
+/* CLASSES */
+.bg-profissional {
+  background-color: #3CB371;
+  height: 150px;
+}
+
+.fa-bell, .fa-facebook, .fa-instagram {
+  margin-top: 10px;
+  margin-left: 25px;
+  font-size: 20px;
 }

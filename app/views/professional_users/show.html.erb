@@ -1,49 +1,76 @@
-<p id="notice"><%= notice %></p>
+<div class="bg-profissional">
+  <button id="openbtn" class="openbtn" onclick="openNav()">&#9776;</button>
 
-<p>
-  <strong>Name:</strong>
-  <%= @professional_user.name %>
-</p>
+  <h5 class="nome-user">
+    <%= @professional_user.name %>
+  </h5>
 
-<p>
-  <strong>Email:</strong>
-  <%= @professional_user.email %>
-</p>
+  <!-- SIDEBAR -->
+  <nav id="mySidebar" class="sidebar">
+    <div class="sidebar-header">
+      <a href="javascript:void(0)" class="closebtn sidebar-header" onclick="closeNav()">&times;</a>
+      <%= @professional_user.name %>
+      <hr>
+    </div>
+    <div class="sidebar-links">
+      <%= link_to "Conta", edit_professional_user_path %>
+      <%= link_to "Suporte", '#' %>
+      <%= link_to 'Sair', sairprofissional_path, method: :delete %>
+    </div>
+  </nav>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @professional_user.phone %>
-</p>
+    <div id="escurecendo" class="div-profile center">
+      <% if @professional_user.avatar.attached? %>
+        <%= image_tag @professional_user.avatar,
+          :alt => "profile picture",
+          class: "img-profile" %>
+      <% else %>
+          <%= image_tag 'no_avatar.jpg',
+          :alt => "No profile picture",
+          class: "img-profile" %>
+      <% end %>
+    </div>
+</div>
 
-<p>
-  <strong>Profession:</strong>
-  <%= @professional_user.profession %>
-</p>
+<div id="conteudo" class="main">
+  <div class="container">
+    <div class="row left">
+      <%= fa_icon "facebook" %>
+      <%= fa_icon "instagram" %>
+  </div>
+  <div class="container">
+    <div class="row right">
+      <%= fa_icon"bell"%>
+      <%= fa_icon "envelope" %>
+      <%= fa_icon "star" %>
+      <span class="avaliacao">4.5</span>
+    </div>
+    <br><br><br><br>
+    <form>
+       <div class="form-group">
+          <textarea class="form-control" id="escurecendo" rows="3" placeholder="Escreva um pouco sobre você"><%=@professional_user.description%></textarea>
+       </div>
+    </form>
+    <br><br><br><br>
+    <div class="row container">
+      <%= link_to temp_path, class: "col-md-4" do %>
+        <div class="card-atendimento">
+          <h5>Serviços</h5>
+        </div>
+      <%end%>
 
-<p>
-  <strong>Document:</strong>
-  <%= @professional_user.document %>
-</p>
+      <%= link_to temp_path, class: "col-md-4" do %>
+        <div class="card-atendimento">
+          <h5>Atendimentos marcados</h5>
+        </div>
+      <%end%>
 
-<p>
-  <strong>Description:</strong>
-  <%= @professional_user.description %>
-</p>
+      <%= link_to temp_path, class: "col-md-4" do %>
+        <div class="card-atendimento">
+          <h5>Histórico de Atendimentos</h5>
+        </div>
+      <%end%>
+    </div><!-- Row -->
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @professional_user.facebook %>
-</p>
-
-<p>
-  <strong>Instagram:</strong>
-  <%= @professional_user.instagram %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @professional_user.password_digest %>
-</p>
-
-<%= link_to 'Edit', edit_professional_user_path(@professional_user) %> |
-<%= link_to 'Back', professional_users_path %>
+  </div> <!-- Container -->
+</div>

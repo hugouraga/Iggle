@@ -1,24 +1,31 @@
-<div class="row">
+<%= render "layouts/header" %>
 
-    <div id="logo-login" class="row">
-        <%= image_tag "logo.png",
-         :alt => "Descricao img",
+<div>
+
+  
+
+	<div id="logo-login" class="row">
+		<%= image_tag "logo.png",
+        :alt => "Descricao img",
         :width => "150px",
         :height => "150px" %>
+	</div>
+
+	<div class="row">
+		<h3 class="nome-app">Iggle</h3>
+		
+	</div>
+  
+    
+	<br><br><br><br><br><br>
+		<h3 class="center">Entre como:</h3> 
+    <div class="center">
+		     			
+    	<%= link_to 'Cliente', login_cliente_path, class: 'btn btn-verde' %>
+    <div>
+
+    <div class="center">
+    	<%= link_to 'Profissional', login_profissional_path, class: 'btn btn-cinza' %>
     </div>
 
-    <div class="row">
-        <h2 class="nome-app">Iggle</h2>
-    </div>
-    <br><br><br><br><br><br>
-
-    <div class="row col-md-6 col-md-offset-3 col-xs-offset-1 col-xs-10">
-        <div class="col-md-6 col-md-offset-4 col-xs-offset-4 col-xs-6">
-            <%= link_to 'Profissional', login_profissional_path , class: 'btn btn-verde' %> 
-            <br><br>
-            <%= link_to 'Cliente', login_cliente_path, class: 'btn btn-cinza' %>
-        <div>   
-    </div>
 </div>
-
-
