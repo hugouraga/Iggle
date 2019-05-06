@@ -30,6 +30,9 @@ a, a:hover {
     color: #FFF;
     padding-top: 10px;
 }
+#container {
+  height: 120px;
+}
 
 /* CLASSES */
 .icon-bar {
@@ -84,7 +87,9 @@ a, a:hover {
 .btn-cinza:hover {
   background-color: rgba(192, 192, 192, 0.6);
 }
-
+.pt-modal {
+  color: #000;
+}
 /* ============= PERFIL DO USUÁRIO ============= */
 
 

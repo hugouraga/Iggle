@@ -1,28 +1,10 @@
+<div class="container"
 <div class="row">
-    <h2 class="nome-app">Suporte</h2>
-</div>
-<div class="row col-md-6 col-md-offset-3 col-xs-offset-1 col-xs-10">
-<%= form_for @contact do |f| %>
-<div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-  <%= f.label :email %>
-  <%= f.text_field :email, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-    <%= f.label :message %>
-    <%= f.text_field :message, class: 'form-control' %>
-</div>
-
-<div class="actions">
-  <div class="center">
-    <%= f.submit 'Enviar' , class: 'btn btn-cinza' %>
+  <div class="col-xs-12">
   </div>
-</div>
 
-<%end%>
+  <div class="col-md-6 col-md-offset-3 col-xs-12">
+    <h3 class='center'> Suporte </h3>
+    <%= render 'form', contact: @contact %>
+  </div>
 </div>
