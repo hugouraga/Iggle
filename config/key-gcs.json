@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "iggle-239722",
+  "private_key_id": "921a3608f2d2b4b4177786a73fd71a755c933c27",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDREAUVJQxFgNsY\nLe2MnRJYZ7UnRWiB1cq/9z8NkVgfhgTsNUxF8krDXHgi8Jx0FDmE34ISQzyjXBJN\nHRun7Y26b98jPyqvfrIhhbzlPPNNzFb0yUw1ulQjQYME5S6DovuCHDq9vxOi3DDW\nBSgTAT89CDH0VGPlAWYppcQQnCC5NWfBQJzcu0Ix5NLsk3SzQR92uv93K57N3EUH\n7mRSB/M9eG83TjBFvWLhhI5wRXAQyhZkm+1g4t3lzF+SFistUaeGcP5sZDrsemwV\nT2TzyfXqiYwb8NbeoJHOPF0Zx5ag2N++UrajKJiO59T5mE4sQGoWZBqa9oHKIHn3\n4ATpbOyrAgMBAAECggEAWT6t9MNOdEMYBD/i5sJMiQmodt21yasCtKTuuTOA+2AC\nLPVpnHhcev432K5/Ezxo+3RQOcyTD6dntpyE6FBLzrkf95No/OaoUxAcvX0h3eWr\nfy6JRmxGq5A1RnsxOodyNy4m00ZEsyKtBEfKPiaroLmlXYhC5okM3B2Dz5VekMDZ\nyBQFRoXcn0jj+Ok56h/ZO7+XU8+HbY6tBFJVnDOkt4ZYQQ0LSmxXIU1XpmD5tot1\nXaGpSI4fWYHJoXDyW764rVCNUdoDGHVYCVeyg+ifrZQsvZrf3swaOcXGbAiPG3WU\nLdB7//0DwoTb+95zeVA54ugeqhpW8te5mEVmA4OmtQKBgQD8ajdzvRTeeB0rs0kl\n83M4lD8tBtA+h/v/YnUDH4F87aB/gOddwOYbLpN6YqUVwHPoKs+xu5w2K4EvLD5D\nbaUEQHVkZQRovtajZhC72J4CGC6pMwZ3qEZmy5sfHgg6XgFjlkPTol+Wdu6qh7dy\nZw9HZxt9OurPc11waqmpw42c/QKBgQDUCCx2+dtjXOgKCHmTiQIryrwtU9cxwo5F\n/n8anUcU6qbXWHf5+fBs3f7IHY+WkeYPUtaGB0GYhwkkz6eoBJ94i2tpLfayD2cC\nu92kr3pNmIQNPNavTQJay6dGbluv14lIgdr+6GrL6ua34fIRR7tOiGmAScTHjYII\nT87GIK60xwKBgHH9FaWy0eXVoHbHtFTrKDF44T7YQNq8VlTyhZ0vcS6VsVFjSRjR\nsBi+Y+N1ANBd5PoHu1usOdNMuj4vYL7amRbedSUtaVxUMmIACbaLEHAps4i9fkIz\nP/fUIu1ehqC1KzNp/J9qSHiOpSFlwLZtTD0Wlxdqr/eXRa8qvAvqP92RAoGBAJYa\n4z+nSwVg9HSF42vrBrpx4B5GyIXVslsi/GCfD39jT5IMc4NoyiiIUKLjKo/x4ejf\nQDfKU0nj7zk8OPjdrPft27CudYNBHC/3R8Ya5H6ihnnIpEOeRRh6LIXUAtzNvcaz\nB5KGf3S1a3iqYHCTU6sZL3c+wixzpaa0uTHSWVxpAoGBAOAb0XEGNhK0+Q9OpRnZ\nwwEafb4WHeLX9kBTp1WActZ5u0ngok1bb2anOmh/Syca0N+x5VOi40eqnXfFaRmq\nLdx3B71hrC45EDUc2/izsv8J0GBw1otWLIY/mdZagFA/91iE0Ts3s4N1fSmxMtZG\nORcmnq5sm2jjYWid1BpQRDMy\n-----END PRIVATE KEY-----\n",
+  "client_email": "iggle-524@iggle-239722.iam.gserviceaccount.com",
+  "client_id": "115685592211662090409",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/iggle-524%40iggle-239722.iam.gserviceaccount.com"
+}
