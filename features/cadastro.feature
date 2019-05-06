@@ -1,25 +1,28 @@
-Feature: Cadastro cliente
-In order to enjoy the functionality of the platform
-As an Iggle user-contractor
-I want to be able to register in the app with the following data: Name, Email, Phone and Password.
+# language: pt
 
-In order to enjoy the functionality of the platform
-As the future professional of Iggle
-I want to be able to register with the following data: Name email, telephone, profession (Nutritionist / Nutrologist /
-Sports Teacher / Physical Ed. Professional), Document number (CRM / CRN / CONFEF), description, facebook, instagram and password.
+Funcionalidade: Cadastro
 
-  Scenario: Cadastro cliente
-    Given I visit the index page
-    And click on the Cliente button
-    And go to the cadastro_cliente page
-    When I fill the new user form with name and email and phone and password
-    And click on the 'Salvar' button
-    Then the message "Usuário cadastrado com sucesso." will be displayed in the index page
+Como usuário-contratante do Iggle
+Para poder usufruir das funcionalidades da plataforma
+Quero poder realizar meu cadastro no app com os seguintes dados: Nome, Email,Telefone e Senha.
 
-  Scenario: Cadastro profissional
-    Given I visit the index page
-    And click on the Profissional button
-    And go to the cadastro_profissional page
-    When I fill the new profissional form with the correct informations
-    And click on the 'Cadastrar' button
-    Then the message "Usuário cadastrado com sucesso." will be displayed in the index page
+Como futuro profissional do Iggle
+Para poder usufruir das funcionalidades da plataforma
+Quero poder me cadastrar com os seguintes dados: Nome email, telefone , profissão (Nutricionista
+Nutrólogo / Professor de Esportes / Profissional de Ed. Física), nº do Documento (CRM / CRN / CONFEF) ,descrição ,facebook, instagram e senha.
+
+  Cenario: Cadastro cliente
+    Dado que eu visito a página inicial
+    E clique no botão Cliente
+    E vá para a página cadastro_cliente
+    Quando eu preencher o novo formulário de usuário com nome e email e telefone e senha
+    E clicar no botão 'Salvar'
+    Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
+
+  Cenario: Cadastro profissional
+    Dado que eu visito a página inicial
+    E clique no botão Profissional
+    E vá para a página cadastro_profissional
+    Quando eu preencher o novo formulário com a informações necessárias
+    E clicar no botão 'Cadastrar'
+    Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial

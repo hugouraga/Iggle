@@ -1,8 +1,12 @@
-Given("click on the Profissional button") do
+Dado("clique no botão Profissional") do
   find('[name=Profissional]').click
 end
 
-When("I fill the new profissional form with the correct informations") do
+Dado("vá para a página cadastro_profissional") do
+end
+
+
+Quando("eu preencher o novo formulário com a informações necessárias") do
   fill_in("profissional_name", with: 'Lindinha')
   fill_in("profissional_email", with: 'lindinha.nutri@gmail.com')
   fill_in("profissional_phone", with: 988888888)

@@ -1,12 +1,15 @@
-Given("I visit the index page") do
+Dado("que eu visito a página inicial") do
   visit root_url
 end
 
-Given("click on the Cliente button") do
+Dado("clique no botão Cliente") do
   find('[name=Cliente]').click
 end
 
-When("I fill the new user form with name and email and phone and password") do
+Dado("vá para a página cadastro_cliente") do
+end
+
+Quando("eu preencher o novo formulário de usuário com nome e email e telefone e senha") do
   fill_in("user_name", with: 'Florzinha')
   fill_in("user_email", with: 'florzinha.poderosa@gmail.com')
   fill_in("user_phone", with: 999999999)
@@ -14,12 +17,10 @@ When("I fill the new user form with name and email and phone and password") do
   fill_in("user_passwordc", with: 'zldmald1$L')
 end
 
-
-When("click on the {string} button") do |string|
+Quando("clicar no botão {string}") do |string|
   find('[name=Salvar]').click
 end
 
-
-Then("the message {string} will be displayed in the index page") do |string|
+Então("a mensagem {string} será exibida na página inicial") do |string|
   expect(page).to have_content('Usuário cadastrado com sucesso')
 end
