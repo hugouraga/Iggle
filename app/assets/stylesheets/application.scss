@@ -87,8 +87,6 @@ a, a:hover {
 
 /* ============= PERFIL DO USUÁRIO ============= */
 
-
-
 /* CLASSES */
 .bg-cliente {
   background-color: #3CB371;
@@ -97,11 +95,12 @@ a, a:hover {
 .div-profile {
   position: absolute;
   width: 100%;
-  top: 70px;
+  top: 60px;
 }
 .img-profile {
   height: 150px;
   width: 150px;
+  border: 3px solid #F4F4F4;
   border-radius: 100px;
 }
 .nome-user {
@@ -123,6 +122,7 @@ a, a:hover {
   font-weight: 900;
   float: left;
   margin: 11px 10px 0 5px;
+  color: gray;
 }
 .caixa-busca {
   width: 98%;
@@ -131,9 +131,15 @@ a, a:hover {
 }
 .card-atendimento {
   height: 100px;
-  border: 1px solid gray;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  background-color: #F4F4F4;
   text-align: center;
   padding-top: 35px;
+}
+.card-atendimento:hover {
+  background-color: #FFF;
+  transition-duration: 1s;
 }
 
 .sidebar {
@@ -141,6 +147,7 @@ a, a:hover {
   width: 0;
   position: fixed;
   background-color: #FFF;
+  border: 1px solid #F4F4F4;
   z-index: 1;
   top: 0;
   right: 0;

@@ -1,11 +1,11 @@
 <%= form_with(model: normal_user, local: true) do |form| %>
   <% if normal_user.errors.any? %>
     <div clas="">
-    <div class="alert alert-danger">    
+    <div class="alert alert-danger">
       <ul>
       <h3>Ops! Encontramos <%= pluralize(normal_user.errors.count, 'erro', 'erros') %> </h3>
 
-      
+
       <% normal_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -44,8 +44,6 @@
     <%= form.file_field :avatar, class: 'form-control' %>
   </div>
 
-  <br>
-
   <div class="actions">
     <div class="center">
       <%= form.submit 'Salvar' , class: 'btn btn-verde' %>
@@ -54,6 +52,6 @@
     <div class="center">
       <%= link_to 'Voltar', :back, class: 'btn btn-cinza' %>
     </div>
-    
+
   </div>
 <% end %>

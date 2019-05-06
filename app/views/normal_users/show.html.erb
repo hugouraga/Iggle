@@ -19,7 +19,7 @@
     </div>
   </nav>
 
-    <div id="escurecendo" class="div-profile center">
+    <div class="div-profile center">
       <% if @normal_user.avatar.attached? %>
         <%= image_tag @normal_user.avatar,
           :alt => "profile picture",
@@ -35,25 +35,25 @@
 <div id="conteudo" class="main">
   <div class="container">
     <div class="row right">
-      <%= fa_icon "envelope" %>
-      <%= fa_icon "star" %>
+      <%= link_to fa_icon('envelope'), temp_path %>
+      <%= link_to fa_icon('star'), temp_path %>
       <span class="avaliacao">4.5</span>
     </div>
 
     <br><br><br><br>
 
     <div class="caixa-busca container">
-      <input id="escurecendo" class="form-control center col-11" type="search" placeholder="Buscar">
+      <input class="form-control center col-11" type="search" placeholder="Buscar">
     </div> <!-- Caixa de busca -->
 
     <div class="row container">
-      <%= link_to temp_path, class: "col-md-6" do %>
+      <%= link_to temp_path, class: "col-sm-6" do %>
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <% end %>
 
-      <%= link_to temp_path, class: "col-md-6" do %>
+      <%= link_to temp_path, class: "col-sm-6" do %>
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>

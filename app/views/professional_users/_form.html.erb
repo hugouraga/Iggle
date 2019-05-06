@@ -1,11 +1,11 @@
 <%= form_with(model: professional_user, local: true) do |form| %>
   <% if professional_user.errors.any? %>
     <div clas="">
-    <div class="alert alert-danger">    
+    <div class="alert alert-danger">
       <ul>
       <h3>Ops! Encontramos <%= pluralize(professional_user.errors.count, 'erro', 'erros') %> </h3>
 
-      
+
       <% professional_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -53,12 +53,6 @@
     <%= form.label :instagram %>
     <%= form.text_field :instagram, class: 'form-control' %>
   </div>
-  
-  <div class="form-group">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar, class: 'form-control' %>
-  </div>
-
 
   <div class="form-group">
     <%= form.label :password %>
@@ -70,7 +64,10 @@
     <%= form.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
-  <br>
+  <div class="form-group">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar, class: 'form-control' %>
+  </div>
 
   <div class="actions">
     <div class="center">
