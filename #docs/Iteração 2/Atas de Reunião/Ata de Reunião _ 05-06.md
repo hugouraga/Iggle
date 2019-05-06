@@ -44,5 +44,6 @@ Horários dos serviços |
 Mensagens |
 Página de serviços - visão cliente |
 Página de serviços - visão profissional | Daniel Silva
-Correção de rotas e controllers, padronização das variáveis |
+Correção de rotas e controllers, padronização das variáveis | Daniel Silva
 Pesquisa (desdobramento para posterior desenvolvimento) |
+Página index | Daniel Silva
