@@ -28,7 +28,7 @@ development:
   database: iggle_development
 
 
-test:
+test: &test
   <<: *default
   database: iggle_test
 
@@ -36,3 +36,6 @@ test:
 production:
   <<: *default
   database: iggle_production
+
+cucumber:
+  <<: *test

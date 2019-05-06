@@ -14,7 +14,7 @@
     </div>
     <div class="sidebar-links">
       <%= link_to "Conta", temp_path %>
-      <%= link_to "Suporte", temp_path %>
+      <a class="click-modal" name="Suporte" data-toggle="modal" data-target="#modal-mensagem">Suporte</a>
       <%= link_to 'Sair', saircliente_path, method: :delete %>
     </div>
   </nav>
@@ -58,7 +58,7 @@
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>
       <% end %>
+    <!-- Final do modal -->
     </div><!-- Row -->
-
   </div> <!-- Container -->
 </div>

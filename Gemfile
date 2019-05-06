@@ -38,6 +38,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Use mailform for contact page
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 # GCS
 gem "google-cloud-storage", "~> 1.8", require: false
@@ -55,9 +57,16 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
+  gem 'selenium-webdriver', '~> 3.6.0'
+  gem 'byebug', platform: :mri
+  gem 'database_cleaner'
+  gem "cucumber-websteps"
+  gem 'connection_pool'
+  gem 'factory_bot'
+  gem 'rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -27,5 +27,20 @@
       </div>
       <%= yield %>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-mensagem">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              <h4 class="modal-title">Suporte</h4>
+            </div>
+            <div class="modal-body">
+              <%= render 'contacts/form', contact: @contact %>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
   </body>
 </html>

@@ -1,0 +1,23 @@
+<%= form_for Contact.new do |f| %>
+
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control', id: "contact_name" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :email %>
+  <%= f.text_field :email, class: 'form-control', id:"contact_email" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :message %>
+  <%= f.text_field :message, class: 'form-control', id:"contact_message" %>
+</div>
+
+<div class="actions">
+  <div class="center">
+    <%= f.submit 'Enviar' , class: 'btn btn-cinza', name: 'Enviar' %>
+  </div>
+</div>
+<%end%>

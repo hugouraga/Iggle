@@ -26,13 +26,13 @@ class NormalUsersController < ApplicationController
   def create
     @normal_user = NormalUser.new(normal_user_params)
 
-    
+
       if @normal_user.save
-        flash[:success] = 'Usuário cadastrado com sucesso.'        
+        flash[:success] = 'Usuário cadastrado com sucesso.'
         redirect_to root_path
       else
         render :new
-        
+
       end
     end
   end
@@ -71,4 +71,3 @@ class NormalUsersController < ApplicationController
     def normal_user_params
       params.require(:normal_user).permit(:name, :email, :phone, :password, :password_confirmation , :avatar)
     end
-
