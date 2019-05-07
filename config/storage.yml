@@ -24,7 +24,7 @@ google:
 google_dev:
   service: GCS
   project: iggle
-  credentials: <%= Rails.root.join("config/key-gcs.json") %>
+  credentials: <%= Rails.root.join("config/secret/key-gcs.json") %>
   bucket: profile-images-iggle
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)

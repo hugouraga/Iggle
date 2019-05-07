@@ -31,4 +31,4 @@
 /config/master.key
 
 # GCS Key
-/config/key-gcs.json
+/config/secret/*
