@@ -22,9 +22,12 @@ Data         | Local
 * Retrabalho
 * Padrões a serem seguidos
 ### O que funcionou bem
+* Autonomia
+* Comprometimento
 ### O que pode ser melhorado
 * Trabalho em grupo
 * Prazos
+* Reuniões diárias
 ## SPRINT PLANNING (09/04 - 13/05)
 ### Objetivos
 * Definir atribuição das tarefas
@@ -40,10 +43,11 @@ Data         | Local
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
-Horários dos serviços |
-Mensagens |
-Página de serviços - visão cliente |
+Horários dos serviços | Jussara Silva
+Endereços | Myllena Alves
+Funcionamento dos botões | Myllena Alves
+Alterar conta | Hugo Uraga
+Página de serviços - visão cliente | Myllena Almeida
 Página de serviços - visão profissional | Daniel Silva
 Correção de rotas e controllers, padronização das variáveis | Daniel Silva
-Pesquisa (desdobramento para posterior desenvolvimento) |
 Página index | Daniel Silva
