@@ -14,6 +14,7 @@ class ProfessionalUser < ApplicationRecord
     validates :document, presence: true, length: { maximum: 50 }
     validates :description, presence: true, length: { maximum: 500 }
     
+    has_many :services
     private
     def email_downcase
       self.email.downcase!
