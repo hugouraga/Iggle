@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2019_05_08_184328) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "normal_users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
