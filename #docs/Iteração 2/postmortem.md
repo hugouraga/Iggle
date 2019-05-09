@@ -44,7 +44,7 @@ Início da Iteração | Término da iteração
 | Criação de Atas de Reunião                                          | Daniel Silva         |
 | Continuação do desenvolvimento                                      | Equipe               |
 | 5º e 6º Sprint                                                      | Equipe               |
-| **Criação de Postmortem da iteração 2**                             | A definir            |
+| **Criação de Postmortem da iteração 3**                             | A definir            |
 ### Lições aprendidas
 * Precisamos fazer um melhor gerenciamento do nosso tempo disponível para o desenvolvimento do projeto.
 * Precisamos aprimorar o uso da metodologia Scrum, utilizada no decorrer do nosso projeto.
