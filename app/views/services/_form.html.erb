@@ -34,22 +34,13 @@
     <%= form.text_field :duration, placeholder: 'Duração', class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-    
-    <%= form.text_field :email, placeholder: 'corrigir essa parte', class: 'form-control' %>
-  </div>
-  
-  <div class="form-group">
-    
-    <%= form.text_field :address, placeholder: 'corrigir aqui tb', class: 'form-control' %>
-  </div>
 
   <div class="actions">
     <div class="center">
-      <%= form.submit 'Cadastrar' , class: 'btn btn-verde' %>
+      <%= form.submit 'Salvar' , class: 'btn btn-verde' %>
     </div>
 
     <div class="center">
-      <%= link_to 'Voltar', temp_path , class: 'btn btn-cinza' %>
+      <%= link_to 'Voltar', services_path , class: 'btn btn-cinza' %>
     </div>
 <% end %>
