@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :normal_users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "static_pages#index"
+  get 'cadastro', to: 'static_pages#cadastro'
   get 'cadastro_cliente', to: 'normal_users#new'
   get 'cadastro_profissional', to: 'professional_users#new'
   get 'login_cliente', to: 'login_cliente#new'
@@ -18,4 +19,5 @@ Rails.application.routes.draw do
   get 'temp', to: 'static_pages#temp'
   delete 'saircliente', to: 'login_cliente#destroy'
   delete 'sairprofissional', to: 'login_profissional#destroy'
+  
 end
