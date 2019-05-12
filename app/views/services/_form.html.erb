@@ -1,11 +1,11 @@
 <%= form_with(model: service, local: true) do |form| %>
   <% if service.errors.any? %>
     <div clas="">
-    <div class="alert alert-danger">    
+    <div class="alert alert-danger">
       <ul>
       <h3>Ops! Encontramos <%= pluralize(service.errors.count, 'erro', 'erros') %> </h3>
 
-      
+
       <% service.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -15,32 +15,50 @@
   <% end %>
 
   <div class="form-group">
-    
+
     <%= form.text_field :service, placeholder: 'Serviço', class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    
-    <%= form.text_field :description, placeholder: 'Descrição', class: 'form-control' %>
+
+    <%= form.text_area :description, placeholder: 'Descrição', class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    
+
     <%= form.text_field :value, placeholder: 'Preço', class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    
+
     <%= form.text_field :duration, placeholder: 'Duração', class: 'form-control' %>
   </div>
 
+<!--
+  <a class="btn btn-primary click-modal" name="Horários" data-toggle="modal" data-target="#modal-schedule">Adicionar um Horário</a>
+    <div class="modal fade " id="modal-schedule">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              <h4 class="modal-title">Selecione um dia e seus horários</h4>
+            </div>
+            <div class="modal-body">
+              <%= render 'schedules/form' %>
+            </div>
+        </div>
+      </div>
+    </div>
+-->
+
+  <br><br><br>
 
   <div class="actions">
     <div class="center">
-      <%= form.submit 'Salvar' , class: 'btn btn-verde' %>
+      <%= form.submit 'Salvar', class: 'btn btn-verde' %>
     </div>
 
     <div class="center">
-      <%= link_to 'Voltar', services_path , class: 'btn btn-cinza' %>
+      <%= link_to 'Voltar', services_path, class: 'btn btn-cinza' %>
     </div>
 <% end %>

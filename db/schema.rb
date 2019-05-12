@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_184328) do
+ActiveRecord::Schema.define(version: 2019_05_11_213423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,13 @@ ActiveRecord::Schema.define(version: 2019_05_08_184328) do
     t.string "facebook", default: "", null: false
     t.string "instagram", default: "", null: false
     t.string "password_digest", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "day"
+    t.string "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

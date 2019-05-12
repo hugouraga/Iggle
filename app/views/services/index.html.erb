@@ -1,45 +1,37 @@
-<div class="row">
-  <div class="col-xs-12">    
-  </div>
-
-  <div class="col-md-6 col-md-offset-3 col-xs-12">
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
     <h1>Meus Serviços</h1>
-  
-
- 
 
 <% if @services.empty? %>
           <div class="well well-large">
           <tr>
             <td colspan="4" class="text-center">
               <h3>Sem serviços cadastrados.</h3>
-              <%= link_to 'click aqui', new_service_path %> para cadastrar um novo serviço
+              <%= link_to 'Clique aqui', new_service_path %> para cadastrar um novo serviço
             </td>
           </tr>
           </div>
         <% end %>
-  
-   
-    <% @services.each do |service| %> 
-      <br> 
-        
-        <div class="well well-large">          
-            <h4>Serviço:  <%= service.service %></h4>                             
+
+
+    <% @services.each do |service| %>
+      <br>
+
+        <div class="well well-large">
+            <h4>Serviço:  <%= service.service %></h4>
             Descrição:  <%= service.description %><br>
             Valor:  <%= service.value %><br>
             Duração: <%= service.duration %> horas<br>
-            
-        <div class="center">            
+
+        <div class="center">
             <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
             <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
-        </div>        
         </div>
- 
+
+</div>
+
     <% end %>
 <div class="center">
   <%= link_to 'Adicionar serviço', new_service_path , class: 'btn btn-verde' %>
-</div>
-  
 </div>
 
 <br>
