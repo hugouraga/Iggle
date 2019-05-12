@@ -26,13 +26,13 @@ class ProfessionalUsersController < ApplicationController
   def create
     @professional_user = ProfessionalUser.new(professional_user_params)
 
-    
+
       if @professional_user.save
-        flash[:success] = 'Usuário cadastrado com sucesso.'        
+        flash[:success] = 'Usuário cadastrado com sucesso.'
         redirect_to root_path
       else
         render :new
-        
+
       end
     end
   end
@@ -69,6 +69,6 @@ class ProfessionalUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professional_user_params
-      params.require(:professional_user).permit(:name, :email, :phone, :profession, :document, :description, :facebook, :instagram, :password, :password_confirmation )
+      params.require(:professional_user).permit(:name, :email, :phone, :profession, :document, :description, :facebook, :instagram, :password, :password_confirmation, :avatar)
     end
 
