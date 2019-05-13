@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_11_213423) do
+ActiveRecord::Schema.define(version: 2019_05_13_003501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,10 +68,12 @@ ActiveRecord::Schema.define(version: 2019_05_11_213423) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.string "day"
-    t.string "hour"
+    t.string "day", null: false
+    t.text "hour", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "service_id"
+    t.index ["service_id"], name: "index_schedules_on_service_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -79,7 +81,6 @@ ActiveRecord::Schema.define(version: 2019_05_11_213423) do
     t.string "description", default: "", null: false
     t.string "value", default: "", null: false
     t.string "duration", default: "", null: false
-    t.string "email", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "professional_user_id"
@@ -87,5 +88,6 @@ ActiveRecord::Schema.define(version: 2019_05_11_213423) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "schedules", "services"
   add_foreign_key "services", "professional_users"
 end

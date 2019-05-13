@@ -17,21 +17,37 @@
       <br>
 
         <div class="well well-large">
-            <h4>Serviço:  <%= service.service %></h4>
-            Descrição:  <%= service.description %><br>
-            Valor:  <%= service.value %><br>
-            Duração: <%= service.duration %> horas<br>
+          <h4>Serviço: <%= service.service %></h4>
+          Descrição: <%= service.description %><br>
+          Valor: R$ <%= service.value %>,00<br>
+          Duração: <%= service.duration %>h00<br>
 
-        <div class="center">
-            <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
-            <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
+          <div class="center">
+            <a class="btn btn-cinza click-modal" name="Serviço" data-toggle="modal" data-target="#modal-service">Detalhes</a>
+              <div class="modal fade" id="modal-service">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <h4 class="modal-title"><strong><%= service.service %></strong></h4>
+                      </div>
+                      <div class="modal-body text-left">
+                        <strong>Descrição: </strong><%= service.description %><br>
+                        <strong>Valor: </strong>R$ <%= service.value %>,00<br>
+                        <strong>Duração: </strong><%= service.duration %>h00<br>
+                        <br>
+                        <strong>Dia:</strong><br>
+                        <strong>Hora:</strong>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
+              <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
+          </div>
         </div>
-
-</div>
 
     <% end %>
 <div class="center">
-  <%= link_to 'Adicionar serviço', new_service_path , class: 'btn btn-verde' %>
+  <%= link_to 'Adicionar serviço', new_service_path, class: 'btn btn-verde' %>
 </div>
-
-<br>
