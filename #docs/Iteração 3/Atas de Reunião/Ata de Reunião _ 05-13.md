@@ -49,3 +49,10 @@ Página index | Daniel Silva
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
+Reunião de redesign | Time
+Mensagens | Hugo Uraga
+Buscas | Myllena Almeida
+Horários de serviços | Jussara Silva
+Testes das atividades da IT 03 | Daniel Silva/ Myllena Alves
+Modelo ER |
+Deploy |
