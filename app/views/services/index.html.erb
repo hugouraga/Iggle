@@ -1,45 +1,53 @@
-<div class="row">
-  <div class="col-xs-12">    
-  </div>
-
-  <div class="col-md-6 col-md-offset-3 col-xs-12">
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
     <h1>Meus Serviços</h1>
-  
-
- 
 
 <% if @services.empty? %>
           <div class="well well-large">
           <tr>
             <td colspan="4" class="text-center">
               <h3>Sem serviços cadastrados.</h3>
-              <%= link_to 'click aqui', new_service_path %> para cadastrar um novo serviço
+              <%= link_to 'Clique aqui', new_service_path %> para cadastrar um novo serviço
             </td>
           </tr>
           </div>
         <% end %>
-  
-   
-    <% @services.each do |service| %> 
-      <br> 
-        
-        <div class="well well-large">          
-            <h4>Serviço:  <%= service.service %></h4>                             
-            Descrição:  <%= service.description %><br>
-            Valor:  <%= service.value %><br>
-            Duração: <%= service.duration %> horas<br>
-            
-        <div class="center">            
-            <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
-            <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
-        </div>        
+
+
+    <% @services.each do |service| %>
+      <br>
+
+        <div class="well well-large">
+          <h4>Serviço: <%= service.service %></h4>
+          Descrição: <%= service.description %><br>
+          Valor: R$ <%= service.value %>,00<br>
+          Duração: <%= service.duration %>h00<br>
+
+          <div class="center">
+            <a class="btn btn-cinza click-modal" name="Serviço" data-toggle="modal" data-target="#modal-service">Detalhes</a>
+              <div class="modal fade" id="modal-service">
+                <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                        <h4 class="modal-title"><strong><%= service.service %></strong></h4>
+                      </div>
+                      <div class="modal-body text-left">
+                        <strong>Descrição: </strong><%= service.description %><br>
+                        <strong>Valor: </strong>R$ <%= service.value %>,00<br>
+                        <strong>Duração: </strong><%= service.duration %>h00<br>
+                        <br>
+                        <strong>Dia:</strong><br>
+                        <strong>Hora:</strong>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
+              <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
+          </div>
         </div>
- 
+
     <% end %>
 <div class="center">
-  <%= link_to 'Adicionar serviço', new_service_path , class: 'btn btn-verde' %>
+  <%= link_to 'Adicionar serviço', new_service_path, class: 'btn btn-verde' %>
 </div>
-  
-</div>
-
-<br>

@@ -17,15 +17,15 @@ local:
 # Remember not to checkin your GCS keyfile to a repository
 google:
   service: GCS
-  project: iggle
+  project: iggle-app
   credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
-  bucket: profile-images-iggle
+  bucket: iggle-profile
 
 google_dev:
   service: GCS
-  project: iggle
-  credentials: <%= Rails.root.join("config/secret/key-gcs.json") %>
-  bucket: profile-images-iggle
+  project: iggle-app
+  credentials: <%= Rails.root.join("config/secrets/google-key.json") %>
+  bucket: iggle-profile
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
