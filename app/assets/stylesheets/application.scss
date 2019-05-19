@@ -90,6 +90,31 @@ a, a:hover {
 .pt-modal {
   color: #000;
 }
+.excluir {
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+  margin-right: 5px;
+  background-color: #dc3545;
+  color: white;
+}
+
+.selecionar {
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+  margin-bottom: 10px;
+  background-color: #17a2b8;
+  color: white;
+}
+.obrigatorio {
+  order: 1px solid #f0ad4e;
+  border-radius: 5px;
+  padding: 3px 8px 3px 8px;
+  background-color: #FFD700;
+  color: white;
+}
+
 /* ============= PERFIL DO USUÁRIO ============= */
 
 /* CLASSES */

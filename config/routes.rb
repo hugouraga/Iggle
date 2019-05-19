@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   get 'temp', to: 'static_pages#temp'
   delete 'saircliente', to: 'login_cliente#destroy'
   delete 'sairprofissional', to: 'login_profissional#destroy'
+
+  get 'show_form', to: 'services#show_form'
 end
