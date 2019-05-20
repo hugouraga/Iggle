@@ -17,7 +17,7 @@ Para aproveitar as funcionalidades oferecidas pela plataforma.
       Quando eu clicar no botão cliente
       E não preencher os dados de autenticação do usuário-contratante
       E pressionar o botão "Entrar"
-      Então é para exibir algo que eu não sei
+      Então é para exibir 'Email ou senha inválidos'
 
     Cenario: Login usuário-profissional sem os dados
       Dado que eu estou na tela inicial do Iggle
@@ -26,4 +26,4 @@ Para aproveitar as funcionalidades oferecidas pela plataforma.
       Quando eu clicar no botão profissional
       E não preencher os dados de autenticação do profissional
       E pressionar o botão "Entrar"
-      Então é para exibir algo que eu não sei
+      Então é para exibir 'Email ou senha inválidos'

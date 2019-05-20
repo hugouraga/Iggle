@@ -32,6 +32,6 @@ Quando("não preencher os dados de autenticação do usuário-contratante") do
   fill_in("password_login_cliente", with: '')
 end
 
-Então("é para exibir algo que eu não sei") do
-  pending # Write code here that turns the phrase above into concrete actions
+Então("é para exibir {string}") do
+  expect(page).to have_content('Email ou senha inválidos')
 end
