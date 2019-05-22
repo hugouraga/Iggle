@@ -4,8 +4,6 @@
     <div class="form-group">
       <%= schedule_f.label :day, "Selecione um dia", class: "selecionar" %>
       <br>
-      <%= schedule_f.radio_button :day, "domingo" %>
-      <%= schedule_f.label :day, "Domingo" %>
       <%= schedule_f.radio_button :day, "segunda" %>
       <%= schedule_f.label :day, "Segunda" %>
       <%= schedule_f.radio_button :day, "terça" %>
@@ -18,47 +16,172 @@
       <%= schedule_f.label :day, "Sexta" %>
       <%= schedule_f.radio_button :day, "sabado" %>
       <%= schedule_f.label :day, "Sábado" %>
+      <%= schedule_f.radio_button :day, "domingo" %>
+      <%= schedule_f.label :day, "Domingo" %>
     </div>
 
-    <div class="form-group">
-      <%= schedule_f.label :hour, "Selecione os horários", class: "selecionar" %>
+    <hr>
+
+    <div class="form-group col-md-6">
+      <%= schedule_f.label :hour_start, "Horário Inicial", class: "selecionar" %>
       <br>
-      <%= schedule_f.radio_button :hour, "6" %>
-      <%= schedule_f.label :hour, "06h" %>
-      <%= schedule_f.radio_button :hour, "7" %>
-      <%= schedule_f.label :hour, "07h" %>
-      <%= schedule_f.radio_button :hour, "8" %>
-      <%= schedule_f.label :hour, "08h" %>
-      <%= schedule_f.radio_button :hour, "9" %>
-      <%= schedule_f.label :hour, "09h" %>
-      <%= schedule_f.radio_button :hour, "10" %>
-      <%= schedule_f.label :hour, "10h" %>
-      <%= schedule_f.radio_button :hour, "11" %>
-      <%= schedule_f.label :hour, "11h" %>
-      <%= schedule_f.radio_button :hour, "12" %>
-      <%= schedule_f.label :hour, "12h" %>
-      <%= schedule_f.radio_button :hour, "13" %>
-      <%= schedule_f.label :hour, "13h" %>
-      <%= schedule_f.radio_button :hour, "14" %>
-      <%= schedule_f.label :hour, "14h" %>
+      <%= schedule_f.radio_button :hour_start, "5" %>
+      <%= schedule_f.label :hour_start, "05h00" %>
+      <%= schedule_f.radio_button :hour_start, "6" %>
+      <%= schedule_f.label :hour_start, "06h00" %>
+      <%= schedule_f.radio_button :hour_start, "7" %>
+      <%= schedule_f.label :hour_start, "07h00" %>
+      <%= schedule_f.radio_button :hour_start, "8" %>
+      <%= schedule_f.label :hour_start, "08h00" %>
       <br>
-      <%= schedule_f.radio_button :hour, "15" %>
-      <%= schedule_f.label :hour, "15h" %>
-      <%= schedule_f.radio_button :hour, "16" %>
-      <%= schedule_f.label :hour, "16h" %>
-      <%= schedule_f.radio_button :hour, "17" %>
-      <%= schedule_f.label :hour, "17h" %>
-      <%= schedule_f.radio_button :hour, "18" %>
-      <%= schedule_f.label :hour, "18h" %>
-      <%= schedule_f.radio_button :hour, "19" %>
-      <%= schedule_f.label :hour, "19h" %>
-      <%= schedule_f.radio_button :hour, "20" %>
-      <%= schedule_f.label :hour, "20h" %>
-      <%= schedule_f.radio_button :hour, "21" %>
-      <%= schedule_f.label :hour, "21h" %>
-      <%= schedule_f.radio_button :hour, "22" %>
-      <%= schedule_f.label :hour, "22h" %>
+      <%= schedule_f.radio_button :hour_start, "9" %>
+      <%= schedule_f.label :hour_start, "09h00" %>
+      <%= schedule_f.radio_button :hour_start, "10" %>
+      <%= schedule_f.label :hour_start, "10h00" %>
+      <%= schedule_f.radio_button :hour_start, "11" %>
+      <%= schedule_f.label :hour_start, "11h00" %>
+      <%= schedule_f.radio_button :hour_start, "12" %>
+      <%= schedule_f.label :hour_start, "12h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_start, "13" %>
+      <%= schedule_f.label :hour_start, "13h00" %>
+      <%= schedule_f.radio_button :hour_start, "14" %>
+      <%= schedule_f.label :hour_start, "14h00" %>
+      <%= schedule_f.radio_button :hour_start, "15" %>
+      <%= schedule_f.label :hour_start, "15h00" %>
+      <%= schedule_f.radio_button :hour_start, "16" %>
+      <%= schedule_f.label :hour_start, "16h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_start, "17" %>
+      <%= schedule_f.label :hour_start, "17h00" %>
+      <%= schedule_f.radio_button :hour_start, "18" %>
+      <%= schedule_f.label :hour_start, "18h00" %>
+      <%= schedule_f.radio_button :hour_start, "19" %>
+      <%= schedule_f.label :hour_start, "19h00" %>
+      <%= schedule_f.radio_button :hour_start, "20" %>
+      <%= schedule_f.label :hour_start, "20h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_start, "21" %>
+      <%= schedule_f.label :hour_start, "21h00" %>
+      <%= schedule_f.radio_button :hour_start, "22" %>
+      <%= schedule_f.label :hour_start, "22h00" %>
+      <%= schedule_f.radio_button :hour_start, "23" %>
+      <%= schedule_f.label :hour_start, "23h00" %>
+      <%= schedule_f.radio_button :hour_start, "0" %>
+      <%= schedule_f.label :hour_start, "00h00" %>
     </div>
+
+    <div class="form-group col-md-6">
+      <%= schedule_f.label :hour_end, "Horário Final", class: "selecionar" %>
+      <br>
+      <%= schedule_f.radio_button :hour_end, "5" %>
+      <%= schedule_f.label :hour_end, "05h00" %>
+      <%= schedule_f.radio_button :hour_end, "6" %>
+      <%= schedule_f.label :hour_end, "06h00" %>
+      <%= schedule_f.radio_button :hour_end, "7" %>
+      <%= schedule_f.label :hour_end, "07h00" %>
+      <%= schedule_f.radio_button :hour_end, "8" %>
+      <%= schedule_f.label :hour_end, "08h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_end, "9" %>
+      <%= schedule_f.label :hour_end, "09h00" %>
+      <%= schedule_f.radio_button :hour_end, "10" %>
+      <%= schedule_f.label :hour_end, "10h00" %>
+      <%= schedule_f.radio_button :hour_end, "11" %>
+      <%= schedule_f.label :hour_end, "11h00" %>
+      <%= schedule_f.radio_button :hour_end, "12" %>
+      <%= schedule_f.label :hour_end, "12h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_end, "13" %>
+      <%= schedule_f.label :hour_end, "13h00" %>
+      <%= schedule_f.radio_button :hour_end, "14" %>
+      <%= schedule_f.label :hour_end, "14h00" %>
+      <%= schedule_f.radio_button :hour_end, "15" %>
+      <%= schedule_f.label :hour_end, "15h00" %>
+      <%= schedule_f.radio_button :hour_end, "16" %>
+      <%= schedule_f.label :hour_end, "16h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_end, "17" %>
+      <%= schedule_f.label :hour_end, "17h00" %>
+      <%= schedule_f.radio_button :hour_end, "18" %>
+      <%= schedule_f.label :hour_end, "18h00" %>
+      <%= schedule_f.radio_button :hour_end, "19" %>
+      <%= schedule_f.label :hour_end, "19h00" %>
+      <%= schedule_f.radio_button :hour_end, "20" %>
+      <%= schedule_f.label :hour_end, "20h00" %>
+      <br>
+      <%= schedule_f.radio_button :hour_end, "21" %>
+      <%= schedule_f.label :hour_end, "21h00" %>
+      <%= schedule_f.radio_button :hour_end, "22" %>
+      <%= schedule_f.label :hour_end, "22h00" %>
+      <%= schedule_f.radio_button :hour_end, "23" %>
+      <%= schedule_f.label :hour_end, "23h00" %>
+      <%= schedule_f.radio_button :hour_end, "0" %>
+      <%= schedule_f.label :hour_end, "00h00" %>
+    </div>
+
+    <!--
+    <div class="form-group col-md-4">
+      <%= schedule_f.label :day, "Dia" %>
+      <%= schedule_f.select :day, [
+        ["Segunda", "segunda"],
+        ["Terça", "terça"],
+        ["Quarta", "quarta"],
+        ["Quinta", "quinta"],
+        ["Sexta", "sexta"],
+        ["Sábado", "sabado"],
+        ["Domingo", "domingo"]
+        ], {:include_blank => 'Selecione um horário'}, {class: 'form-control'} %>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= schedule_f.label :hour_start, "Horário Inicial" %>
+      <%= schedule_f.select :hour_start, [
+        ["06h00", 6],
+        ["07h00", 7],
+        ["08h00", 8],
+        ["09h00", 9],
+        ["10h00", 10],
+        ["11h00", 11],
+        ["12h00", 12],
+        ["13h00", 13],
+        ["14h00", 14],
+        ["15h00", 15],
+        ["16h00", 16],
+        ["17h00", 17],
+        ["18h00", 18],
+        ["19h00", 19],
+        ["20h00", 20],
+        ["21h00", 21],
+        ["22h00", 22],
+        ["23h00", 23]
+        ], {:include_blank => 'Selecione um horário'}, {class: 'form-control'} %>
+    </div>
+
+    <div class="form-group col-md-6">
+      <%= schedule_f.label :hour_end, "Horário Final" %>
+      <%= schedule_f.select :hour_end, [
+        ["06h00", 6],
+        ["07h00", 7],
+        ["08h00", 8],
+        ["09h00", 9],
+        ["10h00", 10],
+        ["11h00", 11],
+        ["12h00", 12],
+        ["13h00", 13],
+        ["14h00", 14],
+        ["15h00", 15],
+        ["16h00", 16],
+        ["17h00", 17],
+        ["18h00", 18],
+        ["19h00", 19],
+        ["20h00", 20],
+        ["21h00", 21],
+        ["22h00", 22],
+        ["23h00", 23]
+        ], {:include_blank => 'Selecione um horário'}, {class: 'form-control'} %>
+    </div>
+     -->
 
     <div class="form-group">
       <%= schedule_f.label :_destroy, "Excluir?", class: "excluir" %>

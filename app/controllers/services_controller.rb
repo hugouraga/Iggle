@@ -41,7 +41,6 @@ class ServicesController < ApplicationController
         format.json { render :show, status: :created, location: @service }
       else
         format.html { redirect_to new_service_path }
-        # format.html { render :new }
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
@@ -82,7 +81,7 @@ class ServicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
       params.require(:service).permit(
-        :service, :description, :value, :duration, :email, schedules_attributes: [:id, :day, :hour, :_destroy]
+        :service, :description, :value, :duration, :email, schedules_attributes: [:id, :day, :hour_start, :hour_end, :_destroy]
         )
     end
 end
