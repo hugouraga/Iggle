@@ -1,3 +1,6 @@
+Dado("que eu seja um usuário cadastrado na plataforma") do
+end
+
 Dado("que eu visito a página inicial") do
   visit root_url
 end

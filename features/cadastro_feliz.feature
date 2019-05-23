@@ -13,16 +13,20 @@ Nutrólogo / Professor de Esportes / Profissional de Ed. Física), nº do Docume
 
   Cenario: Cadastro cliente
     Dado que eu visito a página inicial
-    E clique no botão Cliente
-    E vá para a página cadastro_cliente
+    E clico no botão Cadastro
+    Então eu vou para a página de seleção de cadastro
+    Quando eu clicar no botão Cliente
+    E for para a página cadastro_cliente
     Quando eu preencher o novo formulário de usuário com nome e email e telefone e senha
     E clicar no botão 'Salvar'
     Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
 
   Cenario: Cadastro profissional
     Dado que eu visito a página inicial
-    E clique no botão Profissional
-    E vá para a página cadastro_profissional
-    Quando eu preencher o novo formulário com a informações necessárias
-    E clicar no botão 'Cadastrar'
+    E clico no botão Cadastro
+    Então eu vou para a página de seleção de cadastro
+    Quando eu clicar no botão Profissional
+    E for para a página cadastro_profissional
+    Quando eu preencher o novo formulário com as informações necessárias
+    E clicar no botão 'Salvar'
     Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
