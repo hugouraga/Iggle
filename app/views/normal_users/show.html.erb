@@ -14,7 +14,7 @@
     </div>
     <div class="sidebar-links">
       <%= link_to "Conta", temp_path %>
-      <a class="click-modal" name="Suporte" data-toggle="modal" data-target="#modal-mensagem">Suporte</a>
+      <%= link_to "Suporte", "#suporte", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal"%>
       <%= link_to 'Sair', saircliente_path, method: :delete %>
     </div>
   </nav>
