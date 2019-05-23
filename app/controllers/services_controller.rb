@@ -19,13 +19,6 @@ class ServicesController < ApplicationController
     7.times{@service.schedules.build}
   end
 
-
-  def show_form
-    respond_to do |format|
-      format.js
-    end
-  end
-
   # GET /services/1/edit
   def edit
   end

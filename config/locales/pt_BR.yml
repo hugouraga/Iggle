@@ -1,6 +1,8 @@
 pt-BR:
   activerecord:
+
     attributes:
+
       normal_user:
         name: "Nome"
         email: "Email"
@@ -32,7 +34,8 @@ pt-BR:
 
       schedule:
         day: "Dia"
-        hour: "Hora"
+        hour_start: "Horário Inicial"
+        hour_end: "Horário Final"
 
     errors:
       messages:
