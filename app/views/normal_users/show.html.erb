@@ -47,15 +47,20 @@
     </div> <!-- Caixa de busca -->
 
     <div class="row container">
-      <%= link_to temp_path, class: "col-sm-6" do %>
+      <%= link_to temp_path, class: "col-sm-4" do %>
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <% end %>
 
-      <%= link_to temp_path, class: "col-sm-6" do %>
+      <%= link_to temp_path, class: "col-sm-4" do %>
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
+        </div>
+      <% end %>
+      <%= link_to servicos_path, class: "col-sm-4" do %>
+        <div class="card-atendimento">
+          <h5>VISUALIZAR SERVIÇOS</h5>
         </div>
       <% end %>
     <!-- Final do modal -->
