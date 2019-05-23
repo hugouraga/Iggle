@@ -10,6 +10,7 @@ class NormalUsersController < ApplicationController
   # GET /normal_users/1
   # GET /normal_users/1.json
   def show
+    require_logged_in_user
   end
 
   # GET /normal_users/new

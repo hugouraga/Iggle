@@ -36,6 +36,7 @@
 <div id="conteudo" class="main">
   <div class="container">
     <div class="left">
+<<<<<<< HEAD
       <%= fa_icon "facebook", id: "facebook"%>
       <%= fa_icon "instagram", id: "instagram" %>
 
@@ -43,6 +44,15 @@
       <%= fa_icon "bell", id:"notificação"%>
       <%= fa_icon "envelope", id:"mensagem" %>
       <%= fa_icon "star", id:"avaliacao" %>
+=======
+      <%= link_to fa_icon("facebook"), temp_path %>
+      <%= link_to fa_icon("instagram"), "https:www.instagram.com/" + @professional_user.instagram %>
+
+    <div class="right">
+      <%= link_to fa_icon("bell"), temp_path %>
+      <%= link_to fa_icon("envelope"), temp_path %>
+      <%= link_to fa_icon("star"), temp_path %>
+>>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
       <span class="avaliacao">4.5</span>
   </div>
   <br><br><br><br>

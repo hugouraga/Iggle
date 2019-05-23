@@ -10,6 +10,7 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users/1
   # GET /professional_users/1.json
   def show
+    require_logged_in_user
   end
 
   # GET /professional_users/new

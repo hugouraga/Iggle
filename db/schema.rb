@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_05_22_164058) do
+=======
+ActiveRecord::Schema.define(version: 2019_05_22_014630) do
+>>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,10 +85,11 @@ ActiveRecord::Schema.define(version: 2019_05_22_164058) do
 
   create_table "schedules", force: :cascade do |t|
     t.string "day", null: false
-    t.text "hour", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "service_id"
+    t.integer "hour_start"
+    t.integer "hour_end"
     t.index ["service_id"], name: "index_schedules_on_service_id"
   end
 

@@ -1,6 +1,6 @@
 <%= form_with(model: service, local: true) do |form| %>
   <% if service.errors.any? %>
-    <div clas="">
+    <div>
     <div class="alert alert-danger">
       <ul>
       <h3>Ops! Encontramos <%= pluralize(service.errors.count, 'erro', 'erros') %> </h3>
@@ -15,92 +15,30 @@
   <% end %>
 
   <div class="form-group">
-
-    <%= form.text_field :service, placeholder: 'Serviço', class: 'form-control' %>
+    <%= form.text_field :service, placeholder: 'Serviço *', class: 'form-control', :required => true %>
   </div>
 
   <div class="form-group">
-
-    <%= form.text_area :description, placeholder: 'Descrição', class: 'form-control' %>
+    <%= form.text_area :description, placeholder: 'Descrição *', class: 'form-control', :required => true %>
   </div>
 
   <div class="form-group">
-
-    <%= form.text_field :value, placeholder: 'Preço', class: 'form-control' %>
+    <%= form.number_field :value, placeholder: 'Preço *', class: 'form-control', :required => true %>
   </div>
 
   <div class="form-group">
-
-    <%= form.text_field :duration, placeholder: 'Duração', class: 'form-control' %>
+    <%= form.number_field :duration, placeholder: 'Duração *', max: 9, class: 'form-control', :required => true %>
   </div>
 
-  <%= form.fields_for :schedules do |schedule_f| %>
-    <br>
-    <h4>Horários</h4>
+  <hr>
+  <div class="center">
+    <h5 class="btn btn-warning"><strong>Selecione pelo menos um dia e um horário</strong></h5>
 
-    <div class="form-group">
-      <br>
-      <%= schedule_f.label :day, "Selecione um dia:" %>
-      <br>
-      <%= schedule_f.radio_button :day, "domingo" %>
-      <%= schedule_f.label :day, "Domingo" %>
-      <%= schedule_f.radio_button :day, "segunda" %>
-      <%= schedule_f.label :day, "Segunda" %>
-      <%= schedule_f.radio_button :day, "terça" %>
-      <%= schedule_f.label :day, "Terça" %>
-      <%= schedule_f.radio_button :day, "quarta" %>
-      <%= schedule_f.label :day, "Quarta" %>
-      <%= schedule_f.radio_button :day, "quinta" %>
-      <%= schedule_f.label :day, "Quinta" %>
-      <%= schedule_f.radio_button :day, "sexta" %>
-      <%= schedule_f.label :day, "Sexta" %>
-      <%= schedule_f.radio_button :day, "sabado" %>
-      <%= schedule_f.label :day, "Sábado" %>
-    </div>
+    <%= render "schedules/form", form: form %>
 
-    <div class="form-group">
-      <%= schedule_f.label :hour, "Selecione um horário:" %>
-      <br>
-      <%= schedule_f.radio_button :hour, "6" %>
-      <%= schedule_f.label :hour, "06h" %>
-      <%= schedule_f.radio_button :hour, "7" %>
-      <%= schedule_f.label :hour, "07h" %>
-      <%= schedule_f.radio_button :hour, "8" %>
-      <%= schedule_f.label :hour, "08h" %>
-      <%= schedule_f.radio_button :hour, "9" %>
-      <%= schedule_f.label :hour, "09h" %>
-      <%= schedule_f.radio_button :hour, "10" %>
-      <%= schedule_f.label :hour, "10h" %>
-      <%= schedule_f.radio_button :hour, "11" %>
-      <%= schedule_f.label :hour, "11h" %>
-      <%= schedule_f.radio_button :hour, "12" %>
-      <%= schedule_f.label :hour, "12h" %>
-      <%= schedule_f.radio_button :hour, "13" %>
-      <%= schedule_f.label :hour, "13h" %>
-      <%= schedule_f.radio_button :hour, "14" %>
-      <%= schedule_f.label :hour, "14h" %>
-      <br>
-      <%= schedule_f.radio_button :hour, "15" %>
-      <%= schedule_f.label :hour, "15h" %>
-      <%= schedule_f.radio_button :hour, "16" %>
-      <%= schedule_f.label :hour, "16h" %>
-      <%= schedule_f.radio_button :hour, "17" %>
-      <%= schedule_f.label :hour, "17h" %>
-      <%= schedule_f.radio_button :hour, "18" %>
-      <%= schedule_f.label :hour, "18h" %>
-      <%= schedule_f.radio_button :hour, "19" %>
-      <%= schedule_f.label :hour, "19h" %>
-      <%= schedule_f.radio_button :hour, "20" %>
-      <%= schedule_f.label :hour, "20h" %>
-      <%= schedule_f.radio_button :hour, "21" %>
-      <%= schedule_f.label :hour, "21h" %>
-      <%= schedule_f.radio_button :hour, "22" %>
-      <%= schedule_f.label :hour, "22h" %>
-    </div>
+  </div>
 
-  <% end %>
-
-  <br>
+  <hr>
 
   <div class="actions">
     <div class="center">

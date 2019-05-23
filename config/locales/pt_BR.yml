@@ -1,8 +1,8 @@
 pt-BR:
-  hello: "Olá mundo!"
-
   activerecord:
+
     attributes:
+
       normal_user:
         name: "Nome"
         email: "Email"
@@ -15,8 +15,8 @@ pt-BR:
         name: "Nome"
         email: "Email"
         phone: "Telefone"
-        profession: "Profissão (Nutricionista / Nutrólogo / Professor de Esportes / Profissional de Ed. Física)"
-        document: "Nº do Documento (CRM / CRN / CONFEF)"
+        profession: "Profissão"
+        document: "Nº do Documento (CRN / CRM / CONFEF)"
         description: "Descrição"
         Facebook: "Facebook"
         Instagram: "Instagram"
@@ -24,12 +24,19 @@ pt-BR:
         password_confirmation: "Repetir a senha"
         avatar: "Foto do Perfil"
 
-      services:
+      service:
         service: "Serviço"
         description: "Descrição"
         value: "Preço"
         duration: "Duração"
         email: "Email"
+        schedules: "Horários"
+
+      schedule:
+        day: "Dia"
+        hour_start: "Horário Inicial"
+        hour_end: "Horário Final"
+
     errors:
       messages:
         blank: "não pode ser em branco."

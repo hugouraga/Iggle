@@ -1,11 +1,12 @@
-Quando("eu clicar no botão Profissional") do
+Dado("clique no botão Profissional") do
   find('[name=Profissional]').click
 end
 
-Quando("for para a página cadastro_profissional") do
+Dado("vá para a página cadastro_profissional") do
 end
 
-Quando("eu preencher o novo formulário com as informações necessárias") do
+
+Quando("eu preencher o novo formulário com a informações necessárias") do
   fill_in("profissional_name", with: 'Lindinha')
   fill_in("profissional_email", with: 'lindinha.nutri@gmail.com')
   fill_in("profissional_phone", with: 988888888)
@@ -16,11 +17,4 @@ Quando("eu preencher o novo formulário com as informações necessárias") do
   fill_in("profissional_description", with: "Nutrição Funcional - Saúde & Bem estar")
   fill_in("profissional_password", with: 'a1z21444#A')
   fill_in("profissional_passwordc", with: 'a1z21444#A')
-end
-
-Quando("eu não preencher o formulário com as informações necessárias") do
-end
-
-Então("a mensagem {string} será exibida na página de cadastro do profissional") do |string|
-  expect(page).to have_content('Ops! Encontramos 8 erros')
 end
