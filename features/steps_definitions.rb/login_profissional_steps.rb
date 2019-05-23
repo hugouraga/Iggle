@@ -8,7 +8,7 @@ Quando("preencher os dados de autenticação do profissional corretamente") do
 end
 
 Então("eu deveria estar na página inicial do profissional") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Lindinha')
 end
 
 Quando("não preencher os dados de autenticação do profissional") do

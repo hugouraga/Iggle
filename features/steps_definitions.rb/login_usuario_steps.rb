@@ -24,7 +24,7 @@ Quando("pressionar o botão {string}") do |string|
 end
 
 Então("eu deveria estar na página inicial do usuário-contratante") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Florzinha')
 end
 
 Quando("não preencher os dados de autenticação do usuário-contratante") do
@@ -32,6 +32,6 @@ Quando("não preencher os dados de autenticação do usuário-contratante") do
   fill_in("password_login_cliente", with: '')
 end
 
-Então("é para exibir {string}") do
-  expect(page).to have_content('Email ou senha inválidos')
+Então("é para exibir {string}") do |string|
+  expect(page).to have_content('× Email ou senha inválidos')
 end
