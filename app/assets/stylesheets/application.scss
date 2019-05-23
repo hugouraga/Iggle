@@ -248,3 +248,18 @@ a, a:hover {
   margin-left: 10px;
   font-size: 20px;
 }
+
+/* ============= PERFIL DO PROFISSIONAL ============= */
+
+.card-servicos {
+  height: 300px;
+  border: 1px solid #C0C0C0;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  text-align: center;
+  padding-top: 50px;
+}
+.card-servicos:hover {
+  background-color: #FFF;
+  transition-duration: 1s;
+}
