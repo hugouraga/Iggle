@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addresses
   resources :services
   resources :contacts, only: [:new, :create]
   get 'sessions/new'

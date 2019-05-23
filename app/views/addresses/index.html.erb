@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+<h2>Endereços</h1>
+<% @addresses.each do |address| %>
+    <div class="well well-large">
+      Rua: <%= address.name %>
+      Número: <%= address.number %><br>
+      Complemento: <%= address.description %><br>
+      CEP: <%= address.postal_code %><br>
+      Bairro: <%= address.district %><br>
+      Cidade: <%= address.city %><br>
+      Estado: <%= address.state%><br>
+      <%= link_to 'Edit', edit_address_path(address), class: "btn btn-cinza" %>
+      <%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-cinza" %>
+    </div>
+<% end %>
+<%= link_to 'New Address', new_address_path %>
+</div>
