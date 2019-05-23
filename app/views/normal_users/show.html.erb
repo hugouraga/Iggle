@@ -14,7 +14,7 @@
     </div>
     <div class="sidebar-links">
       <%= link_to "Conta", temp_path %>
-      <%= link_to "Suporte", "#suporte", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal"%>
+      <%= link_to "Suporte", "#signup", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal"%>
       <%= link_to 'Sair', saircliente_path, method: :delete %>
     </div>
   </nav>
@@ -47,21 +47,13 @@
     </div> <!-- Caixa de busca -->
 
     <div class="row container">
-<<<<<<< HEAD
       <%= link_to temp_path, class: "col-sm-6", id: "atendimento_marcado" do %>
-=======
-      <%= link_to temp_path, class: "col-sm-4" do %>
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <% end %>
 
-<<<<<<< HEAD
       <%= link_to temp_path, class: "col-sm-6", id: "historico_atendimento" do %>
-=======
-      <%= link_to temp_path, class: "col-sm-4" do %>
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>

@@ -14,8 +14,8 @@
     </div>
     <div class="sidebar-links">
       <%= link_to "Conta", edit_professional_user_path %>
-      <%= link_to "Endereços", address_path , id: 'Endereços' %>
-      <a class="click-modal" name="Suporte" "data-toggle="modal" data-target="#modal-mensagem">Suporte</a>
+      <%= link_to "Endereços", temp_path %>
+      <a class="click-modal" data-toggle="modal" data-target="#modal-mensagem">Suporte</a>
       <%= link_to 'Sair', sairprofissional_path, method: :delete %>
     </div>
   </nav>
@@ -24,11 +24,11 @@
       <% if @professional_user.avatar.attached? %>
         <%= image_tag @professional_user.avatar,
           :alt => "profile picture",
-          class: "img-profile", id:"foto"%>
+          class: "img-profile" %>
       <% else %>
           <%= image_tag 'no_avatar.jpg',
           :alt => "No profile picture",
-          class: "img-profile", id: "foto" %>
+          class: "img-profile" %>
       <% end %>
     </div>
 </div>
@@ -36,45 +36,35 @@
 <div id="conteudo" class="main">
   <div class="container">
     <div class="left">
-<<<<<<< HEAD
-      <%= fa_icon "facebook", id: "facebook"%>
-      <%= fa_icon "instagram", id: "instagram" %>
+      <%= fa_icon "facebook" %>
+      <%= fa_icon "instagram" %>
 
     <div class="right">
-      <%= fa_icon "bell", id:"notificação"%>
-      <%= fa_icon "envelope", id:"mensagem" %>
-      <%= fa_icon "star", id:"avaliacao" %>
-=======
-      <%= link_to fa_icon("facebook"), temp_path %>
-      <%= link_to fa_icon("instagram"), "https:www.instagram.com/" + @professional_user.instagram %>
-
-    <div class="right">
-      <%= link_to fa_icon("bell"), temp_path %>
-      <%= link_to fa_icon("envelope"), temp_path %>
-      <%= link_to fa_icon("star"), temp_path %>
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
+      <%= fa_icon "bell" %>
+      <%= fa_icon "envelope" %>
+      <%= fa_icon "star" %>
       <span class="avaliacao">4.5</span>
   </div>
   <br><br><br><br>
   <form>
     <div class="form-group">
-      <textarea class="form-control" id="descrição" rows="3" placeholder="Escreva um pouco sobre você"><%=@professional_user.description%></textarea>
+      <textarea class="form-control" rows="3" placeholder="Escreva um pouco sobre você"><%=@professional_user.description%></textarea>
     </div>
     </form>
     <div class="row container">
-      <%= link_to meus_servicos_path, class: "col-md-4", id: "serviços" do %>
+      <%= link_to meus_servicos_path, class: "col-md-4" do %>
         <div class="card-atendimento">
           <h5>SERVIÇOS</h5>
         </div>
       <%end%>
 
-      <%= link_to temp_path, class: "col-md-4",  id: "atendimento_marcado" do %>
+      <%= link_to temp_path, class: "col-md-4" do %>
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <%end%>
 
-      <%= link_to temp_path, class: "col-md-4", id: "historico_consulta" do %>
+      <%= link_to temp_path, class: "col-md-4" do %>
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>

@@ -18,32 +18,15 @@
         <%= form_for :session, url: login_profissional_path, method: :post do |f| %>
 
             <div class="form-group">
-<<<<<<< HEAD
-
                 <%= f.email_field :email, placeholder: 'Email', class: 'form-control', id: 'email_login_profissional' %>
             </div>
-
             <div class="form-group">
-
                 <%= f.password_field :password, placeholder: 'Senha', class: 'form-control', id: 'password_login_profissional' %>
-=======
-                
-                <%= f.email_field :email, placeholder: 'Email', class: 'form-control' %>
-            </div>
-
-            <div class="form-group">
-                
-                <%= f.password_field :password, placeholder: 'Senha', class: 'form-control' %>
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
             </div>
 
             <div class="center">
                 <br>
-<<<<<<< HEAD
                 <%= f.submit 'Entrar', class: 'btn btn-verde', name: 'Entrar'%>
-=======
-                <%= f.submit 'Entrar', class: 'btn btn-verde' %>
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
                 <br><br>
                 <%= link_to 'Voltar', entrar_path, class: 'btn btn-cinza' %>
             <div>
