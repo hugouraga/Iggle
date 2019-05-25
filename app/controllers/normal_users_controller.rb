@@ -43,7 +43,7 @@ class NormalUsersController < ApplicationController
   def update
     respond_to do |format|
       if @normal_user.update(normal_user_params)
-        format.html { redirect_to @normal_user, notice: 'Normal user was successfully updated.' }
+        format.html { redirect_to @normal_user, notice: 'Dados atualizados com sucesso.' }
         format.json { render :show, status: :ok, location: @normal_user }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class NormalUsersController < ApplicationController
   def destroy
     @normal_user.destroy
     respond_to do |format|
-      format.html { redirect_to normal_users_url, notice: 'Normal user was successfully destroyed.' }
+      format.html { redirect_to normal_users_url, notice: 'Usuário excluído com sucesso.' }
       format.json { head :no_content }
     end
   end

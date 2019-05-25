@@ -43,7 +43,7 @@ class ProfessionalUsersController < ApplicationController
   def update
     respond_to do |format|
       if @professional_user.update(professional_user_params)
-        format.html { redirect_to @professional_user, notice: 'Professional user was successfully updated.' }
+        format.html { redirect_to @professional_user, notice: 'Dados atualizados com sucesso.' }
         format.json { render :show, status: :ok, location: @professional_user }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ProfessionalUsersController < ApplicationController
   def destroy
     @professional_user.destroy
     respond_to do |format|
-      format.html { redirect_to professional_users_url, notice: 'Professional user was successfully destroyed.' }
+      format.html { redirect_to professional_users_url, notice: 'Conta excluída com sucesso.' }
       format.json { head :no_content }
     end
   end
