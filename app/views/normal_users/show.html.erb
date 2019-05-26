@@ -14,11 +14,11 @@
     </div>
     <div class="sidebar-links">
       <%= link_to "Conta", temp_path %>
-      <%= link_to "Suporte", "#signup", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal"%>
+      <%= link_to "Suporte", "#signup", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal", name: 'Suporte'%>
       <%= link_to 'Sair', saircliente_path, method: :delete %>
     </div>
   </nav>
-
+  <!-- FINAL DA SIDEBAR -->
     <div class="div-profile center">
       <% if @normal_user.avatar.attached? %>
         <%= image_tag @normal_user.avatar,
@@ -35,7 +35,7 @@
 <div id="conteudo" class="main">
   <div class="container">
     <div class="row right">
-      <%= link_to '<i class="fa fa-envelope"></i>'.html_safe, temp_path, id: "mensagem"%>
+      <%= link_to fa_icon('envelope'), temp_path, id: "mensagem"%>
       <%= link_to fa_icon('star'), temp_path, id:"avaliacao" %>
       <span class="avaliacao">4.5</span>
     </div>
@@ -58,7 +58,7 @@
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>
       <% end %>
-      <%= link_to servicos_path, class: "col-sm-4" do %>
+      <%= link_to servicos_path, class: "col-sm-4", id: "serviços" do %>
         <div class="card-atendimento">
           <h5>VISUALIZAR SERVIÇOS</h5>
         </div>
