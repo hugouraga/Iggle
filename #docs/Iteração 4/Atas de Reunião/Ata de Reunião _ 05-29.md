@@ -42,7 +42,7 @@ Pesquisas | Myllena Almeida
 * Prazos
 * Reuniões diárias
 
-## SPRINT PLANNING (14/05 - 22/05)
+## SPRINT PLANNING (29/05 - 05/06)
 
 ### Objetivos
 * Definir atribuição das tarefas
