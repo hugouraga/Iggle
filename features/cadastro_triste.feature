@@ -13,7 +13,7 @@ Nutrólogo / Professor de Esportes / Profissional de Ed. Física), nº do Docume
 
   Cenario: Cadastro do profissional sem as informações necessárias
     Dado que eu visito a página inicial
-    E clico no botão Cadastro
+    E eu clico no botão Cadastro
     Então eu vou para a página de seleção de cadastro
     Quando eu clicar no botão Profissional
     E for para a página cadastro_profissional
@@ -23,7 +23,7 @@ Nutrólogo / Professor de Esportes / Profissional de Ed. Física), nº do Docume
 
   Cenario: Cadastro do cliente sem as informações necessárias
     Dado que eu visito a página inicial
-    E clico no botão Cadastro
+    E eu clico no botão Cadastro
     Então eu vou para a página de seleção de cadastro
     Quando eu clicar no botão Cliente
     E for para a página cadastro_cliente

@@ -1,5 +1,5 @@
 Quando("eu clicar no botão profissional") do
-  find('[name=profissional]').click
+  find('[id=profissional]').click
 end
 
 Quando("preencher os dados de autenticação do profissional corretamente") do

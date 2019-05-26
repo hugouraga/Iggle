@@ -11,7 +11,7 @@ Então("eu deveria estar na página de seleção do login") do
 end
 
 Quando("eu clicar no botão cliente") do
-  find('[name=cliente]').click
+  find('[id=cliente]').click
 end
 
 Quando("preencher os dados de autenticação do usuário-contratante corretamente") do

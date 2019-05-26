@@ -13,6 +13,7 @@ Para aproveitar as funcionalidades oferecidas pela plataforma.
 
 Contexto: Dado que eu seja um usuário cadastrado
 
+
   Cenario: Login usuário-contratante
     Dado que eu estou na tela inicial do Iggle
     E pressiono o botão "Login"
