@@ -1,5 +1,6 @@
 class ProfessionalUsersController < ApplicationController
   before_action :set_professional_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_logged_in_user
 
   # GET /professional_users
   # GET /professional_users.json
@@ -21,7 +22,15 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users/1/edit
   def edit
   end
-
+  def update
+      @professional_user = current_user
+      if @professional_user.update(professional_user_params)
+        flash.now[:success] = 'Informações alteradas com sucesso!'
+        render :edit 
+      else
+        render :edit         
+      end    
+  end
   # POST /professional_users
   # POST /professional_users.json
   def create
@@ -40,17 +49,7 @@ class ProfessionalUsersController < ApplicationController
 
   # PATCH/PUT /professional_users/1
   # PATCH/PUT /professional_users/1.json
-  def update
-    respond_to do |format|
-      if @professional_user.update(professional_user_params)
-        format.html { redirect_to @professional_user, notice: 'Dados atualizados com sucesso.' }
-        format.json { render :show, status: :ok, location: @professional_user }
-      else
-        format.html { render :edit }
-        format.json { render json: @professional_user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+
 
   # DELETE /professional_users/1
   # DELETE /professional_users/1.json
