@@ -1,10 +1,12 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
+  before_action :require_logged_in_user
 
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = Address.all
+    @addresses = current_user.addresses
+
   end
 
   # GET /addresses/1
@@ -24,12 +26,13 @@ class AddressesController < ApplicationController
   # POST /addresses
   # POST /addresses.json
   def create
-    @address = Address.new(address_params)
+    @address = current_user.addresses.build(address_params)
+
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to @address, notice: 'Address was successfully created.' }
-        format.json { render :show, status: :created, location: @address }
+        format.html { redirect_to addresses_url }
+        flash[:success] = 'Endereço adicionado com sucesso!'
       else
         format.html { render :new }
         format.json { render json: @address.errors, status: :unprocessable_entity }
@@ -40,10 +43,11 @@ class AddressesController < ApplicationController
   # PATCH/PUT /addresses/1
   # PATCH/PUT /addresses/1.json
   def update
+    @address = current_user.addresses.find(params[:id])
+
     respond_to do |format|
       if @address.update(address_params)
-        format.html { redirect_to @address, notice: 'Address was successfully updated.' }
-        format.json { render :show, status: :ok, location: @address }
+        format.html { redirect_to @address, notice: '' }
       else
         format.html { render :edit }
         format.json { render json: @address.errors, status: :unprocessable_entity }
@@ -54,9 +58,11 @@ class AddressesController < ApplicationController
   # DELETE /addresses/1
   # DELETE /addresses/1.json
   def destroy
+    @address = current_user.addresses.find(params[:id])
     @address.destroy
     respond_to do |format|
-      format.html { redirect_to addresses_url, notice: 'Address was successfully destroyed.' }
+      format.html { redirect_to addresses_url }
+      flash[:success] = 'Endereço excluído com sucesso!'
       format.json { head :no_content }
     end
   end

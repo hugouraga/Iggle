@@ -5,7 +5,8 @@ class Address < ApplicationRecord
   validates :postal_code, presence: true, length: { maximum: 500 }
   validates :district, presence: true, length: { maximum: 500 }
   validates :city, presence: true, length: { maximum: 500 }
-  validates :states, presence: true, length: { maximum: 500 }
+  validates :state, presence: true, length: { maximum: 500 }
 
   belongs_to :professional_user
+
 end

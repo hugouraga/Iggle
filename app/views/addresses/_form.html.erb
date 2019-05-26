@@ -1,8 +1,7 @@
 <%= form_with(model: address, local: true) do |form| %>
   <% if address.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
-
+      <h2>Ops! Encontramos <%= pluralize(address.errors.count, "erros") %></h2>
       <ul>
       <% address.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,43 +9,45 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'form-control', id: 'name_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :number %>
-    <%= form.text_field :number %>
+    <%= form.text_field :number, class: 'form-control', id: 'number_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class: 'form-control', id: 'description_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :postal_code %>
-    <%= form.text_field :postal_code %>
+    <%= form.text_field :postal_code, class: 'form-control', id: 'postal_code_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :district %>
-    <%= form.text_field :district %>
+    <%= form.text_field :district, class: 'form-control', id: 'district_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, class: 'form-control', id:'city_address' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :state %>
-    <%= form.text_field :state %>
+    <%= form.text_field :state, class: 'form-control', id: 'state_address' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <div class="center">
+      <%= form.submit 'Salvar', name: 'Salvar'%>
+    </div>
   </div>
+
 <% end %>

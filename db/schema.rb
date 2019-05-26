@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_05_22_164058) do
-=======
-ActiveRecord::Schema.define(version: 2019_05_22_014630) do
->>>>>>> a95fffe27ee515344793a99c804f61d33b1e6f5c
+ActiveRecord::Schema.define(version: 2019_05_24_004750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +46,8 @@ ActiveRecord::Schema.define(version: 2019_05_22_014630) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "professional_user_id"
+    t.index ["professional_user_id"], name: "index_addresses_on_professional_user_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -105,6 +103,7 @@ ActiveRecord::Schema.define(version: 2019_05_22_014630) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "professional_users"
   add_foreign_key "schedules", "services"
   add_foreign_key "services", "professional_users"
 end

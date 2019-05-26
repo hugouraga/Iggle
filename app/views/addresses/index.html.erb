@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-<h2>Endereços</h1>
+<h3>Endereços</h3>
 <% @addresses.each do |address| %>
     <div class="well well-large">
       Rua: <%= address.name %>
@@ -11,9 +11,15 @@
       Bairro: <%= address.district %><br>
       Cidade: <%= address.city %><br>
       Estado: <%= address.state%><br>
-      <%= link_to 'Edit', edit_address_path(address), class: "btn btn-cinza" %>
-      <%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-cinza" %>
+      <div class='right'>
+      <%= link_to fa_icon('edit'), edit_address_path(address), id:'alterar' %>
+      <%= link_to fa_icon('trash'), address, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
     </div>
 <% end %>
-<%= link_to 'New Address', new_address_path %>
+<div class='center'>
+<%= link_to fa_icon('plus-circle'), new_address_path, class: "center", id: 'novo_endereço'%>
+<br>
+<%= link_to 'Voltar', login_profissional_path %>
+</div>
 </div>

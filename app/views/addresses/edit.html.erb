@@ -1,6 +1,7 @@
-<h1>Editing Address</h1>
-
-<%= render 'form', address: @address %>
-
-<%= link_to 'Show', @address %> |
-<%= link_to 'Back', addresses_path %>
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+  <h3>Editar endereço</h3>
+  <%= render 'form', address: @address %>
+  <div class='center'>
+    <%= link_to 'Voltar', addresses_path%>
+  </div>
+</div>

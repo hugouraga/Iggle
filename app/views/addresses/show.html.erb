@@ -1,39 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+  <div class="well well-large">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Nome:</strong>
+    <%= @address.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @address.name %>
-</p>
+  <p>
+    <strong>Número:</strong>
+    <%= @address.number %>
+  </p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @address.number %>
-</p>
+  <p>
+    <strong>Complemento:</strong>
+    <%= @address.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @address.description %>
-</p>
+  <p>
+    <strong>CEP:</strong>
+    <%= @address.postal_code %>
+  </p>
 
-<p>
-  <strong>Postal code:</strong>
-  <%= @address.postal_code %>
-</p>
+  <p>
+    <strong>Bairro:</strong>
+    <%= @address.district %>
+  </p>
 
-<p>
-  <strong>District:</strong>
-  <%= @address.district %>
-</p>
+  <p>
+    <strong>Cidade:</strong>
+    <%= @address.city %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @address.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @address.state %>
-</p>
-
-<%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+  <p>
+    <strong>Estado:</strong>
+    <%= @address.state %>
+  </p>
+  <%= link_to 'Editar', edit_address_path(@address) %> |
+  <%= link_to 'Voltar', addresses_path %>
+  </div>
+</div>
