@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   resources :addresses
   resources :services
   resources :contacts, only: [:new, :create]
-  get 'sessions/new'
+  
   resources :professional_users
   resources :normal_users
   resources :schedules
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "static_pages#index"
+  #get 'sessions/new'
   get 'cadastro', to: 'static_pages#cadastro'
   get 'cadastro_cliente', to: 'normal_users#new'
   get 'cadastro_profissional', to: 'professional_users#new'
