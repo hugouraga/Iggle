@@ -37,6 +37,16 @@ pt-BR:
         hour_start: "Horário Inicial"
         hour_end: "Horário Final"
 
+      address:
+        name: "Rua"
+        number: "Número"
+        description: "Complemento"
+        postal_code: "CEP"
+        district: "Bairro"
+        city: "Cidade"
+        state: "Estado"
+
+
     errors:
       messages:
         blank: "não pode ser em branco."
