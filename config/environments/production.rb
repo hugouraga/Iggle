@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 end
 
-config.assets.precompile += %w( '.svg' )
+# config.assets.precompile += %w( '.svg' )
 
   # Must include to get inline SVGs to work in deploy
-  config.assets.css_compressor = :sass
+  # config.assets.css_compressor = :sass

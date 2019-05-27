@@ -11,6 +11,12 @@ class NormalUsersController < ApplicationController
   # GET /normal_users/1.json
   def show
     require_logged_in_user
+
+    @normal_user = NormalUser.find(params[:id])
+
+    if current_user.id != @normal_user.id
+      redirect_to current_user
+    end
   end
 
   # GET /normal_users/new
@@ -20,6 +26,7 @@ class NormalUsersController < ApplicationController
 
   # GET /normal_users/1/edit
   def edit
+    #@normal_user = current_user
   end
 
   # POST /normal_users
@@ -41,15 +48,24 @@ class NormalUsersController < ApplicationController
   # PATCH/PUT /normal_users/1
   # PATCH/PUT /normal_users/1.json
   def update
+
     respond_to do |format|
       if @normal_user.update(normal_user_params)
-        format.html { redirect_to @normal_user, notice: 'Normal user was successfully updated.' }
+        format.html { redirect_to @normal_user, notice: 'Dados atualizados com sucesso.' }
         format.json { render :show, status: :ok, location: @normal_user }
       else
         format.html { render :edit }
         format.json { render json: @normal_user.errors, status: :unprocessable_entity }
       end
     end
+
+    #@normal_user = current_user
+    #  if @normal_user.update(normal_user_params)
+    #    flash.now[:success] = 'Informações alteradas com sucesso!'
+    #    render :edit
+    #  else
+    #    render :edit
+    #  end
   end
 
   # DELETE /normal_users/1
@@ -57,7 +73,7 @@ class NormalUsersController < ApplicationController
   def destroy
     @normal_user.destroy
     respond_to do |format|
-      format.html { redirect_to normal_users_url, notice: 'Normal user was successfully destroyed.' }
+      format.html { redirect_to normal_users_url, notice: 'Usuário excluído com sucesso.' }
       format.json { head :no_content }
     end
   end

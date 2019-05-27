@@ -1,5 +1,6 @@
 class ProfessionalUsersController < ApplicationController
   before_action :set_professional_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_logged_in_user
 
   # GET /professional_users
   # GET /professional_users.json
@@ -11,6 +12,12 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users/1.json
   def show
     require_logged_in_user
+
+    @professional_user = ProfessionalUser.find(params[:id])
+
+    if current_user.id != @professional_user.id
+      redirect_to current_user
+    end
   end
 
   # GET /professional_users/new
@@ -22,6 +29,15 @@ class ProfessionalUsersController < ApplicationController
   def edit
   end
 
+  def update
+      @professional_user = current_user
+      if @professional_user.update(professional_user_params)
+        flash.now[:success] = 'Informações alteradas com sucesso!'
+        render :edit
+      else
+        render :edit
+      end
+  end
   # POST /professional_users
   # POST /professional_users.json
   def create
@@ -40,24 +56,14 @@ class ProfessionalUsersController < ApplicationController
 
   # PATCH/PUT /professional_users/1
   # PATCH/PUT /professional_users/1.json
-  def update
-    respond_to do |format|
-      if @professional_user.update(professional_user_params)
-        format.html { redirect_to @professional_user, notice: 'Professional user was successfully updated.' }
-        format.json { render :show, status: :ok, location: @professional_user }
-      else
-        format.html { render :edit }
-        format.json { render json: @professional_user.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+
 
   # DELETE /professional_users/1
   # DELETE /professional_users/1.json
   def destroy
     @professional_user.destroy
     respond_to do |format|
-      format.html { redirect_to professional_users_url, notice: 'Professional user was successfully destroyed.' }
+      format.html { redirect_to professional_users_url, notice: 'Conta excluída com sucesso.' }
       format.json { head :no_content }
     end
   end

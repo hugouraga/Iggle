@@ -1,8 +1,6 @@
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-	<h1>Alterar Conta</h1>
+	<h1>Alterar Conta</h1>	
+	<%= render 'form', professional_user: @current_user %>
 
-	<%= render 'form', professional_user: @professional_user %>
-
-	<%= link_to 'Show', @professional_user %> |
-	<%= link_to 'Back', professional_users_path %>
+	
 </div>
