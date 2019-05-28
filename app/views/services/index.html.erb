@@ -24,8 +24,19 @@
 
       <br>
       <% service.schedules.each do |schedule| %>
-        <strong>Dia:</strong> <%= schedule.day.capitalize %>
-        | <%= schedule.hour_start %>:00h ás <%= schedule.hour_end %>:00h
+        <strong>Horário:</strong> <%= schedule.day.capitalize %>
+        <% if schedule.morning == "true" %>
+          | Manhã
+        <% end %>
+
+        <% if schedule.evening == "true" %>
+          | Tarde
+        <% end %>
+
+        <% if schedule.night == "true" %>
+          | Noite
+        <% end %>
+
         <br>
       <% end %>
 

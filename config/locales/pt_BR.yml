@@ -34,8 +34,9 @@ pt-BR:
 
       schedule:
         day: "Dia"
-        hour_start: "Horário Inicial"
-        hour_end: "Horário Final"
+        morning: "Manhã"
+        evening: "Tarde"
+        night: "Noite"
 
       address:
         name: "Rua"

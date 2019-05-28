@@ -30,10 +30,11 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'Serviço criado com sucesso.' }
-        format.json { render :show, status: :created, location: @service }
+        format.html { redirect_to meus_servicos_path }
+        flash[:success] = 'Serviço adicionado com sucesso!'
       else
-        format.html { redirect_to new_service_path }
+        7.times{@service.schedules.build} if @service.schedules.blank?
+        format.html { render :new }
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
@@ -45,8 +46,8 @@ class ServicesController < ApplicationController
     @service = current_user.services.find(params[:id])
     respond_to do |format|
       if @service.update(service_params)
-        format.html { redirect_to @service, notice: 'Serviço atualizado com sucesso.' }
-        format.json { render :show, status: :ok, location: @service }
+        format.html { redirect_to meus_servicos_path }
+        flash[:success] = 'Serviço atualizado com sucesso!'
       else
         format.html { render :edit }
         format.json { render json: @service.errors, status: :unprocessable_entity }
@@ -74,7 +75,7 @@ class ServicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
       params.require(:service).permit(
-        :service, :description, :value, :duration, :email, schedules_attributes: [:id, :day, :hour_start, :hour_end, :_destroy]
+        :service, :description, :value, :duration, :email, schedules_attributes: [:id, :day, :morning, :evening, :night, :_destroy]
         )
     end
 end

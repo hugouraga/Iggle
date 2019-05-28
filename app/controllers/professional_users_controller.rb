@@ -1,6 +1,5 @@
 class ProfessionalUsersController < ApplicationController
   before_action :set_professional_user, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in_user
 
   # GET /professional_users
   # GET /professional_users.json
@@ -27,6 +26,7 @@ class ProfessionalUsersController < ApplicationController
 
   # GET /professional_users/1/edit
   def edit
+    @professional_user = current_user
   end
 
   def update
