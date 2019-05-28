@@ -30,7 +30,6 @@ Início da Iteração | Término da iteração
 | [Página de Serviços (Visão do Cliente)](https://github.com/hugouraga/Iggle/issues/31) (cont. do desenvolvimento)                       | Myllena Almeida |
 | [Página de Serviços (Visão do Profissional)](https://github.com/hugouraga/Iggle/issues/26) (cont. do desenvolvimento) | Daniel Silva |
 | [Correção de rotas e controllers, padronização das variáveis](https://github.com/hugouraga/Iggle/issues/32) (cont. do desenvolvimento) | Daniel Silva    |
-| [GQM](https://github.com/hugouraga/Iggle/issues/33)                                                                       | Daniel Silva e Jussara Silva |
 | Modelo ER - [Issue](https://github.com/hugouraga/Iggle/issues/34) / [Modelo](https://github.com/hugouraga/Iggle/blob/master/%23docs/Itera%C3%A7%C3%A3o%203/Modelo%20ER.png)                                                                                                | Daniel Silva e Jussara Silva |
 | Deploy no Heroku - [Issue](https://github.com/hugouraga/Iggle/issues/35) / [Aplicação](http://iggle-app.herokuapp.com/)                                                     | Jussara Silva   |
 | 5º e 6º Sprint                                                                                                                             | Equipe          |
@@ -47,6 +46,7 @@ Início da Iteração | Término da iteração
 | Atividade                                                           | Atribuição                   |
 | ------------------------------------------------------------------- | ---------------------------- |
 | Realizar reuniões diárias (seg a sex) e quinzenais (fins de semana) | Equipe                       |
+| [GQM](https://github.com/hugouraga/Iggle/issues/33)                 | Equipe                       |
 | Aprendizado e Criação de testes TDD (RSpec) e BDD (Cucumber)        | Daniel Silva e Myllena Alves |
 | Criação de Atas de Reunião                                          | Daniel Silva                 |
 | Finalização do desenvolvimento                                      | Equipe                       |
