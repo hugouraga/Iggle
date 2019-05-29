@@ -1,81 +1,67 @@
-<%= form_with(model: professional_user, local: true) do |form| %>
-  <% if professional_user.errors.any? %>
-    <div clas="">
-    <div class="alert alert-danger">
-      <ul>
+<% if professional_user.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
       <h3>Ops! Encontramos <%= pluralize(professional_user.errors.count, 'erro', 'erros') %> </h3>
 
 
       <% professional_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control', id: 'profissional_name' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: 'form-control', id: 'profissional_email' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: 'form-control', id: 'profissional_phone' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :profession %>
-    <%= form.select :profession, [["Nutricionista", "nutricionista"], ["Nutrólogo", "nutrologo"], ["Professor de Esportes", "professor de esportes"], ["Prof. de Educação Física", "profissional de educacao fisica"]], {}, {class: 'form-control'} %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :document %>
-    <%= form.text_field :document, class: 'form-control', id: 'profissional_document' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: 'form-control', id: 'profissional_description' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook, class: 'form-control', id: 'profissional_facebook' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :instagram %>
-    <%= form.text_field :instagram, class: 'form-control', id: 'profissional_instagram' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: 'form-control', id: 'profissional_password' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, class: 'form-control', id: 'profissional_passwordc' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar, class: 'form-control' %>
-  </div>
-
-  <div class="actions">
-    <div class="center">
-      <%= form.submit 'Cadastrar' , class: 'btn btn-verde', name: 'Salvar' %>
-    </div>
-
-    <div class="center">
-      <%= link_to 'Voltar', @professional_user, class: 'btn btn-cinza' %>
-    </div>
+    </ul>
   </div>
 <% end %>
+
+<div class="form-group">
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control', id: 'profissional_name' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :email %>
+  <%= form.text_field :email, class: 'form-control', id: 'profissional_email' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :phone %>
+  <%= form.text_field :phone, class: 'form-control', id: 'profissional_phone' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :profession %>
+  <%= form.select :profession, [["Nutricionista", "nutricionista"], ["Nutrólogo", "nutrologo"], ["Professor de Esportes", "professor de esportes"], ["Prof. de Educação Física", "profissional de educacao fisica"]], {}, {class: 'form-control'} %>
+</div>
+
+<div class="form-group">
+  <%= form.label :document %>
+  <%= form.text_field :document, class: 'form-control', id: 'profissional_document' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :description %>
+  <%= form.text_area :description, class: 'form-control', id: 'profissional_description' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :facebook %>
+  <%= form.text_field :facebook, class: 'form-control', id: 'profissional_facebook' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :instagram %>
+  <%= form.text_field :instagram, class: 'form-control', id: 'profissional_instagram' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :password %>
+  <%= form.password_field :password, class: 'form-control', id: 'profissional_password' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation, class: 'form-control', id: 'profissional_passwordc' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar, class: 'form-control' %>
+</div>

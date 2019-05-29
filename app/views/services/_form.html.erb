@@ -1,4 +1,3 @@
-<%= form_with(model: service, local: true) do |form| %>
   <% if service.errors.any? %>
     <div>
     <div class="alert alert-danger">
@@ -38,13 +37,3 @@
   <%= render "schedules/form", form: form %>
 
   <hr>
-
-  <div class="actions">
-    <div class="center">
-      <%= form.submit 'Salvar', class: 'btn btn-verde' %>
-    </div>
-
-    <div class="center">
-      <%= link_to 'Voltar', services_path, class: 'btn btn-cinza' %>
-    </div>
-<% end %>

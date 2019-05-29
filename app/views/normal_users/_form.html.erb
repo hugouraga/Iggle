@@ -1,57 +1,42 @@
-<%= form_with(model: normal_user, local: true) do |form| %>
-  <% if normal_user.errors.any? %>
-    <div clas="">
-    <div class="alert alert-danger">
-      <ul>
+<% if normal_user.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
       <h3>Ops! Encontramos <%= pluralize(normal_user.errors.count, 'erro', 'erros') %> </h3>
 
 
       <% normal_user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control', id:"user_name" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: 'form-control', id:"user_email" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, class: 'form-control', id:"user_phone" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: 'form-control', id:'user_password' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, class: 'form-control', id:'user_passwordc' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :avatar %>
-    <%= form.file_field :avatar, class: 'form-control' %>
-  </div>
-
-  <div class="actions">
-    <div class="center">
-      <%= form.submit 'Salvar' , class: 'btn btn-verde', name: 'Salvar' %>
-    </div>
-
-    <div class="center">
-      <%= link_to 'Voltar', :back, class: 'btn btn-cinza' %>
-    </div>
-
+    </ul>
   </div>
 <% end %>
+
+<div class="form-group">
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control', id:"user_name" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :email %>
+  <%= form.text_field :email, class: 'form-control', id:"user_email" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :phone %>
+  <%= form.text_field :phone, class: 'form-control', id:"user_phone" %>
+</div>
+
+<div class="form-group">
+  <%= form.label :password %>
+  <%= form.password_field :password, class: 'form-control', id:'user_password' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation, class: 'form-control', id:'user_passwordc' %>
+</div>
+
+<div class="form-group">
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar, class: 'form-control' %>
+</div>

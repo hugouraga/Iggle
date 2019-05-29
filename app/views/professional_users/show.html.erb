@@ -36,13 +36,13 @@
 <div id="conteudo" class="main">
   <div class="container">
     <div class="left">
-      <%= fa_icon "facebook" %>
-      <%= fa_icon "instagram" %>
+      <%= link_to fa_icon('facebook'), temp_path, id: "notificacao" %>
+      <%= link_to fa_icon('instagram'), "https://www.instagram.com/" + @professional_user.instagram, id: "notificacao" %>
 
     <div class="right">
-      <%= fa_icon "bell" %>
-      <%= fa_icon "envelope" %>
-      <%= fa_icon "star" %>
+      <%= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
+      <%= link_to fa_icon('envelope'), temp_path, id: "chat" %>
+      <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
       <span class="avaliacao">4.5</span>
   </div>
   <br><br><br><br>
