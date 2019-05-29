@@ -64,5 +64,5 @@ Quando("eu não preencher meus dados") do
 end
 
 Então("uma mensagem de erro é visualizada") do
-  expect(page).to have_content('Ops! Encontramos 6 erros')
+  expect(page).to have_content('Ops! Encontramos 5 erros')
 end
