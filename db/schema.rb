@@ -50,14 +50,6 @@ ActiveRecord::Schema.define(version: 2019_05_28_170905) do
     t.index ["professional_user_id"], name: "index_addresses_on_professional_user_id"
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "normal_users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
@@ -97,6 +89,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_170905) do
     t.string "description", default: "", null: false
     t.string "value", default: "", null: false
     t.string "duration", default: "", null: false
+    t.string "email", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "professional_user_id"

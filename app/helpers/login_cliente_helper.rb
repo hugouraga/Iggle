@@ -7,11 +7,11 @@ module LoginClienteHelper
         session.delete(:user_id)
     end
 
-    def current_user
-        @current_user ||= NormalUser.find_by(id: session[:user_id])
+    def current_normal_user
+        @current_normal_user ||= NormalUser.find_by(id: session[:user_id])
     end
 
-    def user_signed_in?
-        !current_user.nil?
+    def normal_user_signed_in?
+        !current_normal_user.nil?
     end
 end

@@ -15,7 +15,7 @@
 
   <body>
     <div>
-    <% unless !user_signed_in? %>
+    <% unless !normal_user_signed_in? or !professional_user_signed_in? %>
       
     
       <div class="container">

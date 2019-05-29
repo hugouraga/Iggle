@@ -1,11 +1,11 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in_user
+  before_action :require_logged_in_professional_user
 
   # GET /services
   # GET /services.json
   def index
-    @services = current_user.services
+    @services = current_professional_user.services
   end
 
   # GET /services/1
@@ -26,7 +26,7 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @service = current_user.services.build(service_params)
+    @service = current_professional_user.services.build(service_params)
 
     respond_to do |format|
       if @service.save
@@ -43,7 +43,7 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
-    @service = current_user.services.find(params[:id])
+    @service = current_professional_user.services.find(params[:id])
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to meus_servicos_path }
@@ -58,7 +58,7 @@ class ServicesController < ApplicationController
   # DELETE /services/1
   # DELETE /services/1.json
   def destroy
-    @service = current_user.services.find(params[:id])
+    @service = current_professional_user.services.find(params[:id])
     @service.destroy
     respond_to do |format|
       format.html { redirect_to services_url, notice: 'Serviço excluído com sucesso.' }

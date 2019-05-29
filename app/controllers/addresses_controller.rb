@@ -1,11 +1,11 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in_user
+  before_action :require_logged_in_professional_user
 
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = current_user.addresses
+    @addresses = current_professional_user.addresses
 
   end
 
@@ -26,7 +26,7 @@ class AddressesController < ApplicationController
   # POST /addresses
   # POST /addresses.json
   def create
-    @address = current_user.addresses.build(address_params)
+    @address = current_professional_user.addresses.build(address_params)
 
 
     respond_to do |format|
@@ -43,7 +43,7 @@ class AddressesController < ApplicationController
   # PATCH/PUT /addresses/1
   # PATCH/PUT /addresses/1.json
   def update
-    @address = current_user.addresses.find(params[:id])
+    @address = current_professional_user.addresses.find(params[:id])
 
     respond_to do |format|
       if @address.update(address_params)
@@ -58,7 +58,7 @@ class AddressesController < ApplicationController
   # DELETE /addresses/1
   # DELETE /addresses/1.json
   def destroy
-    @address = current_user.addresses.find(params[:id])
+    @address = current_professional_user.addresses.find(params[:id])
     @address.destroy
     respond_to do |format|
       format.html { redirect_to addresses_url }

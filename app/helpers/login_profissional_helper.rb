@@ -7,11 +7,11 @@ module LoginProfissionalHelper
         session.delete(:user_id)
     end
 
-    def current_user
-        @current_user ||= ProfessionalUser.find_by(id: session[:user_id])
+    def current_professional_user
+        @current_professional_user ||= ProfessionalUser.find_by(id: session[:user_id])
     end
 
-    def user_signed_in?
-        !current_user.nil?
+    def professional_user_signed_in?
+        !current_professional_user.nil?
     end
 end
