@@ -25,5 +25,6 @@ Rails.application.routes.draw do
   delete 'saircliente', to: 'login_cliente#destroy'
   delete 'sairprofissional', to: 'login_profissional#destroy'
   get 'servicos', to:'services#index_normal_users'
+  get 'busca', to:'normal_users#search'
   #get 'editar_profissional', to: 'professional_users#edit'
 end

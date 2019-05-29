@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 2019_05_28_170905) do
     t.index ["professional_user_id"], name: "index_addresses_on_professional_user_id"
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "normal_users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
@@ -82,6 +90,12 @@ ActiveRecord::Schema.define(version: 2019_05_28_170905) do
     t.string "evening", default: "false", null: false
     t.string "night", default: "false", null: false
     t.index ["service_id"], name: "index_schedules_on_service_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "search"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|

@@ -42,23 +42,24 @@
 
     <br><br><br><br>
 
-    <div class="caixa-busca container">
-      <input class="form-control center col-11" type="search" placeholder="Buscar" id="buscar">
-    </div> <!-- Caixa de busca -->
-
     <div class="row container">
-      <%= link_to temp_path, class: "col-sm-6", id: "atendimento_marcado" do %>
+      <%= link_to temp_path, class: "col-sm-3", id: "atendimento_marcado" do %>
         <div class="card-atendimento">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <% end %>
 
-      <%= link_to temp_path, class: "col-sm-6", id: "historico_atendimento" do %>
+      <%= link_to temp_path, class: "col-sm-3", id: "historico_atendimento" do %>
         <div class="card-atendimento">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>
       <% end %>
-      <%= link_to servicos_path, class: "col-sm-4", id: "serviços" do %>
+      <%= link_to busca_path, class: "col-sm-3", id: "busca" do %>
+        <div class="card-atendimento">
+          <h5>BUSCAR</h5>
+        </div>
+      <% end %>
+      <%= link_to servicos_path, class: "col-sm-3", id: "serviços" do %>
         <div class="card-atendimento">
           <h5>VISUALIZAR SERVIÇOS</h5>
         </div>
