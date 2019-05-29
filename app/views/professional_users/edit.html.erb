@@ -1,6 +1,16 @@
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-	<h1>Alterar Conta</h1>	
-	<%= render 'form', professional_user: @current_professional_user %>
+  <h1>Alterar conta</h1>
+  <%= form_with(model: @professional_user, local: true) do |form| %>
+    <%= render 'form', professional_user: @current_professional_user, form: form %>
 
-	
+    <div class="actions">
+      <div class="center">
+        <%= form.submit 'Cadastrar' , class: 'btn btn-verde', name: 'Salvar' %>
+      </div>
+
+      <div class="center">
+        <%= link_to 'Voltar', @professional_user, class: 'btn btn-cinza' %>
+      </div>
+    </div>
+  <% end %>
 </div>

@@ -1,7 +1,16 @@
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
   <h3>Editar endereço</h3>
-  <%= render 'form', address: @address %>
-  <div class='center'>
-    <%= link_to 'Voltar', addresses_path%>
-  </div>
+  <%= form_with(model: @address, local: true) do |form| %>
+    <%= render 'form', address: @address, form: form %>
+
+    <div class="actions">
+      <div class="center">
+        <%= form.submit 'Salvar', class: 'btn btn-verde', name: 'Salvar' %>
+      </div>
+
+      <div class='center'>
+        <%= link_to 'Voltar', addresses_path, class: 'btn btn-cinza' %>
+      </div>
+    </div>
+  <% end %>
 </div>

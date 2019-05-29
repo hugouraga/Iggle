@@ -1,25 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-<h3>Endereços</h3>
-<% @addresses.each do |address| %>
+  <h1>Meus Endereços</h1>
+  <br>
+  <% if @addresses.empty? %>
     <div class="well well-large">
-      Rua: <%= address.name %>
-      Número: <%= address.number %><br>
-      Complemento: <%= address.description %><br>
-      CEP: <%= address.postal_code %><br>
-      Bairro: <%= address.district %><br>
-      Cidade: <%= address.city %><br>
-      Estado: <%= address.state%><br>
-      <div class='right'>
-      <%= link_to fa_icon('edit'), edit_address_path(address), id:'alterar' %>
-      <%= link_to fa_icon('trash'), address, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <tr>
+        <td colspan="4" class="text-center">
+          <h3>Sem endereços cadastrados.</h3>
+          <%= link_to 'Clique aqui', new_address_path %> para cadastrar um novo endereço.
+        </td>
+      </tr>
     </div>
+  <% end %>
+
+  <% @addresses.each do |address| %>
+    <div class="well well-large">
+      <h4 class="center"><strong><%= address.name.upcase + ", " + address.number %></strong></h4>
+      <strong>Complemento:</strong> <%= address.description %><br>
+      <strong>CEP:</strong> <%= address.postal_code %><br>
+      <strong>Bairro:</strong> <%= address.district %><br>
+      <strong>Cidade:</strong> <%= address.city %><br>
+      <strong>Estado:</strong> <%= address.state%><br>
+
+      <div class="center"> <!--Center -->
+        <%= link_to 'Editar', edit_address_path(address), class: 'btn btn-cinza', id: 'alterar' %>
+        <%= link_to 'Apagar', address, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza' %>
+      </div> <!--Center -->
     </div>
-<% end %>
-<div class='center'>
-<%= link_to fa_icon('plus-circle'), new_address_path, class: "center", id: 'novo_endereço'%>
-<br>
-<%= link_to 'Voltar', login_profissional_path %>
-</div>
+  <% end %>
+
+  <div class="center">
+    <%= link_to 'Adicionar endereço', new_address_path, class: 'btn btn-verde' %>
+    <br><br>
+    <%= link_to 'Voltar', login_profissional_path, class: "btn btn-cinza" %>
+  </div>
 </div>
