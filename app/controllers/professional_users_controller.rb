@@ -4,7 +4,12 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users
   # GET /professional_users.json
   def index
-    @professional_users = ProfessionalUser.all
+    @professional_users = ProfessionalUser.where(name:params[:search])
+    if @professional_users.empty?
+      flash.now[:danger] = 'Profissional não encontrado!'
+    end
+
+      
   end
 
   # GET /professional_users/1
