@@ -28,15 +28,15 @@
 
 #### 3º Passo: Métricas
 
-- Número de modalidades que existem na plataforma (>=2)
-- Quantidade e qualidade das informações disponíveis no perfil do profissional
-- Quantidade de canais de comunicação da plataforma
-- Número de interações nos canais da plataforma (retorno de mensagens)
-- Número de serviços contratados
-- Número de avaliações cliente-profissional (vice-versa)
-- Quantidade de filtros
-- Quantidade de profissionais retornados em diferentes tipos de pesquisas
-- Quantidade de serviços cadastrados na plataforma (de acordo com parâmetro)
+- Número de modalidades que existem na plataforma (>=2);
+- Quantidade de informações disponíveis no perfil do profissional;
+- Quantidade de canais de comunicação da plataforma;
+- Número de interações nos canais da plataforma (retorno de mensagens);
+- Número de serviços contratados;
+- Número de avaliações cliente-profissional (vice-versa);
+- Quantidade de filtros;
+- Quantidade de profissionais retornados em diferentes tipos de pesquisas;
+- Quantidade de serviços cadastrados na plataforma (de acordo com parâmetro);
 
 
 ### Processo
@@ -64,9 +64,9 @@
 - Número de histórias de usuário planejadas por sprint;
 - Número de histórias de usuário desenvolvidas por sprint;
 - Quantidade de daily meetings realizadas por semana;
-- Quantidade de reunião de planejamento de sprint/retrospectivas;
+- Quantidade de reunião de planejamento de sprint/retrospectivas realizadas desde o começo do projeto;
 - Quantidade de sprints;
 - Quantidade de testes de comportamento (por feature);
-- Quantidade de features;
+- Quantidade de features implementadas;
 - Quantidade de vezes que histórias tiveram que ser bloqueadas ou retornadas (impedimentos);
-- Problemas encontrados para construção do mvp1;
+- Quantidade de problemas encontrados para construção do mvp1 (em relação a gestão e conhecimento).
