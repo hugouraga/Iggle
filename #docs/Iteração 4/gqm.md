@@ -4,16 +4,16 @@
 
 #### 1º Passo: Metas organizacionais e metas de medições associadas
 
-- Permitir que os usuários tanto forneçam como contratem serviços no ramo de saúde fitness.
-- Possibilitar que os profissionais consigam montar um portfólio de serviços e cadastrar informações essenciais para seus futuros clientes.
-- Disponibilizar um meio de  comunicação objetivo entre cliente e profissional.
-- Permitir que os usuários consigam tem uma comunicação rápida com a equipe do Iggle.
-- Permitir que os usuários contratantes consigam buscar e comparar diversos profissionais.
-- Disponibilizar uma agenda dos serviços marcados e um histórico dos serviços prestados. 
-- Permitir que a plataforma tenha uma política de feedback, não só com a equipe do Iggle, mas também entre cliente-profissional (vice-versa)
-- Atender a necessidade de serviço do usuário-contratante.
-- Oferecer diferentes tipos de serviços na plataforma.
-- Ter uma variedade de serviços de acordo com diferentes parâmetros (localidade, modalidade e etc)
+- Permitir que os usuários tanto forneçam como contratem serviços no ramo de saúde fitness;
+- Possibilitar que os profissionais consigam montar um portfólio de serviços e cadastrar informações essenciais para seus futuros clientes;
+- Disponibilizar um meio de  comunicação objetivo entre cliente e profissional;
+- Permitir que os usuários consigam tem uma comunicação rápida com a equipe do Iggle;
+- Permitir que os usuários contratantes consigam buscar e comparar diversos profissionais;
+- Disponibilizar uma agenda dos serviços marcados e um histórico dos serviços prestados;
+- Permitir que a plataforma tenha uma política de feedback, não só com a equipe do Iggle, mas também entre cliente-profissional (vice-versa);
+- Atender a necessidade de serviço do usuário-contratante;
+- Oferecer diferentes tipos de serviços na plataforma;
+- Ter uma variedade de serviços de acordo com diferentes parâmetros (localidade, modalidade e etc).
 
 #### 2º Passo: Gerar perguntas
 
@@ -36,17 +36,17 @@
 - Número de avaliações cliente-profissional (vice-versa);
 - Quantidade de filtros;
 - Quantidade de profissionais retornados em diferentes tipos de pesquisas;
-- Quantidade de serviços cadastrados na plataforma (de acordo com parâmetro);
+- Quantidade de serviços cadastrados na plataforma (de acordo com parâmetro).
 
 
 ### Processo
 
 #### 1º Passo: Metas organizacionais e metas de medições associadas
 
-- Desenvolvimento das histórias de usuário no período designado.
-- Cumprimento do cronograma de reuniões diárias e reuniões que são por sprint.
-- Uma boa cobertura de testes de comportamento na aplicação.
-- Uma boa cobertura de testes funcionais na aplicação.
+- Desenvolvimento das histórias de usuário no período designado;
+- Cumprimento do cronograma de reuniões diárias e reuniões que são por sprint;
+- Uma boa cobertura de testes de comportamento na aplicação;
+- Uma boa cobertura de testes funcionais na aplicação;
 - Atender os requisitos do mínimo produto viável.
 
 #### 2º Passo: Gerar perguntas
