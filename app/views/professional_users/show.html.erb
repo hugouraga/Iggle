@@ -49,20 +49,18 @@
     <% end %>
       
 
-      
-
     <div class="right">
       <%= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
       <%= link_to fa_icon('envelope'), temp_path, id: "chat" %>
       <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
       <span class="avaliacao">4.5</span>
-  </div>
-  <br><br><br><br>
-  <form>
-    <div class="form-group">
-      <textarea class="form-control" rows="3" placeholder="Escreva um pouco sobre você"><%=@professional_user.description%></textarea>
     </div>
-    </form>
+  <br><br><br><br>
+    <div class="description">
+      <%=@professional_user.description%>
+    </div>
+    <hr>
+    <br>
     <div class="row container">
       <%= link_to meus_servicos_path, class: "col-md-4" do %>
         <div class="card-atendimento">
