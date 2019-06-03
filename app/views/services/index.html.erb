@@ -15,33 +15,41 @@
 
   <% @services.each do |service| %> <!-- Serviços -->
     <br>
-
     <div class="well well-large"> <!-- Card -->
       <h4 class="center"><strong><%= service.service.upcase %></strong></h4>
-      <strong>Descrição:</strong> <%= service.description %><br>
-      <strong>Valor:</strong> R$ <%= service.value %>,00<br>
-      <strong>Duração:</strong> <%= service.duration %>:00h<br>
-
-      <br>
-      <% service.schedules.each do |schedule| %>
-        <strong>Horário:</strong> <%= schedule.day.capitalize %>
-        <% if schedule.morning == "true" %>
-          | Manhã
-        <% end %>
-
-        <% if schedule.evening == "true" %>
-          | Tarde
-        <% end %>
-
-        <% if schedule.night == "true" %>
-          | Noite
-        <% end %>
-
+      <strong>Descrição:</strong> <%= service.description %><br><br>
+      <strong>Valor:</strong> R$ <%= service.value %>,00 |
+      <strong>Duração:</strong> <%= service.duration %>h<br>
+      <br><strong>Endereço:</strong><br>
+      <%= service.address.name + ", " + service.address.number + " | " %>
+      <strong>Complemento: </strong>
+      <%= service.address.description.capitalize  %><br>
+      <strong>CEP: </strong>
+      <%=  service.address.postal_code + " - " + service.address.district + ", " + service.address.city + ", " + service.address.state.upcase %><br>
+      <% if !service.address.schedules.empty? %> <!-- Se não for vazio -->
         <br>
-      <% end %>
+        <strong>Horários de atendimento:</strong><br>
+        <% service.address.schedules.each do |schedule| %> <!-- Cada um dos horários -->
+          <% if schedule.day != "sábado" and schedule.day != "domingo" %> <!-- Para colocar feira no dia -->
+            <%= schedule.day.capitalize + "-feira" %>
+          <% else %>
+            <%= schedule.day.capitalize %>
+          <% end %> <!-- Para colocar feira no dia -->
+          <% if schedule.morning == "true" %> <!-- Se for de manhã -->
+            | Manhã
+          <% end %> <!-- Se for de manhã -->
+          <% if schedule.evening == "true" %> <!-- Se for de tarde -->
+            | Tarde
+          <% end %> <!-- Se for de tarde -->
+          <% if schedule.night == "true" %> <!-- Se for de noite -->
+            | Noite
+          <% end %> <!-- Se for de noite -->
+          <br>
+        <% end %> <!-- Cada um dos horários -->
+      <% end %> <!-- Se não for vazio -->
 
-      <br>
       <div class="center"> <!--Center -->
+        <br>
         <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
         <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
       </div> <!--Center -->

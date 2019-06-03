@@ -14,26 +14,26 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.text_field :service, placeholder: 'Serviço *', class: 'form-control', :required => true %>
+    <%= form.label :service, "Nome" %>
+    <%= form.text_field :service, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.text_area :description, placeholder: 'Descrição *', class: 'form-control', :required => true %>
+    <%= form.label :description, "Descrição" %>
+    <%= form.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.number_field :value, placeholder: 'Preço *', class: 'form-control', :required => true %>
+    <%= form.label :value, "Preço" %>
+    <%= form.number_field :value, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.number_field :duration, placeholder: 'Duração *', max: 9, class: 'form-control', :required => true %>
+    <%= form.label :duration, "Duração (em horas)" %>
+    <%= form.number_field :duration, max: 9, class: 'form-control' %>
   </div>
 
-  <hr>
-  <div class="center">
-    <h5 class="btn btn-warning"><strong>Selecione pelo menos um dia e um turno</strong></h5>
+  <div class="form-group">
+    <%= form.label :address_id, "Endereço (horários de atendimento já inclusos no endereço)" %>
+    <%= form.collection_select :address_id, Address.order(:name), :id, :name, {}, {id: "selecionar-endereco", class: "form-control" } %>
   </div>
-
-  <%= render "schedules/form", form: form %>
-
-  <hr>

@@ -11,12 +11,12 @@
 
 <div class="form-group">
   <label id="#mensagem"> Mensagem </label>
-  <%= f.text_field :message, class: 'form-control', id:"contact_message" %>
+  <%= f.text_area :message, class: 'form-control', id:"contact_message" %>
 </div>
 
 <div class="actions">
   <div class="center">
-    <%= f.submit 'Enviar' , class: 'btn btn-cinza', name: 'Enviar' %>
+    <%= f.submit 'Enviar' , class: 'btn btn-verde', name: 'Enviar' %>
   </div>
 </div>
 <%end%>

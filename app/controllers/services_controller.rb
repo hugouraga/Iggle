@@ -16,7 +16,6 @@ class ServicesController < ApplicationController
   # GET /services/new
   def new
     @service = Service.new
-    7.times{@service.schedules.build}
   end
 
   # GET /services/1/edit
@@ -33,7 +32,6 @@ class ServicesController < ApplicationController
         format.html { redirect_to meus_servicos_path }
         flash[:success] = 'Serviço adicionado com sucesso!'
       else
-        7.times{@service.schedules.build} if @service.schedules.blank?
         format.html { render :new }
         format.json { render json: @service.errors, status: :unprocessable_entity }
       end
@@ -60,10 +58,8 @@ class ServicesController < ApplicationController
   def destroy
     @service = current_professional_user.services.find(params[:id])
     @service.destroy
-    respond_to do |format|
-      format.html { redirect_to services_url, notice: 'Serviço excluído com sucesso.' }
-      format.json { head :no_content }
-    end
+    redirect_to services_url
+    flash[:success] = 'Serviço excluído com sucesso.'
   end
 
   private
@@ -74,8 +70,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(
-        :service, :description, :value, :duration, :email, schedules_attributes: [:id, :day, :morning, :evening, :night, :_destroy]
-        )
+      params.require(:service).permit( :service, :description, :value, :duration, :email, :address_id )
     end
 end

@@ -3,6 +3,7 @@
     <%= form_with(model: @service, local: true) do |form| %>
         <%= render 'form', service: @service, form: form %>
 
+        <br>
         <div class="actions">
             <div class="center">
                 <%= form.submit 'Adicionar', class: 'btn btn-verde' %>

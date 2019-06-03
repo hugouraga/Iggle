@@ -19,6 +19,7 @@
       <%= link_to 'Sair', sairprofissional_path, method: :delete %>
     </div>
   </nav>
+</div>
 
     <div class="div-profile center">
       <% if @professional_user.avatar.attached? %>
@@ -37,32 +38,29 @@
   <div class="container">
     <div class="left">
       <% if @professional_user.facebook != "" %>
-        <%= link_to fa_icon('facebook'), @professional_user.facebook, id: "notificacao", class:'btn btn-primary' %>
-        <% else %>
-         <%= link_to fa_icon('facebook'), @professional_user.facebook, id: "notificacao" %>   
+        <%= link_to fa_icon('facebook'), @professional_user.facebook, id: "facebook", class:'verde', target: :_blank %>
+      <% else %>
+        <%= link_to fa_icon('facebook'), @professional_user.facebook, id: "facebook", :title => "Você não possui um facebook cadastrado" %>
       <% end %>
 
       <% if @professional_user.instagram != "" %>
-        <%= link_to fa_icon('instagram'), "htps://www.instagram.com/" + @professional_user.instagram, id: "notificacao", class: 'btn btn-danger' %>    
+        <%= link_to fa_icon('instagram'), "https://www.instagram.com/" + @professional_user.instagram, id: "instagram", class: 'verde', target: :_blank %>
       <% else %>
-      <%= link_to fa_icon('instagram'), "htps://www.instagram.com/" + @professional_user.instagram, id: "notificacao" %>
-    <% end %>
-      
-
-      
+        <%= link_to fa_icon('instagram'), @professional_user.instagram, id: "instagram", :title => "Você não possui um instagram cadastrado" %>
+      <% end %>
+    </div>
 
     <div class="right">
-      <%= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
+      <%#= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
       <%= link_to fa_icon('envelope'), temp_path, id: "chat" %>
       <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
       <span class="avaliacao">4.5</span>
-  </div>
-  <br><br><br><br>
-  <form>
-    <div class="form-group">
-      <textarea class="form-control" rows="3" placeholder="Escreva um pouco sobre você"><%=@professional_user.description%></textarea>
     </div>
-    </form>
+    <br><br><br><br>
+    <div class="container">
+      <h4 class="center descricao"><%= @professional_user.description %></h4>
+    </div>
+
     <div class="row container">
       <%= link_to meus_servicos_path, class: "col-md-4" do %>
         <div class="card-atendimento">
@@ -82,6 +80,6 @@
         </div>
       <%end%>
     </div><!-- Row -->
-
+    <br>
   </div> <!-- Container -->
 </div>

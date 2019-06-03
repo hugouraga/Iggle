@@ -1,39 +1,22 @@
-<%= form.fields_for :schedules do |schedule_f| %>
+<div class="form-group col-lg-6">
+    <%= form.select :day, [
+        ["Segunda-feira", "segunda"],
+        ["Terça-feira", "terça"],
+        ["Quarta-feira", "quarta"],
+        ["Quinta-feira", "quinta"],
+        ["Sexta-feira", "sexta"],
+        ["Sábado", "sábado"],
+		["Domingo", "domingo"]
+		], {}, { class: "form-control" } %>
+</div>
 
-  <hr>
+<div class="form-group col-lg-6">
+    <%= form.check_box :morning, {id: "manha"}, 'true' %>
+    <%= form.label :morning, "Manhã" %>
+    <%= form.check_box :evening, {id: "tarde"}, 'true' %>
+    <%= form.label :evening, "Tarde" %>
+    <%= form.check_box :night, {id: "noite"}, 'true' %>
+    <%= form.label :night, "Noite" %><br>
 
-  <div class="form-group">
-    <%= schedule_f.label :day, "Dia", class: "selecionar" %>
-    <%= schedule_f.radio_button :day, "segunda" %>
-    <%= schedule_f.label :day, "Segunda" %>
-    <%= schedule_f.radio_button :day, "terça" %>
-    <%= schedule_f.label :day, "Terça" %>
-    <%= schedule_f.radio_button :day, "quarta" %>
-    <%= schedule_f.label :day, "Quarta" %>
-    <%= schedule_f.radio_button :day, "quinta" %>
-    <%= schedule_f.label :day, "Quinta" %>
-    <%= schedule_f.radio_button :day, "sexta" %>
-    <%= schedule_f.label :day, "Sexta" %>
-    <%= schedule_f.radio_button :day, "sábado" %>
-    <%= schedule_f.label :day, "Sábado" %>
-    <%= schedule_f.radio_button :day, "domingo" %>
-    <%= schedule_f.label :day, "Domingo" %>
-  </div>
-
-  <div class="form-group">
-    <%= schedule_f.label "Turno", class: "selecionar" %>
-    <%= schedule_f.radio_button :morning, "true" %>
-    <%= schedule_f.label :morning, "Manhã" %>
-    <%= schedule_f.radio_button :evening, "true" %>
-    <%= schedule_f.label :evening, "Tarde" %>
-    <%= schedule_f.radio_button :night, "true" %>
-    <%= schedule_f.label :night, "Noite" %>
-  </div>
-
-  <div class="form-group">
-    <%= schedule_f.label :_destroy, "Excluir Horário", class: "excluir" %>
-    <%= schedule_f.radio_button :_destroy, "true" %>
-    <%= schedule_f.label :_destroy, "Sim" %>
-  </div>
-
-<% end %>
+    <%= form.hidden_field :address_id, :value => params[:address_id] %>
+</div>

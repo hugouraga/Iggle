@@ -90,29 +90,8 @@ a, a:hover {
 .pt-modal {
   color: #000;
 }
-.excluir {
-  border: 1px solid red;
-  border-radius: 5px;
-  padding: 3px 8px 3px 8px;
-  margin-right: 5px;
-  background-color: #dc3545;
-  color: white;
-}
-
-.selecionar {
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  padding: 3px 8px 3px 8px;
-  margin-bottom: 10px;
-  background-color: #17a2b8;
-  color: white;
-}
-.obrigatorio {
-  order: 1px solid #f0ad4e;
-  border-radius: 5px;
-  padding: 3px 8px 3px 8px;
-  background-color: #FFD700;
-  color: white;
+.verde {
+  color: #3CB371;
 }
 
 /* ============= PERFIL DO USUÁRIO ============= */
@@ -169,9 +148,9 @@ a, a:hover {
 }
 .card-atendimento {
   height: 100px;
-  border: 1px solid #C0C0C0;
-  border-radius: 10px;
-  background-color: #F4F4F4;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  background-color: #FAFAFA;
   text-align: center;
   padding-top: 35px;
 }
@@ -237,6 +216,11 @@ a, a:hover {
   border: none;
   border-radius: 5px;
   margin-left: 92%;
+}
+.descricao{
+  line-height: 30px;
+  color: #808080;
+  padding: 0px 40px 0px 40px;
 }
 
 

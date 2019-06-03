@@ -1,5 +1,5 @@
 class Schedule < ApplicationRecord
-	belongs_to :service
+	belongs_to :address
 
 	validates :day, presence: true
 	validates :morning, presence: true

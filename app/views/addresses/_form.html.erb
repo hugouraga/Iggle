@@ -41,5 +41,33 @@
 
 <div class="form-group">
   <%= form.label :state %>
-  <%= form.text_field :state, class: 'form-control', id: 'state_address' %>
+  <%= form.select :state, [
+    ["Acre (AC)", "ac"],
+    ["Alagoas (AL)", "al"],
+    ["Amapá (AP)", "ap"],
+    ["Amazonas (AM)", "am"],
+    ["Bahia (BA)", "ba"],
+    ["Ceará (CE)", "ce"],
+    ["Distrito Federal (DF)", "df"],
+    ["Espírito Santo (ES)", "es"],
+    ["Goiás (GO)", "go"],
+    ["Maranhão (MA)", "ma"],
+    ["Mato Grosso (MT)", "mt"],
+    ["Mato Grosso do Sul", "ms"],
+    ["Minas Gerais (MG)", "mg"],
+    ["Pará (PA)", "pa"],
+    ["Paraíba (PB)", "pb"],
+    ["Paraná (PR)", "pr"],
+    ["Pernambuco (PE)", "pe"],
+    ["Piauí (PI)", "pi"],
+    ["Rio de Janeiro (RJ)", "rj"],
+    ["Rio Grande do Norte (RN)", "rn"],
+    ["Rio Grande do Sul (RS)", "rs"],
+    ["Rondônia (RO)", "ro"],
+    ["Roraima (RR)", "rr"],
+    ["Santa Catarina (SC)", "sc"],
+    ["São Paulo (SP)", "sp"],
+    ["Sergipe (SE)", "se"],
+    ["Tocantins (TO)", "to"]
+    ], {}, {class: 'form-control'} %>
 </div>

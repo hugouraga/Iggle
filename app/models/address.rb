@@ -1,4 +1,7 @@
 class Address < ApplicationRecord
+  has_many :schedules, dependent: :destroy
+  has_many :service
+
   validates :name, presence: true, length: { maximum: 500 }
   validates :number, presence: true, length: { maximum: 500 }
   validates :description, presence: true, length: { maximum: 500 }

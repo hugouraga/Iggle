@@ -20,8 +20,42 @@
       <strong>Complemento:</strong> <%= address.description %><br>
       <strong>CEP:</strong> <%= address.postal_code %><br>
       <strong>Bairro:</strong> <%= address.district %><br>
-      <strong>Cidade:</strong> <%= address.city %><br>
-      <strong>Estado:</strong> <%= address.state%><br>
+      <strong>Cidade:</strong> <%= address.city + ", " + address.state.upcase %><br>
+      <br>
+
+      <% if address.schedules.empty? %>
+        <strong>Sem horários cadastrados.</strong><br>
+      <% else %>
+        <strong>Horários de atendimento: </strong><br>
+        <% address.schedules.each do |schedule| %>
+          <% if schedule.day != "sábado" and schedule.day != "domingo" %> <!-- Para colocar feira no dia -->
+            <%= schedule.day.capitalize + "-feira" %>
+          <% else %>
+            <%= schedule.day.capitalize %>
+          <% end %> <!-- Para colocar feira no dia -->
+          <% if schedule.morning == "true" %>
+            | Manhã
+          <% end %>
+          <% if schedule.evening == "true" %>
+            | Tarde
+          <% end %>
+          <% if schedule.night == "true" %>
+            | Noite
+          <% end %>
+          <strong>
+            <%= fa_icon "angle-double-right" %>
+            <%= link_to "Editar", edit_schedule_path(schedule, address_id: address.id), class: "verde", id: "alterar-horario" %>
+            |
+            <%= link_to "Apagar", schedule, method: :delete, data: { confirm: 'Confirma?' }, class: "verde" %>
+          </strong>
+          <br>
+        <% end %>
+      <% end %>
+      <br>
+      <%# @address_id = address.id %>
+      <%#= link_to "Adicionar Horário", new_schedule_path(@address_id), class: "btn btn-verde", 'data-target' => "#modal-horario", 'data-toggle' => "modal", name: 'Horario' %>
+      <%= link_to 'Adicionar Horário', new_schedule_path(address_id: address.id), class: 'btn btn-verde', id: 'adicionar-horario' %>
+      <br><br>
 
       <div class="center"> <!--Center -->
         <%= link_to 'Editar', edit_address_path(address), class: 'btn btn-cinza', id: 'alterar' %>

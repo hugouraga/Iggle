@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def new
-    if professional_user_signed_in? or nornal_user_signed_in?
+    if professional_user_signed_in? or normal_user_signed_in?
       @contact = Contact.new
     end
   end
