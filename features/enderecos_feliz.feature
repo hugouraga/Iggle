@@ -40,7 +40,7 @@ Contexto: Dado que eu esteja logado na plataforma
   Cenario: Adicionar novo endereço
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na sessão "Endereços"
+    E clico na seção "Endereços"
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de adição
     E for direcionado para o formulário de adicão de endereço
@@ -51,7 +51,7 @@ Contexto: Dado que eu esteja logado na plataforma
   Cenario: Alterar dados de um endereço
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na sessão "Endereços"
+    E clico na seção "Endereços"
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de alteração
     E for direcionado para o formulário de alteração de dados do endereço
