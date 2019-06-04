@@ -45,6 +45,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem "google-cloud-storage", "~> 1.8", require: false
 
 group :development, :test do
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -64,7 +65,6 @@ group :test do
   gem "cucumber-websteps"
   gem 'connection_pool'
   gem 'factory_bot'
-  gem 'rspec'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
