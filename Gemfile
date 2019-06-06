@@ -46,6 +46,8 @@ gem "google-cloud-storage", "~> 1.8", require: false
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'ffaker'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -64,7 +66,6 @@ group :test do
   gem 'database_cleaner'
   gem "cucumber-websteps"
   gem 'connection_pool'
-  gem 'factory_bot'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -121,8 +121,12 @@ GEM
     execjs (2.7.0)
     factory_bot (5.0.2)
       activesupport (>= 4.2.0)
+    factory_bot_rails (5.0.2)
+      factory_bot (~> 5.0.2)
+      railties (>= 4.2.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
+    ffaker (2.11.0)
     ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     font-awesome-rails (4.7.0.5)
@@ -335,7 +339,8 @@ DEPENDENCIES
   cucumber-websteps
   database_cleaner
   duktape
-  factory_bot
+  factory_bot_rails
+  ffaker
   font-awesome-rails
   google-cloud-storage (~> 1.8)
   jbuilder (~> 2.5)
