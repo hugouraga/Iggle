@@ -23,7 +23,7 @@
       <br><strong>Endereço:</strong><br>
       <%= service.address.name + ", " + service.address.number + " | " %>
       <strong>Complemento: </strong>
-      <%= service.address.description.capitalize  %><br>
+      <%= service.address.description  %><br>
       <strong>CEP: </strong>
       <%=  service.address.postal_code + " - " + service.address.district + ", " + service.address.city + ", " + service.address.state.upcase %><br>
       <% if !service.address.schedules.empty? %> <!-- Se não for vazio -->

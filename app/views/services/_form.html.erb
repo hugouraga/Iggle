@@ -35,5 +35,5 @@
 
   <div class="form-group">
     <%= form.label :address_id, "Endereço (horários de atendimento já inclusos no endereço)" %>
-    <%= form.collection_select :address_id, Address.order(:name), :id, :name, {}, {id: "selecionar-endereco", class: "form-control" } %>
+    <%= form.collection_select :address_id, current_professional_user.addresses.order(:name), :id, :name, {}, {id: "selecionar-endereco", class: "form-control" } %>
   </div>

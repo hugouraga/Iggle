@@ -11,6 +11,7 @@ Dado("clico na sessão {string}") do |string|
 end
 
 Então("eu deveria está na página de endereços do profissional") do
+  visit meus_enderecos_path
 end
 
 Quando("eu clicar no ícone de adição") do
@@ -32,12 +33,11 @@ Quando("preencher meus dados") do
 end
 
 Então("meu novo endereço aparece na página de endereços do profissional") do
-  expect(page).to have_content('Via Elevado Pres. João Goulart')
+  expect(page).to have_content('VIA ELEVADO PRES. JOÃO GOULART, 19')
 end
 
 Quando("eu clicar no ícone de alteração") do
-  visit meus_enderecos_path
-  find('[id=alterar]').click
+  find('[id=editar]').click
 end
 
 Quando("for direcionado para o formulário de alteração de dados do endereço") do
@@ -64,5 +64,5 @@ Quando("eu não preencher meus dados") do
 end
 
 Então("uma mensagem de erro é visualizada") do
-  expect(page).to have_content('Ops! Encontramos 6 erros')
+  expect(page).to have_content('Ops! Encontramos 5 erros')
 end

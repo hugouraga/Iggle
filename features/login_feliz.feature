@@ -12,6 +12,21 @@ Para aproveitar as funcionalidades oferecidas pela plataforma.
 
 
 Contexto: Dado que eu seja um usuário cadastrado
+  Dado que eu visito a página inicial
+  E eu clico no botão Cadastro
+  Então eu vou para a página de seleção de cadastro
+  Quando eu clicar no botão Cliente
+  E for para a página cadastro_cliente
+  Quando eu preencher o novo formulário de usuário com nome e email e telefone e senha
+  E clicar no botão 'Salvar'
+  Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
+  Dado que eu visito a página inicial
+  E eu clico no botão Cadastro
+  Então eu vou para a página de seleção de cadastro
+  Quando eu clicar no botão Profissional
+  Quando eu preencher o novo formulário com as informações necessárias
+  E clicar no botão 'Salvar'
+  Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
 
 
   Cenario: Login usuário-contratante
