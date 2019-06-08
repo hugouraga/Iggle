@@ -16,7 +16,7 @@ class LoginClienteController < ApplicationController
 
     def destroy
         sign_out
-        flash[:success] = 'logout realizado com sucesso!'
+        flash[:success] = 'Logout realizado com sucesso!'
         redirect_to entrar_path
     end
 

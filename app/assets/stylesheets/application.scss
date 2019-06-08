@@ -20,12 +20,6 @@ a, a:hover {
   margin: 20px auto 0px auto;
   text-align: center;
 }
-#descricao {
-  width: 60%;
-  margin: 20px auto 120px auto;
-  text-align: center;
-  color: #808080;
-}
 #title-cadastro {
     color: #FFF;
     padding-top: 10px;
@@ -217,12 +211,6 @@ a, a:hover {
   border-radius: 5px;
   margin-left: 92%;
 }
-.descricao{
-  line-height: 30px;
-  color: #808080;
-  padding: 0px 40px 0px 40px;
-}
-
 
 /* ============= PERFIL DO PROFISSIONAL ============= */
 
@@ -251,4 +239,9 @@ a, a:hover {
 .card-servicos:hover {
   background-color: #FFF;
   transition-duration: 1s;
+}
+
+.description{
+  text-align: center;
+  color: #808080;
 }

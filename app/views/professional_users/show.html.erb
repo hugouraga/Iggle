@@ -56,11 +56,11 @@
       <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
       <span class="avaliacao">4.5</span>
     </div>
-    <br><br><br><br>
-    <div class="container">
-      <h4 class="center descricao"><%= @professional_user.description %></h4>
+    <br><br><br><br><br>
+    <div class="description">
+      <%=@professional_user.description%>
     </div>
-
+    <hr>
     <div class="row container">
       <%= link_to meus_servicos_path, class: "col-md-4" do %>
         <div class="card-atendimento">

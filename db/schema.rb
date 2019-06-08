@@ -92,6 +92,12 @@ ActiveRecord::Schema.define(version: 2019_06_02_151327) do
     t.index ["address_id"], name: "index_schedules_on_address_id"
   end
 
+  create_table "searches", force: :cascade do |t|
+    t.string "search"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "service", default: "", null: false
     t.string "description", default: "", null: false
@@ -109,5 +115,6 @@ ActiveRecord::Schema.define(version: 2019_06_02_151327) do
   add_foreign_key "addresses", "professional_users"
   add_foreign_key "schedules", "addresses"
   add_foreign_key "services", "addresses"
+  add_foreign_key "schedules", "services"
   add_foreign_key "services", "professional_users"
 end

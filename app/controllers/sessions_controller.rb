@@ -7,16 +7,16 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in(user)
       redirect_to temp_path(user)
-    else 
+    else
       flash.now[:danger] = 'Email ou senha inválidos'
       render 'new'
     end
   end
 
-  def destroy 
+  def destroy
     sing_out
-    flash[:sucess] = 'logout realizado com sucesso!'
+    flash[:sucess] = 'Logout realizado com sucesso!'
     redirect_to entrar_path
   end
-  
+
 end
