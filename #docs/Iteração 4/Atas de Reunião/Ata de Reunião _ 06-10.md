@@ -38,10 +38,12 @@ Linkar ao facebook | Hugo Uraga
 Mudança de cor no icone quando não cadastrado - Redes sociais do profissional | Hugo Uraga
 Endereços na página de serviços | Jussara Silva
 Horários na página de endereços | Myllena Alves, Jussara Silva
+Testes BDD e RSPEC | Myllena Alves
 
 ## O que falta fazer
 Ação                            | Responsável   
 :-------------------------------: | :-------------: 
+Levantamento de erros | ?
 [Buscas - nome, serviço, localidade, profissão](https://github.com/hugouraga/Iggle/issues/54) | Myllena Almeida
 [Mensagens](https://github.com/hugouraga/Iggle/issues/53) | Daniel Silva
 [Perfil do profissional - visão cliente](https://github.com/hugouraga/Iggle/issues/55) | Myllena Almeida
