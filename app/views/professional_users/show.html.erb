@@ -2,14 +2,14 @@
   <button id="openbtn" class="openbtn" onclick="openNav()">&#9776;</button>
 
   <h5 class="nome-user">
-    <%= @professional_user.name %>
+    <%= @professional_user.name.titlecase %>
   </h5>
 
   <!-- SIDEBAR -->
   <nav id="mySidebar" class="sidebar">
     <div class="sidebar-header">
       <a href="javascript:void(0)" class="closebtn sidebar-header" onclick="closeNav()">&times;</a>
-      <%= @professional_user.name %>
+      <%= @professional_user.name.titlecase %>
       <hr>
     </div>
     <div class="sidebar-links">
@@ -54,11 +54,10 @@
       <%#= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
       <%= link_to fa_icon('envelope'), temp_path, id: "chat" %>
       <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
-      <span class="avaliacao">4.5</span>
     </div>
     <br><br><br><br><br>
     <div class="description">
-      <%=@professional_user.description%>
+      <%=@professional_user.description %>
     </div>
     <hr>
     <div class="row container">

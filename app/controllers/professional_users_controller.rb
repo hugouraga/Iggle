@@ -4,12 +4,10 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users
   # GET /professional_users.json
   def index
-    @professional_users = ProfessionalUser.where(name:params[:search])
+    @professional_users = ProfessionalUser.where(name: params[:search])
     if @professional_users.empty?
-      flash.now[:danger] = 'Profissional não encontrado!'
+      flash.now[:danger] = "Profissional não encontrado."
     end
-
-      
   end
 
   # GET /professional_users/1
@@ -22,6 +20,15 @@ class ProfessionalUsersController < ApplicationController
     if current_professional_user.id != @professional_user.id
       redirect_to current_professional_user
     end
+  end
+
+  def profile_professional_user
+    @professional_user = ProfessionalUser.find(params[:id])
+  end
+
+  def professional_services
+    @professional_user = ProfessionalUser.find(params[:id])
+    @services = @professsional_user.services
   end
 
   # GET /professional_users/new

@@ -2,6 +2,8 @@ class Address < ApplicationRecord
   has_many :schedules, dependent: :destroy
   has_many :service
 
+  before_save :city_downcase, :district_downcase
+
   validates :name, presence: true, length: { maximum: 500 }
   validates :number, presence: true, length: { maximum: 500 }
   validates :description, presence: false, length: { maximum: 500 }
@@ -12,4 +14,11 @@ class Address < ApplicationRecord
 
   belongs_to :professional_user
 
+  private
+  def city_downcase
+    self.city.downcase!
+  end
+  def district_downcase
+    self.district.downcase!
+  end
 end

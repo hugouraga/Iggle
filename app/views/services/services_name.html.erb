@@ -1,0 +1,60 @@
+<br>
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+	<h3 class="center">Busque um serviço pelo seu nome</h3>
+    <div class="well well-large">
+        <div class="form-group center">
+            <%= form_tag(busca_servico_nome_path, :method => :get) do %>
+				<div class="col-sm-7">
+                	<%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Digite o nome em minúsculo. Ex: yoga' %>
+				</div>
+				<%= submit_tag 'Buscar', class:' btn btn-verde' %>
+            <% end %>
+        </div>
+    </div>
+
+	<% @services.each do |service| %> <!-- Serviços -->
+		<br>
+		<div class="well well-large"> <!-- Card -->
+			<h4 class="center"><strong><%= service.service.upcase %></strong></h4>
+			<strong>Profissional:</strong> <%= service.professional_user.name.titlecase + " | " + service.professional_user.profession.titlecase %>
+            <%= fa_icon "angle-double-right" %>
+			<strong><%= link_to 'Visitar Perfil', perfil_profissional_path(service.professional_user.id), class: "verde" %></strong><br><br>
+			<strong>Descrição:</strong> <%= service.description %><br><br>
+			<strong>Valor:</strong> R$ <%= service.value %>,00 |
+			<strong>Duração:</strong> <%= service.duration %>h<br>
+			<br><strong>Endereço:</strong><br>
+			<%= service.address.name + ", " + service.address.number + " | " %>
+			<strong>Complemento: </strong>
+			<%= service.address.description  %><br>
+			<strong>CEP: </strong>
+			<%=  service.address.postal_code + " - " + service.address.district.capitalize + ", " + service.address.city.capitalize + ", " + service.address.state.upcase %><br>
+			<% if !service.address.schedules.empty? %> <!-- Se não for vazio -->
+				<br>
+				<strong>Horários de atendimento:</strong><br>
+				<% service.address.schedules.each do |schedule| %> <!-- Cada um dos horários -->
+				<% if schedule.day != "sábado" and schedule.day != "domingo" %> <!-- Para colocar feira no dia -->
+					<%= schedule.day.capitalize + "-feira" %>
+				<% else %>
+					<%= schedule.day.capitalize %>
+				<% end %> <!-- Para colocar feira no dia -->
+				<% if schedule.morning == "true" %> <!-- Se for de manhã -->
+					| Manhã
+				<% end %> <!-- Se for de manhã -->
+				<% if schedule.evening == "true" %> <!-- Se for de tarde -->
+					| Tarde
+				<% end %> <!-- Se for de tarde -->
+				<% if schedule.night == "true" %> <!-- Se for de noite -->
+					| Noite
+				<% end %> <!-- Se for de noite -->
+				<br>
+				<% end %> <!-- Cada um dos horários -->
+			<% end %> <!-- Se não for vazio -->
+		</div> <!--Card -->
+
+	<% end %> <!-- Serviços -->
+
+	<div class="center"> <!-- Adicionar Serviço -->
+		<%= link_to 'Voltar', login_cliente_path, class: "btn btn-cinza" %>
+	</div> <!-- Adicionar Serviço -->
+
+</div> <!--Container -->

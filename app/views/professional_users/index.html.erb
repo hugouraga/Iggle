@@ -1,34 +1,46 @@
 <br>
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-    <div class="well well-large"> 
-        <div class="form-inline center">
-            <div class="form-group">
-                <%= form_tag(professional_users_path, :method => :get) do %>
-                    <%= text_field_tag 'search', nil, class: 'form-control form-style', placeholder:'Digite aqui sua busca'%>
-                    <%= submit_tag 'Buscar', class:' btn btn-verde'%>
-                <% end %>
-                <br>
-            </div>
+	<h3 class="center">Busque um profissional pelo seu nome</h3>
+    <div class="well well-large">
+        <div class="form-group center">
+            <%= form_tag(professional_users_path, :method => :get) do %>
+                <div class="col-sm-7">
+                    <%= text_field_tag 'search', nil, class: 'form-control form-style', placeholder:'Digite em minúsculo. Ex: carla diaz' %>
+                </div>
+                <%= submit_tag 'Buscar', class:' btn btn-verde'%>
+            <% end %>
+            <br>
         </div>
+    </div>
 
+    <% if @professional_users.empty? %>
+
+    <% else %>
         <table class="table">
             <thead>
                 <tr>
-                <th>Nome</th>
-                <th>Profissão</th>
-                <th colspan="3"></th>
+                    <th class="center">Nome</th>
+                    <th class="center">Profissão</th>
+                    <th class="center">Perfil</th>
+                    <th class="center">Serviços</th>
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody class="center">
                 <% @professional_users.each do |professional_user| %>
-                <tr>
-                    <td><%= professional_user.name %></td>
-                    <td><%= professional_user.profession %></td>
-                    <td><%= link_to 'Visitar perfil', perfil_profissional_path %></td>
-                </tr>
+                    <tr>
+                        <td><%= professional_user.name.titlecase %></td>
+                        <td><%= professional_user.profession.titlecase %></td>
+                        <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id) %></td>
+                        <td><%= link_to "Visualizar", servicos_profissional_path(id: professional_user.id) %></td>
+                    </tr>
                 <% end %>
             </tbody>
         </table>
-    </div>
+    <% end %>
+
+    <div class="center"> <!-- Adicionar Serviço -->
+        <br>
+        <%= link_to 'Voltar', login_cliente_path, class: "btn btn-cinza" %>
+    </div> <!-- Adicionar Serviço -->
 </div>

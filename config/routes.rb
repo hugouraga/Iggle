@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :addresses
   resources :services
   resources :contacts, only: [:new, :create]
-  
+
   resources :professional_users
   resources :normal_users
   resources :schedules
@@ -24,8 +24,10 @@ Rails.application.routes.draw do
   get 'temp', to: 'static_pages#temp'
   delete 'saircliente', to: 'login_cliente#destroy'
   delete 'sairprofissional', to: 'login_profissional#destroy'
-  get 'servicos', to:'services#index_normal_users'
-  get 'busca', to:'professional_users#index'
-  get 'perfil_profissional', to:'normal_users#profile_professional_user'
+  get 'servicos_profissional', to:'services#professional_services'
+  get 'busca_profissional', to:'professional_users#index'
+  get 'busca_servico_nome', to: 'services#services_name'
+  get '/:id' => 'professional_users#profile_professional_user', as: :perfil_profissional
+  #get 'servicos_profissional', to: 'professional_users#professional_services'
   #get 'editar_profissional', to: 'professional_users#edit'
 end
