@@ -1,11 +1,35 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in_professional_user
+  before_action :require_logged_in_professional_user, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /services
   # GET /services.json
   def index
     @services = current_professional_user.services
+  end
+
+  def professional_services
+    #@services = Service.all
+    @services = Service.where(professional_user_id: params[:id])
+  end
+
+  def services_name
+    @services = Service.where(service: params[:search])
+    @professional = Service.joins(:professional_user).where(professional_users: params[:id])
+    if params[:search].present?
+      if @services.empty?
+        flash.now[:danger] = 'Serviço não encontrado!'
+      end
+    end
+  end
+
+  def services_district
+    @services = Service.joins(:address).where(addresses: {district: params[:search]})
+    if params[:search].present?
+      if @services.empty?
+        flash.now[:danger] = 'Serviço não encontrado!'
+      end
+    end
   end
 
   # GET /services/1

@@ -1,0 +1,61 @@
+<div class="bg-profissional">
+  <br>
+  <span class="nome-user"><%= @professional_user.name.titlecase %></span>
+</div>
+
+    <div class="div-profile center">
+      <% if @professional_user.avatar.attached? %>
+        <%= image_tag @professional_user.avatar,
+          :alt => "profile picture",
+          class: "img-profile" %>
+      <% else %>
+          <%= image_tag 'no_avatar.jpg',
+          :alt => "No profile picture",
+          class: "img-profile" %>
+      <% end %>
+    </div>
+
+<div id="conteudo" class="main">
+  <div class="container">
+    <div class="left">
+      <% if @professional_user.facebook != "" %>
+        <%= link_to fa_icon('facebook'), @professional_user.facebook, id: "facebook", class:'verde', target: :_blank %>
+      <% end %>
+
+      <% if @professional_user.instagram != "" %>
+        <%= link_to fa_icon('instagram'), "https://www.instagram.com/" + @professional_user.instagram, id: "instagram", class: 'verde', target: :_blank %>
+      <% end %>
+    </div>
+
+    <div class="right">
+      <%#= link_to fa_icon('bell'), temp_path, id: "notificacao" %>
+      <%= link_to fa_icon('envelope'), temp_path, id: "chat" %>
+      <%= link_to fa_icon('star'), temp_path, id: "avaliacao" %>
+    </div>
+    <br><br><br><br><br>
+    <div class="description">
+      <%= @professional_user.description %><br><br>
+      <strong>Telefone:</strong> <%= "(" + @professional_user.phone[0..1] + ") " + @professional_user.phone[2..-1] %><br>
+      <strong>E-mail:</strong> <%= @professional_user.email %><br>
+    </div>
+    <hr>
+    <div class="col-md-12">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <%= link_to servicos_profissional_path(id: @professional_user.id) do %>
+          <div class="card-atendimento">
+            <h5>SERVIÇOS</h5>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+
+    <div class="center"> <!-- Adicionar Serviço -->
+      <%= link_to 'Voltar', busca_profissional_path, class: "btn btn-cinza" %>
+    </div> <!-- Adicionar Serviço -->
+
+  </div> <!-- Container -->
+</div>

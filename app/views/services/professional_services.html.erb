@@ -1,12 +1,11 @@
 <div class="col-md-6 col-md-offset-3 col-xs-12 container"> <!-- Container -->
-  <h1>Meus Serviços</h1>
+  <h1>Serviços</h1>
 
   <% if @services.empty? %>
     <div class="well well-large">
       <tr>
         <td colspan="4" class="text-center">
           <h3>Sem serviços cadastrados.</h3>
-          <%= link_to 'Clique aqui', new_service_path %> para cadastrar um novo serviço
         </td>
       </tr>
     </div>
@@ -25,7 +24,7 @@
       <strong>Complemento: </strong>
       <%= service.address.description  %><br>
       <strong>CEP: </strong>
-      <%=  service.address.postal_code + " - " + service.address.district.titlecase + ", " + service.address.city.titlecase + ", " + service.address.state.upcase %><br>
+      <%=  service.address.postal_code + " - " + service.address.district.capitalize + ", " + service.address.city.capitalize + ", " + service.address.state.upcase %><br>
       <% if !service.address.schedules.empty? %> <!-- Se não for vazio -->
         <br>
         <strong>Horários de atendimento:</strong><br>
@@ -47,20 +46,13 @@
           <br>
         <% end %> <!-- Cada um dos horários -->
       <% end %> <!-- Se não for vazio -->
-
-      <div class="center"> <!--Center -->
-        <br>
-        <%= link_to 'Editar', edit_service_path(service), class: 'btn btn-cinza'%>
-        <%= link_to 'Apagar', service, method: :delete, data: { confirm: 'Confirma?' }, class: 'btn btn-cinza'%>
-      </div> <!--Center -->
     </div> <!--Card -->
 
   <% end %> <!-- Serviços -->
 
   <div class="center"> <!-- Adicionar Serviço -->
-    <%= link_to 'Adicionar serviço', new_service_path, class: 'btn btn-verde' %>
-    <br><br>
-    <%= link_to 'Voltar', login_profissional_path, class: "btn btn-cinza" %>
+    <br>
+    <%= link_to 'Voltar', :back, class: "btn btn-cinza" %>
   </div> <!-- Adicionar Serviço -->
 
 </div> <!--Container -->
