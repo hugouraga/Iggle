@@ -25,7 +25,7 @@
       <strong>Complemento: </strong>
       <%= service.address.description  %><br>
       <strong>CEP: </strong>
-      <%=  service.address.postal_code + " - " + service.address.district.titlecase + ", " + service.address.city.titlecase + ", " + service.address.state.upcase %><br>
+      <%=  service.address.postal_code + " - " + service.address.district + ", " + service.address.city + ", " + service.address.state.upcase %><br>
       <% if !service.address.schedules.empty? %> <!-- Se não for vazio -->
         <br>
         <strong>Horários de atendimento:</strong><br>
@@ -57,10 +57,10 @@
 
   <% end %> <!-- Serviços -->
 
-  <div class="center"> <!-- Adicionar Serviço -->
+  <div class="center">
     <%= link_to 'Adicionar serviço', new_service_path, class: 'btn btn-verde' %>
     <br><br>
     <%= link_to 'Voltar', login_profissional_path, class: "btn btn-cinza" %>
-  </div> <!-- Adicionar Serviço -->
+  </div>
 
 </div> <!--Container -->

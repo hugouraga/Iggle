@@ -12,25 +12,22 @@
 
 	<%= favicon_link_tag 'logo.png' %>
   </head>
-
   <body>
-    <div>
-    <% unless !normal_user_signed_in? or !professional_user_signed_in? %>
-      
-    
+    <% if normal_user_signed_in? or professional_user_signed_in? %>
       <div class="container">
-          <% flash.each do |message_type, message| %>
-            <%= content_tag 'div', class: "alert alert-#{message_type} alert-dismissible", role: 'alert' do %>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+        <% flash.each do |message_type, message| %>
+          <br>
+          <%= content_tag 'div', class: "alert alert-#{message_type} alert-dismissible", role: 'alert' do %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
             <%= message %>
           <% end %>
         <% end %>
       </div>
     <% end %>
-      <%= yield %>
-    </div>
+    <%= yield %>
+
     <!-- Modal -->
     <div class="modal fade" id="modal-mensagem">
       <div class="modal-dialog">
