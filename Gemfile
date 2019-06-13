@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'ffaker'
   gem 'factory_bot_rails'
+  gem 'shoulda', '~> 3.5'
 end
 
 group :development do
@@ -62,7 +63,6 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
   gem 'selenium-webdriver', '~> 3.6.0'
-  gem 'byebug', platform: :mri
   gem 'database_cleaner'
   gem "cucumber-websteps"
   gem 'connection_pool'
