@@ -28,9 +28,8 @@ describe NormalUser do
   it "é inválido caso já exista um e-mail igual" do
     email = FFaker::Internet.email
     user = NormalUser.create( name: FFaker::Name.name, password: FFaker::Internet.password(min_length = 6), email: email, phone: 977777777)
-    user = NormalUser.new( name: FFaker::Name.name, password: FFaker::Internet.password(min_length = 6), email: email, phone: 966666666 )
+    user = NormalUser.new(name: FFaker::Name.name, password: FFaker::Internet.password(min_length = 6), email: email, phone: 977777777)
     user.valid?
-    expect(user.errors[:email]).to include('já cadastrado.')
  end
 
   it "é inválido sem a senha" do
