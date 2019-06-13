@@ -2,14 +2,14 @@
   <button id="openbtn" class="openbtn" onclick="openNav()">&#9776;</button>
 
   <h5 class="nome-user">
-    <%= @professional_user.name.titlecase %>
+    <%= @professional_user.name %>
   </h5>
 
   <!-- SIDEBAR -->
   <nav id="mySidebar" class="sidebar">
     <div class="sidebar-header">
       <a href="javascript:void(0)" class="closebtn sidebar-header" onclick="closeNav()">&times;</a>
-      <%= @professional_user.name.titlecase %>
+      <%= @professional_user.name %>
       <hr>
     </div>
     <div class="sidebar-links">

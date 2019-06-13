@@ -1,7 +1,7 @@
 class ProfessionalUser < ApplicationRecord
   has_secure_password
   has_one_attached :avatar
-  before_save :email_downcase, :name_downcase
+  before_save :email_downcase
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
@@ -19,8 +19,5 @@ class ProfessionalUser < ApplicationRecord
   private
   def email_downcase
     self.email.downcase!
-  end
-  def name_downcase
-    self.name.downcase!
   end
 end

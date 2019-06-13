@@ -1,11 +1,11 @@
 <br>
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-	<h3 class="center">Busque um serviço pelo seu nome</h3>
+	<h3 class="center">Buscar um serviço pelo seu nome</h3>
     <div class="well well-large">
         <div class="form-group center">
             <%= form_tag(busca_servico_nome_path, :method => :get) do %>
 				<div class="col-sm-7">
-                	<%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Digite o nome em minúsculo. Ex: yoga' %>
+                	<%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Digite o nome do serviço que deseja encontrar' %>
 				</div>
 				<%= submit_tag 'Buscar', class:' btn btn-verde' %>
             <% end %>
@@ -16,7 +16,7 @@
 		<br>
 		<div class="well well-large"> <!-- Card -->
 			<h4 class="center"><strong><%= service.service.upcase %></strong></h4>
-			<strong>Profissional:</strong> <%= service.professional_user.name.titlecase + " | " + service.professional_user.profession.titlecase %>
+			<strong>Profissional:</strong> <%= service.professional_user.name + " | " + service.professional_user.profession %>
             <%= fa_icon "angle-double-right" %>
 			<strong><%= link_to 'Visitar Perfil', perfil_profissional_path(service.professional_user.id), class: "verde" %></strong><br><br>
 			<strong>Descrição:</strong> <%= service.description %><br><br>
@@ -27,7 +27,7 @@
 			<strong>Complemento: </strong>
 			<%= service.address.description  %><br>
 			<strong>CEP: </strong>
-			<%=  service.address.postal_code + " - " + service.address.district.capitalize + ", " + service.address.city.capitalize + ", " + service.address.state.upcase %><br>
+			<%=  service.address.postal_code + " - " + service.address.district + ", " + service.address.city + ", " + service.address.state.upcase %><br>
 			<% if !service.address.schedules.empty? %> <!-- Se não for vazio -->
 				<br>
 				<strong>Horários de atendimento:</strong><br>
@@ -53,8 +53,8 @@
 
 	<% end %> <!-- Serviços -->
 
-	<div class="center"> <!-- Adicionar Serviço -->
+	<div class="center">
 		<%= link_to 'Voltar', login_cliente_path, class: "btn btn-cinza" %>
-	</div> <!-- Adicionar Serviço -->
+	</div>
 
 </div> <!--Container -->

@@ -4,9 +4,20 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users
   # GET /professional_users.json
   def index
-    @professional_users = ProfessionalUser.where(name: params[:search])
-    if @professional_users.empty?
-      flash.now[:danger] = "Profissional não encontrado."
+    @professional_users = ProfessionalUser.where("name ILIKE ?", "#{params[:search]}")
+    if params[:search].present?
+      if @professional_users.empty?
+        flash.now[:danger] = "Profissional não encontrado."
+      end
+    end
+  end
+
+  def professionals_profession
+    @professional_users = ProfessionalUser.where(profession: params[:search])
+    if params[:search].present?
+      if @professional_users.empty?
+        flash.now[:danger] = "Não existe nenhum profissional com esta especialidade cadastrado."
+      end
     end
   end
 

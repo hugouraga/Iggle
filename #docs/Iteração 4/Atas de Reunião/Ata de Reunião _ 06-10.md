@@ -21,11 +21,11 @@ Login | Hugo Uraga, Daniel Silva | Sim (segurança)
 Sac | Myllena Alves | Não
 Home Cliente | Myllena Almeida | Não
 Home Profissional | Jussara Silva | Não
-Serviços - Profissional (CRUD) | Daniel Silva | ?
-Alterar perfil profissional | Daniel Silva, Hugo Uraga | Sim (segurança)
-Alterar perfil cliente | Daniel Silva | Sim (segurança)
-Endereços | Myllena Alves | ?
-Horários de atendimento | Jussara Silva | ?
+Serviços - Profissional (CRUD) | Daniel Silva | Não
+Alterar perfil profissional | Daniel Silva, Hugo Uraga | Não
+Alterar perfil cliente | Daniel Silva | Não
+Endereços | Myllena Alves/ Jussara Silva | Não
+Horários de atendimento | Jussara Silva | Não
 
 ## Correções que foram feitas
 Ação                            | Responsável   
@@ -39,14 +39,15 @@ Mudança de cor no icone quando não cadastrado - Redes sociais do profissional 
 Endereços na página de serviços | Jussara Silva
 Horários na página de endereços | Myllena Alves, Jussara Silva
 Testes BDD e RSPEC | Myllena Alves
+[Perfil do profissional - visão cliente](https://github.com/hugouraga/Iggle/issues/55) | Jussara Silva
 
 ## O que falta fazer
 Ação                            | Responsável   
 :-------------------------------: | :-------------: 
 Levantamento de erros | ?
-[Buscas - nome, serviço, localidade, profissão](https://github.com/hugouraga/Iggle/issues/54) | Myllena Almeida
+[Buscas - nome, serviço, localidade, profissão](https://github.com/hugouraga/Iggle/issues/54) | Myllena Almeida/ Jussara Silva
 [Mensagens](https://github.com/hugouraga/Iggle/issues/53) | Daniel Silva
-[Perfil do profissional - visão cliente](https://github.com/hugouraga/Iggle/issues/55) | Myllena Almeida
+
 
 
 ## RETROSPECTIVA 
@@ -75,8 +76,8 @@ Levantamento de erros | ?
 ### Ações a serem tomadas
 Ação                            | Responsável   
 :-------------------------------: | :-------------:
+[Documentação da falha de segurança do login](https://github.com/hugouraga/Iggle/issues/47) | Daniel Silva
 [Mensagens](https://github.com/hugouraga/Iggle/issues/53) | Daniel Silva
-[Perfil do profissional - visão cliente](https://github.com/hugouraga/Iggle/issues/55) | Myllena Almeida
 [Deploy](https://github.com/hugouraga/Iggle/issues/50) | Jussara Silva
 [Roteiro da apresentação](https://github.com/hugouraga/Iggle/issues/56) | Daniel Silva
 Reunião de redesign | Opcional

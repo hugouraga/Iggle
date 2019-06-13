@@ -19,8 +19,8 @@
       <h4 class="center"><strong><%= address.name.upcase + ", " + address.number %></strong></h4>
       <strong>Complemento:</strong> <%= address.description %><br>
       <strong>CEP:</strong> <%= address.postal_code %><br>
-      <strong>Bairro:</strong> <%= address.district.titlecase %><br>
-      <strong>Cidade:</strong> <%= address.city.titlecase + ", " + address.state.upcase %><br>
+      <strong>Bairro:</strong> <%= address.district %><br>
+      <strong>Cidade:</strong> <%= address.city + ", " + address.state.upcase %><br>
       <br>
 
       <% if address.schedules.empty? %>

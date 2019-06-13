@@ -1,6 +1,6 @@
 <div class="bg-profissional">
   <br>
-  <span class="nome-user"><%= @professional_user.name.titlecase %></span>
+  <span class="nome-user"><%= @professional_user.name %></span>
 </div>
 
     <div class="div-profile center">
@@ -36,7 +36,15 @@
     <div class="description">
       <%= @professional_user.description %><br><br>
       <strong>Telefone:</strong> <%= "(" + @professional_user.phone[0..1] + ") " + @professional_user.phone[2..-1] %><br>
-      <strong>E-mail:</strong> <%= @professional_user.email %><br>
+      <strong>E-mail:</strong> <%= @professional_user.email %><br><br>
+      <strong>Formação:</strong> <%= @professional_user.profession.titlecase + " | " %>
+      <% if @professional_user.profession == "nutricionista" %>
+        <strong>CRN:</strong> <%= @professional_user.document %><br>
+      <% elsif @professional_user.profession == "nutrólogo" %>
+        <strong>CRM:</strong> <%= @professional_user.document %><br>
+      <% else %>
+        <strong>CONFEF:</strong> <%= @professional_user.document %><br>
+      <% end %>
     </div>
     <hr>
     <div class="col-md-12">
@@ -53,9 +61,9 @@
       </div>
     </div>
 
-    <div class="center"> <!-- Adicionar Serviço -->
-      <%= link_to 'Voltar', busca_profissional_path, class: "btn btn-cinza" %>
-    </div> <!-- Adicionar Serviço -->
+    <div class="center">
+      <%= link_to 'Voltar', login_cliente_path, class: "btn btn-cinza" %>
+    </div>
 
   </div> <!-- Container -->
 </div>
