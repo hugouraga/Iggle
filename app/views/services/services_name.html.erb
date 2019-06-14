@@ -16,7 +16,7 @@
 		<br>
 		<div class="well well-large"> <!-- Card -->
 			<h4 class="center"><strong><%= service.service.upcase %></strong></h4>
-			<strong>Profissional:</strong> <%= service.professional_user.name + " | " + service.professional_user.profession %>
+			<strong>Profissional:</strong> <%= service.professional_user.name + " | " + service.professional_user.profession.titlecase %>
             <%= fa_icon "angle-double-right" %>
 			<strong><%= link_to 'Visitar Perfil', perfil_profissional_path(service.professional_user.id), class: "verde" %></strong><br><br>
 			<strong>Descrição:</strong> <%= service.description %><br><br>

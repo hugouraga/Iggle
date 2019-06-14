@@ -10,7 +10,7 @@ class ProfessionalUser < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                                     format: { with: VALID_EMAIL_REGEX },
                                     uniqueness: { case_sensitive: true }
-  validates :phone, presence: true, length: { minimum: 10 }, length: { maximum: 11 }
+  validates :phone, presence: true, length: { minimum: 10, maximum: 11 }
   validates :document, presence: true, length: { maximum: 50 }
   validates :description, presence: true, length: { maximum: 500 }
 

@@ -26,10 +26,18 @@ class ProfessionalUsersController < ApplicationController
   def show
     require_logged_in_professional_user
 
-    @professional_user = ProfessionalUser.find(params[:id])
+    begin
+      @professional_user = ProfessionalUser.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      @professional_user = nil
+    end
 
-    if current_professional_user.id != @professional_user.id
-      redirect_to current_professional_user
+    if !@professional_user.nil?
+      if !current_professional_user.nil?
+        if current_professional_user.id != @professional_user.id
+          redirect_to current_professional_user
+        end
+      end
     end
   end
 
@@ -93,7 +101,11 @@ class ProfessionalUsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_professional_user
-      @professional_user = ProfessionalUser.find(params[:id])
+      begin
+        @professional_user = ProfessionalUser.find(params[:id])
+      rescue ActiveRecord::RecordNotFound => e
+        @professional_user = nil
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

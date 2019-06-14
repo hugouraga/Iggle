@@ -12,10 +12,18 @@ class NormalUsersController < ApplicationController
   def show
     require_logged_in_normal_user
 
-    @normal_user = NormalUser.find(params[:id])
+    begin
+      @normal_user = NormalUser.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => e
+      @normal_user = nil
+    end
 
-    if current_normal_user.id != @normal_user.id
-      redirect_to current_normal_user
+    if !@normal_user.nil?
+      if !current_normal_user.nil?
+        if current_normal_user.id != @normal_user.id
+          redirect_to current_normal_user
+        end
+      end
     end
   end
 
@@ -71,7 +79,11 @@ class NormalUsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_normal_user
-      @normal_user = NormalUser.find(params[:id])
+      begin
+        @normal_user = NormalUser.find(params[:id])
+      rescue ActiveRecord::RecordNotFound => e
+        @normal_user = nil
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
