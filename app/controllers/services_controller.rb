@@ -14,15 +14,28 @@ class ServicesController < ApplicationController
   end
 
   def services_name
-    @services = Service.where("service ILIKE ?", "#{params[:search]}")
-    @professional = Service.joins(:professional_user).where(professional_users: params[:id])
-    if params[:search].present?
-      if @services.empty?
-        flash.now[:danger] = 'Serviço não encontrado!'
+    if params[:search].nil? || params[:search] == ""
+      @services = nil
+    else
+      @services = Service.where("service ILIKE ?", "%#{params[:search]}%")
+      @professional = Service.joins(:professional_user).where(professional_users: params[:id])
+      if params[:search].present?
+        if @services.empty?
+          flash.now[:danger] = 'Serviço não encontrado!'
+        end
       end
     end
   end
 
+  def addresses_names
+    @services = Service.joins(:address).where("city ILIKE ?", "#{params[:search]}")
+    @professional = Service.joins(:professional_user).where(professional_users: params[:id])
+    if params[:search].present?
+      if @services.empty?
+        flash.now[:danger] = 'Cidade não encontrada!'
+      end
+    end
+  end
 
   # GET /services/1
   # GET /services/1.json

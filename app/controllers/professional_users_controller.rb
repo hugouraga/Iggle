@@ -4,10 +4,14 @@ class ProfessionalUsersController < ApplicationController
   # GET /professional_users
   # GET /professional_users.json
   def index
-    @professional_users = ProfessionalUser.where("name ILIKE ?", "#{params[:search]}")
-    if params[:search].present?
-      if @professional_users.empty?
-        flash.now[:danger] = "Profissional não encontrado."
+    if params[:search].nil? || params[:search] == ""
+      @professional_users = nil
+    else
+      @professional_users = ProfessionalUser.where("name ILIKE ?", "%#{params[:search]}%")
+      if params[:search].present?
+        if @professional_users.empty?
+          flash.now[:danger] = 'Profissional não encontrado!'
+        end
       end
     end
   end
