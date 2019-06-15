@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_02_151327) do
+ActiveRecord::Schema.define(version: 2019_06_15_162548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,12 +50,23 @@ ActiveRecord::Schema.define(version: 2019_06_02_151327) do
     t.index ["professional_user_id"], name: "index_addresses_on_professional_user_id"
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "message"
+  create_table "conversations", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "recipient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "conversation_id"
+    t.bigint "professional_user_id"
+    t.bigint "normal_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["normal_user_id"], name: "index_messages_on_normal_user_id"
+    t.index ["professional_user_id"], name: "index_messages_on_professional_user_id"
   end
 
   create_table "normal_users", force: :cascade do |t|
@@ -92,17 +103,12 @@ ActiveRecord::Schema.define(version: 2019_06_02_151327) do
     t.index ["address_id"], name: "index_schedules_on_address_id"
   end
 
-  create_table "searches", force: :cascade do |t|
-    t.string "search"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "services", force: :cascade do |t|
     t.string "service", default: "", null: false
     t.string "description", default: "", null: false
     t.string "value", default: "", null: false
     t.string "duration", default: "", null: false
+    t.string "email", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "professional_user_id"
@@ -115,6 +121,5 @@ ActiveRecord::Schema.define(version: 2019_06_02_151327) do
   add_foreign_key "addresses", "professional_users"
   add_foreign_key "schedules", "addresses"
   add_foreign_key "services", "addresses"
-  add_foreign_key "schedules", "services"
   add_foreign_key "services", "professional_users"
 end
