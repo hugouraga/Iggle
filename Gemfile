@@ -59,7 +59,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
+  gem 'chromedriver-helper', '1.2.0'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
   gem 'selenium-webdriver', '~> 3.6.0'

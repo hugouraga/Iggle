@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 2019_06_15_162548) do
     t.index ["professional_user_id"], name: "index_addresses_on_professional_user_id"
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "recipient_id"
@@ -101,6 +109,12 @@ ActiveRecord::Schema.define(version: 2019_06_15_162548) do
     t.string "night", default: "false", null: false
     t.bigint "address_id"
     t.index ["address_id"], name: "index_schedules_on_address_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "search"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|

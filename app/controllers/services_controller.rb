@@ -32,10 +32,11 @@ class ServicesController < ApplicationController
     @professional = Service.joins(:professional_user).where(professional_users: params[:id])
     if params[:search].present?
       if @services.empty?
-        flash.now[:danger] = 'Cidade não encontrada!'
+        flash.now[:danger] = 'Não serviços cadastrados com esta cidade!'
       end
     end
   end
+
 
   # GET /services/1
   # GET /services/1.json
