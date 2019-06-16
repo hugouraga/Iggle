@@ -42,8 +42,6 @@ class ProfessionalUsersController < ApplicationController
           redirect_to current_professional_user
         end
       end
-    else
-      redirect_to login_profissional_path
     end
   end
 

@@ -24,8 +24,6 @@ class NormalUsersController < ApplicationController
           redirect_to current_normal_user
         end
       end
-    else
-      redirect_to login_cliente_path
     end
   end
 
