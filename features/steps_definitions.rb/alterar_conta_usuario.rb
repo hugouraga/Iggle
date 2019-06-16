@@ -27,6 +27,18 @@ Quando("clicar no botão para {string}") do |string|
     save_and_open_page
 end
 
-Então("meus dados são atualizados com sucesso") do
+Então("meus dados são atualizados") do
     expect(page).to have_content('Dados atualizados com sucesso!')
+end
+
+Quando("eu não alterar os dados necessários do formulário cliente") do
+    fill_in("user_name", with: '')
+    fill_in("user_email", with: '')
+    fill_in("user_phone", with: '')
+    fill_in("user_password", with: '')
+    fill_in("user_passwordc", with: '')
+end
+
+Então("meus dados não são atualizados") do
+    expect(page).to have_content('Ops! Encontramos alguns erros')
 end

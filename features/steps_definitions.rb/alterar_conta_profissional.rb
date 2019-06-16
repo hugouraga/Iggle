@@ -31,6 +31,22 @@ Quando("clicar no botão {string}") do |string|
     save_and_open_page
 end
 
-Então("meus dados são atualizados com sucesso") do
+Então("meus dados são atualizados") do
     expect(page).to have_content('Dados atualizados com sucesso!')
+end
+
+Quando("eu não alterar os dados necessários do formulário profissional") do
+    fill_in("profissional_name", with: '')
+    fill_in("profissional_email", with: '')
+    fill_in("profissional_phone", with: '')
+    fill_in("profissional_document", with: '')
+    fill_in("profissional_instagram", with: "")
+    fill_in("profissional_facebook", with: "")
+    fill_in("profissional_description", with: "")
+    fill_in("profissional_password", with: '')
+    fill_in("profissional_passwordc", with: '')
+end
+
+Então("meus dados não são atualizados") do
+    expect(page).to have_content('Ops! Encontramos alguns erros')
 end
