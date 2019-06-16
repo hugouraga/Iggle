@@ -9,7 +9,7 @@
     font-size: 20px;
 }
 </style>
-<div class="panel panel-default">
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
 <% if @over_5 %>
  <%= link_to 'Show All', '?m=all', class: 'btn btn-link pull-right' %>
 <% end %>
@@ -23,10 +23,10 @@ $(document).ready(function(){
 </script>
  <% @messages.each do |message| %>
   <% if message.body %>
-   <% user = User.find(message.user_id) %>
+   <% normal_user = NormalUser.find(message.normal_user_id) %>
    <div class="item">
 <div class="panel-heading">
-       <div class="header"><strong><%= user.email %> </strong><%= message.message_time %></div>
+       <div class="header"><strong><%= current_normal_user.email %> </strong><%= message.message_time %></div>
       <div class="list">
        <div class="item">
         <i class="right triangle icon"></i>
@@ -44,9 +44,9 @@ $(document).ready(function(){
 <div class="form-group">
   <%= f.text_area :body, class: "form-control" %>
 </div>
-  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+  <%= f.text_field :normal_user_id, value: current_normal_user.id, type: "hidden" %>
 <div class="form-group">
-  <%= f.submit "Send Reply", class: "form-control btn btn-primary" %>
+  <%= f.submit "Enviar mensagem", class: "btn btn-verde" %>
 </div>
 <% end %>
 </div>
