@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'servicos_profissional', to:'services#professional_services'
   get 'busca_profissional', to:'professional_users#index'
   get 'busca_servico_nome', to: 'services#services_name'
+  get 'busca_endereco_nome', to: 'services#addresses_names'
   get 'busca_profissional_profissao', to: 'professional_users#professionals_profession'
   get '/:id' => 'professional_users#profile_professional_user', as: :perfil_profissional
   #get 'servicos_profissional', to: 'professional_users#professional_services'
