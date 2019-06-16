@@ -28,11 +28,15 @@ class ServicesController < ApplicationController
   end
 
   def addresses_names
-    @services = Service.joins(:address).where("city ILIKE ?", "#{params[:search]}")
-    @professional = Service.joins(:professional_user).where(professional_users: params[:id])
-    if params[:search].present?
-      if @services.empty?
-        flash.now[:danger] = 'Não serviços cadastrados com esta cidade!'
+    if params[:search].nil? || params[:search] == ""
+      @services = nil
+    else
+      @services = Service.joins(:address).where("city ILIKE ?", "%#{params[:search]}%")
+      @professional = Service.joins(:professional_user).where(professional_users: params[:id])
+      if params[:search].present?
+        if @services.empty?
+          flash.now[:danger] = 'Não serviços cadastrados com esta cidade!'
+        end
       end
     end
   end
