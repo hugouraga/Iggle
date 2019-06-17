@@ -49,6 +49,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'factory_bot_rails'
   gem 'shoulda', '~> 3.5'
+  gem 'ZenTest'
 end
 
 group :development do
