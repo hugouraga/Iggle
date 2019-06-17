@@ -1,11 +1,11 @@
 <br>
 <div class="col-md-6 col-md-offset-3 col-xs-12 container">
-	<h3 class="center">Buscar um serviço pelo seu nome</h3>
+	<h3 class="center">Buscar por cidade</h3>
     <div class="well well-large">
         <div class="form-group center">
-            <%= form_tag(busca_servico_nome_path, :method => :get) do %>
+            <%= form_tag(busca_endereco_nome_path, :method => :get) do %>
 				<div class="col-sm-7">
-                	<%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Digite o nome do serviço que deseja encontrar' %>
+                	<%= text_field_tag 'search', nil, class: 'form-control', placeholder: 'Digite o nome da cidade que deseja encontrar' %>
 				</div>
 				<%= submit_tag 'Buscar', class:' btn btn-verde' %>
             <% end %>

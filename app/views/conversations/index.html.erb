@@ -1,0 +1,71 @@
+<style>
+.glyphicon {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+}
+</style>
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+<h2>Caixa de entrada</h2>
+</div>
+
+<div class="col-md-6 col-md-offset-3 col-xs-12 container">
+      
+    
+    
+   <!-- Container -->
+
+<div class="center">
+  <ul class="nav nav-pills nav-stacked">
+    <br>
+    <li><button type="button" class="list-group-item"
+    data-toggle="collapse" data-target="#mail"><h4>Conversas
+      <i class="glyphicon glyphicon-inbox"></i></h4></button></li>
+    <div id="mail" class="collapse">
+      <br>      
+      <div class="nav nav-tabs nav-stacked">
+      <div class="item">
+        <% @conversations.each do |conversation| %>
+          <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+            <% if conversation.sender_id == current_user.id %>
+              <% recipient = ProfessionalUser.find(conversation.recipient_id) %>
+            <% else %>
+              <% recipient = ProfessionalUser.find(conversation.sender_id) %>
+            <% end %>
+          
+          
+
+          
+          <%= link_to recipient.name + " | " + recipient.profession.upcase, conversation_messages_path(conversation)%>
+          
+          
+          <% end %>
+        <% end %>
+      </div>
+      </div>
+      </div>
+    <br><br>
+    <li><button type="button" class="list-group-item"
+    data-toggle="collapse" data-target="#new"><h4>Profissionais
+      <i class="glyphicon glyphicon-new-window" style="vertical-align:right;"></i></h4></button></li>
+  </ul>
+  <div id="new" class="collapse">
+    <div class="panel-body">     
+       <% @professional_users.each do |professional_user| %>
+        <% if professional_user.email != current_normal_user.email %>
+         <div class="nav nav-tabs nav-stacked">
+         <div class="item">
+      <%= link_to professional_user.name + " | " + professional_user.profession.upcase,
+       conversations_path(sender_id: current_normal_user.id, recipient_id: professional_user.id), method: "post"%>
+     </div>
+      <% end %>
+     <% end %>
+    </div>
+    </div>
+  </div>
+</div>
+
+        <br>
+        <%= link_to 'Voltar', login_cliente_path, class: "btn btn-cinza" %>
+  </div>
+</div>

@@ -13,30 +13,30 @@
         </div>
     </div>
 
-    <% if @professional_users.empty? %>
-
-    <% else %>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th class="center">Nome</th>
-                    <th class="center">Profissão</th>
-                    <th class="center">Perfil</th>
-                    <th class="center">Serviços</th>
-                </tr>
-            </thead>
-
-            <tbody class="center">
-                <% @professional_users.each do |professional_user| %>
+    <% if !@professional_users.nil? %>
+        <% if !@professional_users.empty? %>
+            <table class="table">
+                <thead>
                     <tr>
-                        <td><%= professional_user.name %></td>
-                        <td><%= professional_user.profession %></td>
-                        <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id), id: 'Visitar' %></td>
-                        <td><%= link_to "Visualizar", servicos_profissional_path(id: professional_user.id) %></td>
+                        <th class="center">Nome</th>
+                        <th class="center">Profissão</th>
+                        <th class="center">Perfil</th>
+                        <th class="center">Serviços</th>
                     </tr>
-                <% end %>
-            </tbody>
-        </table>
+                </thead>
+
+                <tbody class="center">
+                    <% @professional_users.each do |professional_user| %>
+                        <tr>
+                            <td><%= professional_user.name %></td>
+                            <td><%= professional_user.profession.titlecase %></td>
+                            <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id) %></td>
+                            <td><%= link_to "Visualizar", servicos_profissional_path(id: professional_user.id) %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        <% end %>
     <% end %>
 
     <div class="center">

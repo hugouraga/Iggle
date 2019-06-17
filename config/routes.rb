@@ -2,14 +2,16 @@ Rails.application.routes.draw do
   resources :addresses
   resources :services
   resources :contacts, only: [:new, :create]
-
   resources :professional_users
   resources :normal_users
   resources :schedules
-
+  resources :conversations do
+    resources :messages
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "static_pages#index"
   #get 'sessions/new'
+  get 'mensagens', to: 'conversations#index'
   get 'cadastro', to: 'static_pages#cadastro'
   get 'cadastro_cliente', to: 'normal_users#new'
   get 'cadastro_profissional', to: 'professional_users#new'
@@ -27,6 +29,7 @@ Rails.application.routes.draw do
   get 'servicos_profissional', to:'services#professional_services'
   get 'busca_profissional', to:'professional_users#index'
   get 'busca_servico_nome', to: 'services#services_name'
+  get 'busca_endereco_nome', to: 'services#addresses_names'
   get 'busca_profissional_profissao', to: 'professional_users#professionals_profession'
   get '/:id' => 'professional_users#profile_professional_user', as: :perfil_profissional
   #get 'servicos_profissional', to: 'professional_users#professional_services'
