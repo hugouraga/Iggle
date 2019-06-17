@@ -19,7 +19,7 @@ end
 Quando("eu preencher o novo formulário de usuário com nome e email e telefone e senha") do
   fill_in("user_name", with: 'Florzinha')
   fill_in("user_email", with: 'florzinha.poderosa@gmail.com')
-  fill_in("user_phone", with: 999999999)
+  fill_in("user_phone", with: 9999999999)
   fill_in("user_password", with: 'zldmald1$L')
   fill_in("user_passwordc", with: 'zldmald1$L')
 end

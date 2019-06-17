@@ -5,7 +5,7 @@ Dado("clico na sidebar") do
   find('[id=openbtn]').click
 end
 
-Dado("clico na sessão {string}") do |string|
+Dado("clico na seção {string}") do |string|
   find('[id=Endereços]').click
   save_and_open_page
 end
@@ -28,7 +28,6 @@ Quando("preencher meus dados") do
     fill_in("postal_code_address", with: '5423020')
     fill_in("district_address", with: 'Vila Buarque')
     fill_in("city_address", with: 'São Paulo')
-    fill_in("state_address", with: 'SP')
     save_and_open_page
 end
 
@@ -37,13 +36,13 @@ Então("meu novo endereço aparece na página de endereços do profissional") do
 end
 
 Quando("eu clicar no ícone de alteração") do
-  find('[id=editar]').click
+  find('[id=alterar]').click
 end
 
 Quando("for direcionado para o formulário de alteração de dados do endereço") do
 end
 
-Quando("alterar os dados necessários") do
+Quando("alterar os dados necessários do endereço") do
   fill_in("district_address", with: 'Vila Mariana')
   save_and_open_page
 end
@@ -59,7 +58,6 @@ Quando("eu não preencher meus dados") do
   fill_in("postal_code_address", with: '')
   fill_in("district_address", with: '')
   fill_in("city_address", with: '')
-  fill_in("state_address", with: 'P')
   save_and_open_page
 end
 

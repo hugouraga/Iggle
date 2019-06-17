@@ -1,9 +1,29 @@
 Quando("eu acessar o meu perfil") do
 end
 
-Então("eu tenho que ver uma caixa de busca para que eu possa fazer uma busca para contratar serviços") do
-  find('[id=buscar]')
+
+Então("eu tenho que ver a minha foto") do
+  find('[id=picture]')
 end
+
+
+Então("um card para filtrar por Profissional") do
+  find('[id=busca-profissional]')
+end
+
+Então("um card para filtrar por Serviço") do
+  find('[id=busca-servico-nome]')
+
+end
+
+Então("um card para filtrar por Localidade") do
+  find('[id=busca-servico-cidade]')
+end
+
+Então("um card para filtrar por Especialidade") do
+  find('[id=busca-profissional-profissao]')
+end
+
 
 Então("um ícone com uma caixa de mensagem para que eu possa acessá-la") do
   find('[id=mensagem]')
