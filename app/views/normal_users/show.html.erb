@@ -19,7 +19,7 @@
     </div>
   </nav>
   <!-- FINAL DA SIDEBAR -->
-    <div class="div-profile center">
+    <div class="div-profile center" id="picture">
       <% if @normal_user.avatar.attached? %>
         <%= image_tag @normal_user.avatar,
           :alt => "profile picture",

@@ -32,7 +32,7 @@
                 <% @professional_users.each do |professional_user| %>
                     <tr>
                         <td><%= professional_user.name %></td>
-                        <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id) %></td>
+                        <td><%= link_to 'Visitar', id: 'Visitar'%></td>
                         <td><%= link_to "Visualizar", servicos_profissional_path(id: professional_user.id) %></td>
                     </tr>
                 <% end %>

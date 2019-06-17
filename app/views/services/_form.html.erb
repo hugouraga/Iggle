@@ -15,22 +15,22 @@
 
   <div class="form-group">
     <%= form.label :service, "Nome" %>
-    <%= form.text_field :service, class: 'form-control' %>
+    <%= form.text_field :service, class: 'form-control', id: 'nome_serviço' %>
   </div>
 
   <div class="form-group">
     <%= form.label :description, "Descrição" %>
-    <%= form.text_area :description, class: 'form-control' %>
+    <%= form.text_area :description, class: 'form-control', id:'descrição_serviço' %>
   </div>
 
   <div class="form-group">
     <%= form.label :value, "Preço" %>
-    <%= form.number_field :value, class: 'form-control' %>
+    <%= form.number_field :value, class: 'form-control', id: 'preço_serviço' %>
   </div>
 
   <div class="form-group">
     <%= form.label :duration, "Duração (em horas)" %>
-    <%= form.number_field :duration, max: 9, class: 'form-control' %>
+    <%= form.number_field :duration, max: 9, class: 'form-control', id: 'duração_serviço' %>
   </div>
 
   <div class="form-group">

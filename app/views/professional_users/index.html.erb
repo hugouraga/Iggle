@@ -31,7 +31,7 @@
                     <tr>
                         <td><%= professional_user.name %></td>
                         <td><%= professional_user.profession %></td>
-                        <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id) %></td>
+                        <td><%= link_to 'Visitar', perfil_profissional_path(professional_user.id), id: 'Visitar' %></td>
                         <td><%= link_to "Visualizar", servicos_profissional_path(id: professional_user.id) %></td>
                     </tr>
                 <% end %>

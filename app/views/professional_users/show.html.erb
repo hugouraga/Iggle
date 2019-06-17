@@ -21,7 +21,7 @@
   </nav>
 </div>
 
-    <div class="div-profile center">
+    <div class="div-profile center" id="picture">
       <% if @professional_user.avatar.attached? %>
         <%= image_tag @professional_user.avatar,
           :alt => "profile picture",
@@ -61,20 +61,20 @@
     </div>
     <hr>
     <div class="row container">
-      <%= link_to meus_servicos_path, class: "col-md-4" do %>
+      <%= link_to meus_servicos_path, class: "col-md-4", id: "serviços" do %>
         <div class="card-atendimento">
           <h5>SERVIÇOS</h5>
         </div>
       <%end%>
 
       <%= link_to temp_path, class: "col-md-4" do %>
-        <div class="card-atendimento">
+        <div class="card-atendimento" id="atendimento_marcado">
           <h5>ATENDIMENTOS MARCADOS</h5>
         </div>
       <%end%>
 
       <%= link_to temp_path, class: "col-md-4" do %>
-        <div class="card-atendimento">
+        <div class="card-atendimento" id="historico_consulta">
           <h5>HISTÓRICO DE ATENDIMENTOS</h5>
         </div>
       <%end%>
