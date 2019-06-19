@@ -6,16 +6,16 @@ Início da Iteração | Término da iteração
 
 
 ### O que estava planejado
-| Atividade                                                           | Atribuição           |
-| ------------------------------------------------------------------- | -------------------- |
-| Realizar reuniões diárias (seg a sex) e quinzenais (fins de semana) | Equipe               |
-| Aprendizado e Criação de testes TDD (RSpec) e BDD (Cucumber)        | Equipe               |
-| Criação de Atas de Reunião                                          | Daniel Silva         |
-| Finalização do desenvolvimento                                      | Equipe               |
-| Deploy no Heroku                                                    | Jussara Silva        |
-| Screencast da aplicação                                             | A definir            |
-| 7º, 8º e 9ª Sprint                                                  | Equipe               |
-| **Criação de Postmortem da iteração 4**                             | A definir            |
+| Atividade                                                           | Atribuição                 |
+| ------------------------------------------------------------------- | -------------------------- |
+| Realizar reuniões diárias (seg a sex) e quinzenais (fins de semana) | Equipe                     |
+| Aprendizado e Criação de testes TDD (RSpec) e BDD (Cucumber)        | Equipe                     |
+| Criação de Atas de Reunião                                          | Daniel Silva               |
+| Finalização do desenvolvimento                                      | Equipe                     |
+| Deploy no Heroku                                                    | Jussara Silva              |
+| Screencast da aplicação                                             | Myllena Alves              |
+| 7º, 8º e 9ª Sprint                                                  | Equipe                     |
+| **Criação de Postmortem da iteração 4**                             | Myllena Alves e Daniel     |
 
 
 ### O que foi feito
@@ -34,7 +34,7 @@ Início da Iteração | Término da iteração
 |Aprendizado e Criação de testes TDD (RSpec) e BDD (Cucumber)                                 | Equipe                    |
 |[Criação de Atas de Reunião](https://github.com/hugouraga/Iggle/tree/master/%23docs/Itera%C3%A7%C3%A3o%204/Atas%20de%20Reuni%C3%A3o) | Daniel Silva   |
 | Roteiro da apresentação	                                                                    | Daniel Silva   |
-| [Postmortem](https://github.com/hugouraga/Iggle/edit/master/%23docs/Itera%C3%A7%C3%A3o%204/postmortem.md)                                                 | Myllena Alves  |
+| [Postmortem](https://github.com/hugouraga/Iggle/edit/master/%23docs/Itera%C3%A7%C3%A3o%204/postmortem.md)                                                 | Myllena Alves e Daniel  |
 | [Screencast da aplicação](https://www.loom.com/share/3b37d052cafb4cc2923b0e12a95f70a9)	                                     | Myllena Alves  |
 | 7º, 8º e 9ª Sprint                                           | Equipe         |
 
@@ -43,15 +43,6 @@ Início da Iteração | Término da iteração
 | Atividade                                                 | Razão                       |
 | --------------------------------------------------------- | --------------------------- |
 | [Mensagens](https://github.com/hugouraga/Iggle/issues/53) | Tempo de desenvolvimento    |
-
-
-
-
-
-Não foi feito
-
-[Mensagens](https://github.com/hugouraga/Iggle/issues/53)
-
 
 ### Lições aprendidas
 - Importância de ferramentas que estejam integradas com o time
