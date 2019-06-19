@@ -30,11 +30,10 @@ Início da Iteração | Término da iteração
 |[Apresentação](https://github.com/hugouraga/Iggle/issues/51)                                 | Daniel                    |
 |[Limitação de acesso](https://github.com/hugouraga/Iggle/issues/57)                          | Hugo                      |
 |[Deploy](https://github.com/hugouraga/Iggle/issues/50)                                       | Jussara                   |
-|[Screencast](https://github.com/hugouraga/Iggle/issues/48)                                   | Myllena Alves             |
 |Aprendizado e Criação de testes TDD (RSpec) e BDD (Cucumber)                                 | Equipe                    |
 |[Criação de Atas de Reunião](https://github.com/hugouraga/Iggle/tree/master/%23docs/Itera%C3%A7%C3%A3o%204/Atas%20de%20Reuni%C3%A3o) | Daniel Silva   |
 | Roteiro da apresentação	                                                                    | Daniel Silva   |
-| [Postmortem](https://github.com/hugouraga/Iggle/edit/master/%23docs/Itera%C3%A7%C3%A3o%204/postmortem.md)                                                 | Myllena Alves e Daniel  |
+| [Postmortem](https://github.com/hugouraga/Iggle/blob/master/%23docs/Itera%C3%A7%C3%A3o%204/postmortem.md)                                                 | Myllena Alves e Daniel  |
 | [Screencast da aplicação](https://www.loom.com/share/3b37d052cafb4cc2923b0e12a95f70a9)	                                     | Myllena Alves  |
 | 7º, 8º e 9ª Sprint                                           | Equipe         |
 
