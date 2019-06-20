@@ -6,7 +6,7 @@
 
 Projeto da disciplina de [Engenharia de Software](https://github.com/if977/if977) (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
 
-#### Link da aplicação no Heroku: [http://iggle-app.herokuapp.com](http://iggle-app.herokuapp.com)
+#### [Acessar a aplicação](http://iggle-app.herokuapp.com) | [Screencast](https://www.loom.com/share/3b37d052cafb4cc2923b0e12a95f70a9)
 
 ## Equipe
 
