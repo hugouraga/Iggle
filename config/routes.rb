@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   resources :addresses
   resources :services
-  resources :contacts, only: [:new, :create]
+  resources :contacts
   resources :professional_users
   resources :normal_users
   resources :schedules
   resources :conversations do
-    resources :messages
+  resources :messages
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "static_pages#index"
