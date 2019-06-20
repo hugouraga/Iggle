@@ -13,10 +13,10 @@
       <hr>
     </div>
     <div class="sidebar-links">
-      <%= link_to "Conta", edit_professional_user_path %>
+      <%= link_to "Conta", edit_professional_user_path, id: 'Conta' %>
       <%= link_to "Endereços", meus_enderecos_path, id: 'Endereços' %>
       <%= link_to "Suporte", "#signup", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal", name: 'Suporte'%>
-      <%= link_to 'Sair', sairprofissional_path, method: :delete %>
+      <%= link_to 'Sair', sairprofissional_path, method: :delete, id: 'Sair' %>
     </div>
   </nav>
 </div>

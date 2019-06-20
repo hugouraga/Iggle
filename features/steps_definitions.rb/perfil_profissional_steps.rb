@@ -31,6 +31,7 @@ Quando("eu pressionar o card de “Histórico de consultas” na página de perf
 end
 
 Então("eu devo clicar no link para visitar o seu perfil") do
+  expect(page).to have_content('Lindinha')
   find('[id=Visitar]').click
 end
 

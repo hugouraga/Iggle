@@ -11,7 +11,7 @@ Dado("clico na sessão {string}") do |string|
 end
 
 Então("eu deveria está na página de alteração de conta do cliente") do
-    visit edit_normal_user_path
+  expect(page).to have_content('Alterar conta')
 end
 
 Quando("alterar os dados necessários do formulário cliente") do
@@ -39,6 +39,6 @@ Quando("eu não alterar os dados necessários do formulário cliente") do
     fill_in("user_passwordc", with: '')
 end
 
-Então("meus dados não são atualizados") do
-    expect(page).to have_content('Ops! Encontramos alguns erros')
+Então("os dados da conta do cliente não são atualizados") do
+    expect(page).to have_content('Ops! Encontramos 6 erros')
 end

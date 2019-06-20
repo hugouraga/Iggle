@@ -22,7 +22,7 @@ para que eu possa administrar os serviços que quero oferecer na plataforma.
     Então eu deveria estar na página inicial do profissional
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na seção "Endereços"
+    E clico na seção Endereços
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de adição
     E for direcionado para o formulário de adicão de endereço
@@ -38,6 +38,13 @@ para que eu possa administrar os serviços que quero oferecer na plataforma.
     Então as alterações são salvas
 
   Cenario: Página de serviços visão cliente
+    Dado que eu visito a página inicial
+    E eu clico no botão Cadastro
+    Então eu vou para a página de seleção de cadastro
+    Quando eu clicar no botão Profissional
+    Quando eu preencher o novo formulário com as informações necessárias
+    E clicar no botão 'Salvar'
+    Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
     Dado que eu visito a página inicial
     E eu clico no botão Cadastro
     Então eu vou para a página de seleção de cadastro

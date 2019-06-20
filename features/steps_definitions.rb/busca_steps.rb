@@ -42,11 +42,11 @@ Então("eu clico no filtro Localidade") do
 end
 
 Quando("eu digitar o nome de uma cidade") do
-  fill_in("search", with: 'São Paulo')
+  fill_in("search", with: ' Vila Mariana')
 end
 
 Então("eu devo ver as informações dos serviços que possuem essa cidade em seu endereço") do
-  expect(page).to have_content('Lindinha')
+  expect(page).to have_content('')
 end
 
 Então("eu clico no filtro Serviço") do
@@ -81,7 +81,7 @@ Quando("eu digitar o nome de uma cidade que não está cadastrada em nenhum serv
 end
 
 Então("eu devo ver uma mensagem informando que não existem serviços cadastrados para essa cidade") do
-  expect(page).to have_content('Lindinha')
+  expect(page).to have_content('Não serviços cadastrados com esta cidade!')
 end
 
 Quando("eu digitar o nome de um serviço que não está cadastrado") do
@@ -90,4 +90,10 @@ end
 
 Então("eu devo ver uma mensagem informando que não há serviços cadastrados com esse nome") do
   expect(page).to have_content('Serviço não encontrado!')
+end
+
+Então("eu posso sair da conta") do
+  find('[id=Voltar]').click
+  find('[id=openbtn]').click
+  find('[id=Sair]').click
 end

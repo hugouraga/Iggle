@@ -23,7 +23,7 @@ Eu quero pesquisar de acordo com parâmetros de nome do profissional, especialid
 		Então eu deveria estar na página inicial do profissional
 		Dado que eu estou no meu perfil
 		E clico na sidebar
-		E clico na seção "Endereços"
+		E clico na seção Endereços
 		Então eu deveria está na página de endereços do profissional
 		Quando eu clicar no ícone de adição
 		E for direcionado para o formulário de adicão de endereço
@@ -37,6 +37,7 @@ Eu quero pesquisar de acordo com parâmetros de nome do profissional, especialid
 		E preencher as informações necessárias no form do serviço
 		E eu clicar no botão 'Salvar'
 		Então as alterações são salvas
+		E eu posso sair da conta
 
 	Cenario: Busca por serviço
 		Dado que eu visito a página inicial

@@ -31,5 +31,5 @@ end
 
 
 Então("a mensagem {string} será exibida na página de cadastro do profissional") do |string|
-  expect(page).to have_content('Ops! Encontramos 8 erros')
+  expect(page).to have_content('Ops! Encontramos 9 erros')
 end

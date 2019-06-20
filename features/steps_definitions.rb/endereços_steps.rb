@@ -5,7 +5,7 @@ Dado("clico na sidebar") do
   find('[id=openbtn]').click
 end
 
-Dado("clico na seção {string}") do |string|
+Dado("clico na seção Endereços") do 
   find('[id=Endereços]').click
   save_and_open_page
 end

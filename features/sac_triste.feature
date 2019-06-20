@@ -28,13 +28,7 @@ Contexto: Dado que eu esteja logado na plataforma
   E preencher os dados de autenticação do usuário-contratante corretamente
   E pressionar o botão "  Entrar"
   Então eu deveria estar na página inicial do usuário-contratante
-  Dado que eu estou na tela inicial do Iggle
-  E pressiono o botão "Login"
-  Então eu deveria estar na página de seleção do login
-  Quando eu clicar no botão profissional
-  E preencher os dados de autenticação do profissional corretamente
-  E pressionar o botão "Entrar"
-  Então eu deveria estar na página inicial do profissional
+
 
 Cenário: Não preencheu os campos corretamente
   Quando eu  não preencher com meu nome, email e mensagem

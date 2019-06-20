@@ -24,7 +24,7 @@ Quero poder adicionar e alterar dados de endereços com os campos (Nome da rua, 
     Então eu deveria estar na página inicial do profissional
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na seção "Endereços"
+    E clico na seção Endereços
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de adição
     E for direcionado para o formulário de adicão de endereço
@@ -49,7 +49,7 @@ Quero poder adicionar e alterar dados de endereços com os campos (Nome da rua, 
     Então eu deveria estar na página inicial do profissional
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na seção "Endereços"
+    E clico na seção Endereços
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de adição
     E for direcionado para o formulário de adicão de endereço
@@ -79,7 +79,7 @@ Quero poder adicionar e alterar dados de endereços com os campos (Nome da rua, 
     Então eu deveria estar na página inicial do profissional
     Dado que eu estou no meu perfil
     E clico na sidebar
-    E clico na seção "Endereços"
+    E clico na seção Endereços
     Então eu deveria está na página de endereços do profissional
     Quando eu clicar no ícone de adição
     E for direcionado para o formulário de adicão de endereço

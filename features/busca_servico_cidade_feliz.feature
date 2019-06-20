@@ -14,13 +14,7 @@ Quando eu clicar no botão Profissional
 Quando eu preencher o novo formulário com as informações necessárias
 E clicar no botão 'Salvar'
 Então a mensagem "Usuário cadastrado com sucesso" será exibida na página inicial
-Dado que eu estou na tela inicial do Iggle
-E pressiono o botão "Login"
-Então eu deveria estar na página de seleção do login
-Quando eu clicar no botão profissional
-E preencher os dados de autenticação do profissional corretamente
-E pressionar o botão "Entrar"
-Então eu deveria estar na página inicial do profissional
+
 
 Cenario: Busca por Localidade
 	Dado que eu visito a página inicial

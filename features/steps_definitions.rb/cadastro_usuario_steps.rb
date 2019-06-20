@@ -41,5 +41,5 @@ Quando("eu não preencher o novo formulário de usuário com nome e email e tele
 end
 
 Então("a mensagem {string} será exibida") do |string|
-  expect(page).to have_content('Ops! Encontramos 6 erros')
+  expect(page).to have_content('Ops! Encontramos 7 erros')
 end

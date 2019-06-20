@@ -13,9 +13,9 @@
       <hr>
     </div>
     <div class="sidebar-links">
-      <%= link_to "Conta", edit_normal_user_path %>
+      <%= link_to "Conta", edit_normal_user_path, id: 'Conta' %>
       <%= link_to "Suporte", "#signup", 'data-target' => "#modal-mensagem", 'data-toggle' => "modal", name: 'Suporte'%>
-      <%= link_to 'Sair', saircliente_path, method: :delete %>
+      <%= link_to 'Sair', saircliente_path, method: :delete, id: 'Show'%>
     </div>
   </nav>
   <!-- FINAL DA SIDEBAR -->
