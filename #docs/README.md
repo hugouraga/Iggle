@@ -1,7 +1,7 @@
 ## Artefatos
 
 
-**| [Home](https://github.com/hugouraga/Iggle/blob/master) | [Entregas](https://github.com/hugouraga/Iggle/blob/master/%23docs) |**
+**| [Home](https://github.com/hugouraga/Iggle) | [Entregas](https://github.com/hugouraga/Iggle/tree/master/%23docs) |**
 
 ---
 
