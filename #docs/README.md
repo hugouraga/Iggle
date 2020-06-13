@@ -1,7 +1,7 @@
 ## Artefatos
 
 
-**| [Home](https://github.com/shirubadan/Iggle/blob/master/README.md) | [Sobre o projeto](https://github.com/shirubadan/Iggle/blob/master/Sobre%20o%20projeto.md) | [Entregas](https://github.com/hugouraga/Iggle/blob/master/%23docs/README.md) |**
+**| [Home](https://github.com/hugouraga/Iggle/blob/master) | [Entregas](https://github.com/hugouraga/Iggle/blob/master/%23docs) |**
 
 ---
 
