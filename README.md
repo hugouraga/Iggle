@@ -12,7 +12,7 @@ Projeto da disciplina de [Engenharia de Software](https://github.com/if977/if977
 
 | ![daniel](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/daniel.png) | ![myllena-alves](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/myllena-alves.png) | ![hugo](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/hugo.png) | ![jussara](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/jussara.png) | ![myllena-almeida](https://github.com/hugouraga/Iggle/blob/master/%23docs/team-imgs/myllena-almeida.png) |
 |:---------------------:|:------------------:|:----------------:|:--------------------:|:-----------------------:|
-[Daniel Silva](https://github.com/shirubadan) (djs) | [Myllena Alves](https://github.com/myllenaalves) (mal4) | [Hugo Uraga](https://github.com/hugouraga) (hiu) | [Jussara Silva](https://github.com/jussararodrigues) (jprs) | [Myllena Almeida](https://github.com/MyllenaAlmeida) (mrma2) | 
+[Daniel Silva](https://github.com/js-dan) (djs) | [Myllena Alves](https://github.com/myllenaalves) (mal4) | [Hugo Uraga](https://github.com/hugouraga) (hiu) | [Jussara Silva](https://github.com/jussararodrigues) (jprs) | [Myllena Almeida](https://github.com/MyllenaAlmeida) (mrma2) | 
 | GP / Scrum Master | Product Owner | Desenvolvedor | Desenvolvedora | Desenvolvedora |
 
 ## Descrição
